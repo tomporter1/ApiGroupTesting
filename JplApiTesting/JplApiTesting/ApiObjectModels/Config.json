@@ -1,0 +1,8 @@
+{
+  "CAD": {
+    "url": "https://ssd-api.jpl.nasa.gov/cad.api"
+  },
+  "Fireball": {
+    "url": "https://ssd-api.jpl.nasa.gov/fireball.api"
+  }
+}
