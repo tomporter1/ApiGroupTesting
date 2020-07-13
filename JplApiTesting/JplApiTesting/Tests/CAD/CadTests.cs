@@ -1,10 +1,5 @@
 ﻿using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.Tests.CAD
 {
@@ -19,9 +14,10 @@ namespace JplApiTesting.Tests.CAD
         }
 
         [Test]
-        public void CallingTheAPI_ReturnsSuccessCode()
+        public void CallingTheAPI_ReturnsCorrectSignatureSource()
         {
             Assert.That(_cadService.dto.LatestCAD.signature.source, Is.EqualTo("NASA/JPL SBDB Close Approach Data API"));
+            Assert.That(_cadService.dto.LatestCAD.signature.version, Is.EqualTo("1.1"));
         }
     }
 }
