@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestModel.cs" />
+    <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CADService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,8 +65,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApiObjectModels\CAD\DataHandling\" />
-    <Folder Include="ApiObjectModels\CAD\HTTPManager\" />
     <Folder Include="ApiObjectModels\Fireball\DataHandling\" />
     <Folder Include="ApiObjectModels\Fireball\HTTPManager\" />
     <Folder Include="ApiObjectModels\Fireball\Services\" />
