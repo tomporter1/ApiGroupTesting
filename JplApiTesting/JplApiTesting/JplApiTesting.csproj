@@ -56,16 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiObjectModels\FireballConfigReader.cs" />
-    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballDTO.cs" />
-    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballModel.cs" />
-    <Compile Include="ApiObjectModels\Fireball\Services\FireballService.cs" />
-    <Compile Include="ApiObjectModels\Fireball\HTTPManager\FireballManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Fireball\FireballTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="readme.md" />
   </ItemGroup>
@@ -73,6 +67,9 @@
     <Folder Include="ApiObjectModels\CAD\DataHandling\" />
     <Folder Include="ApiObjectModels\CAD\HTTPManager\" />
     <Folder Include="ApiObjectModels\CAD\Services\" />
+    <Folder Include="ApiObjectModels\Fireball\DataHandling\" />
+    <Folder Include="ApiObjectModels\Fireball\HTTPManager\" />
+    <Folder Include="ApiObjectModels\Fireball\Services\" />
     <Folder Include="ApiObjectModels\Scout\DataHandling\" />
     <Folder Include="ApiObjectModels\Scout\HTTPManager\" />
     <Folder Include="ApiObjectModels\Scout\Services\" />
