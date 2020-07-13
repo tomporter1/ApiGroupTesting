@@ -6,9 +6,9 @@ namespace JplApiTesting.ApiObjectModels.CAD
 {
     public class CADConfigReader
     {
-        private static ConfigRoot json => JsonConvert.DeserializeObject<ConfigRoot>(File.ReadAllText(jsonFilePath));
-        private static readonly string jsonFilePath = AppDomain.CurrentDomain.BaseDirectory + @"ApiObjectModels\Config.json";
+        private static ConfigRoot _configObj => JsonConvert.DeserializeObject<ConfigRoot>(File.ReadAllText(_jsonFilePath));
+        private static readonly string _jsonFilePath = AppDomain.CurrentDomain.BaseDirectory + @"ApiObjectModels\Config.json";
     
-        public static readonly string BaseUrl = json.CAD.url;
+        public static readonly string BaseUrl = _configObj.CAD.url;
     }
 }
