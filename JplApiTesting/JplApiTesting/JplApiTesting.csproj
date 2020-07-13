@@ -60,6 +60,24 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApiObjectModels\CAD\DataHandling\" />
+    <Folder Include="ApiObjectModels\CAD\HTTPManager\" />
+    <Folder Include="ApiObjectModels\CAD\Services\" />
+    <Folder Include="ApiObjectModels\Fireball\DataHandling\" />
+    <Folder Include="ApiObjectModels\Fireball\HTTPManager\" />
+    <Folder Include="ApiObjectModels\Fireball\Services\" />
+    <Folder Include="ApiObjectModels\Scout\DataHandling\" />
+    <Folder Include="ApiObjectModels\Scout\HTTPManager\" />
+    <Folder Include="ApiObjectModels\Scout\Services\" />
+    <Folder Include="ApiObjectModels\Sentry\DataHandling\" />
+    <Folder Include="ApiObjectModels\Sentry\HTTPManager\" />
+    <Folder Include="ApiObjectModels\Sentry\Services\" />
+    <Folder Include="Tests\CAD\" />
+    <Folder Include="Tests\Fireball\" />
+    <Folder Include="Tests\Scout\" />
+    <Folder Include="Tests\Sentry\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
