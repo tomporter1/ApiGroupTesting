@@ -62,6 +62,10 @@
     <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CADService.cs" />
     <Compile Include="ApiObjectModels\ConfigModel.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestDTO.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestModel.cs" />
+    <Compile Include="ApiObjectModels\Scout\HTTPManager\ScoutLatestCallManager.cs" />
+    <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +76,6 @@
     <Folder Include="ApiObjectModels\Fireball\DataHandling\" />
     <Folder Include="ApiObjectModels\Fireball\HTTPManager\" />
     <Folder Include="ApiObjectModels\Fireball\Services\" />
-    <Folder Include="ApiObjectModels\Scout\DataHandling\" />
-    <Folder Include="ApiObjectModels\Scout\HTTPManager\" />
-    <Folder Include="ApiObjectModels\Scout\Services\" />
     <Folder Include="ApiObjectModels\Sentry\DataHandling\" />
     <Folder Include="ApiObjectModels\Sentry\HTTPManager\" />
     <Folder Include="ApiObjectModels\Sentry\Services\" />
