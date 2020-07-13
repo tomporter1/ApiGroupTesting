@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
-	class SentryDTO
+	public class SentryDTO
 	{
 	}
 }
