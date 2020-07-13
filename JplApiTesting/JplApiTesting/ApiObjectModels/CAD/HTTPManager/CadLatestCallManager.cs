@@ -1,6 +1,5 @@
 ﻿using RestSharp;
 using System;
-using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
@@ -11,7 +10,6 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 
         public CadLatestCallManager()
         {
-           
         }
 
         internal string GetAllCadData()
