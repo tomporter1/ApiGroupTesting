@@ -7,16 +7,17 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
     public class ScoutLatestCallManager
     {
         private readonly IRestClient _client;
-        private IRestResponse _response;
 
         public ScoutLatestCallManager()
         {
-
+            _client = new RestClient(ScoutConfigReader.ScoutUrl);
         }
 
-        internal string GetAllCadData()
+        public string GetAllScoutData()
         {
-            throw new NotImplementedException();
+            var request = new RestRequest("/");
+            var response = _client.Execute(request, Method.GET);
+            return response.Content;
         }
     }
 }

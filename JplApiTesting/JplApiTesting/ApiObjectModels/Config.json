@@ -4,5 +4,8 @@
   },
   "Fireball": {
     "url": "https://ssd-api.jpl.nasa.gov/fireball.api"
+  },
+  "Scout": {
+    "url": "https://ssd-api.jpl.nasa.gov/scout.api"
   }
 }

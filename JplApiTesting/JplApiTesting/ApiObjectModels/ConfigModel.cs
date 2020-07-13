@@ -10,6 +10,7 @@ namespace JplApiTesting.ApiObjectModels
     {
         public Info CAD { get; set; }
         public Info Fireball { get; set; }
+        public Info Scout { get; set; }
     }
 
     public class Info
