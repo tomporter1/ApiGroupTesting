@@ -55,6 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\HTTPManager\SentryCallManager.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +74,6 @@
     <Folder Include="ApiObjectModels\Scout\DataHandling\" />
     <Folder Include="ApiObjectModels\Scout\HTTPManager\" />
     <Folder Include="ApiObjectModels\Scout\Services\" />
-    <Folder Include="ApiObjectModels\Sentry\DataHandling\" />
-    <Folder Include="ApiObjectModels\Sentry\HTTPManager\" />
-    <Folder Include="ApiObjectModels\Sentry\Services\" />
     <Folder Include="Tests\CAD\" />
     <Folder Include="Tests\Fireball\" />
     <Folder Include="Tests\Scout\" />
