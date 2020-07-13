@@ -14,7 +14,7 @@ namespace JplApiTesting.Tests.CAD
         }
 
         [Test]
-        public void CallingTheAPI_ReturnsCorrectSignatureSource()
+        public void CallingTheAPI_ReturnsCorrectSignature()
         {
             Assert.That(_cadService.dto.LatestCAD.signature.source, Is.EqualTo("NASA/JPL SBDB Close Approach Data API"));
             Assert.That(_cadService.dto.LatestCAD.signature.version, Is.EqualTo("1.1"));
