@@ -1,13 +1,22 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
     public class CadLatestCallManager
     {
+        private readonly IRestClient _client;
+        private IRestResponse _response;
 
+        public CadLatestCallManager()
+        {
+           
+        }
+
+        internal string GetAllCadData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
