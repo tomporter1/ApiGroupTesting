@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     //https://ssd-api.jpl.nasa.gov/doc/cad.html
-    public abstract class CADService
+    public abstract class CadService
     {
         public CadLatestCallManager callManager = new CadLatestCallManager();
         public CadLatestDTO dto = new CadLatestDTO();
