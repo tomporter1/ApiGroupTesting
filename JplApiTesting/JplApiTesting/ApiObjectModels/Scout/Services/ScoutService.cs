@@ -9,14 +9,22 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
     {
         public ScoutLatestCallManager callManager = new ScoutLatestCallManager();
         public ScoutLatestDTO dto = new ScoutLatestDTO();
-        public string NEOdata;
+        public string NEOdataforall;
+        public string NEOdataforgiven;
         public JObject json_current;
 
         public ScoutService()
         {
-            NEOdata = callManager.GetAllScoutData();
-            dto.DeserializeLatestScout(NEOdata);
-            json_current = JsonConvert.DeserializeObject<JObject>(NEOdata);
+            NEOdataforall = callManager.GetAllScoutData();
+            dto.DeserializeLatestScout(NEOdataforall);
+            json_current = JsonConvert.DeserializeObject<JObject>(NEOdataforall);
+        }
+
+        public ScoutService(string objectName)
+        {
+            NEOdataforgiven = callManager.GetScoutDataForGivenName(objectName);
+            dto.DeserializeLatestScoutQuery(NEOdataforgiven);
+            json_current = JsonConvert.DeserializeObject<JObject>(NEOdataforgiven);
         }
     }
 }
