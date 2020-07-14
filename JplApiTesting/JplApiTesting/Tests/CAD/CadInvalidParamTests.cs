@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace JplApiTesting.Tests.CAD
 {
-    public class CadErrorTests
+    public class CadInvalidParamTests
     {
         private CadCustomRequestService _cadService;
 
@@ -25,7 +25,7 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_WithInvalidParameters_ReturnsCorrectMessage()
         {
             Assert.That(_cadService.dto.ErrorCAD.message, Is.EqualTo("one or more query parameter was not recognized"));
-        }
+        }         
 
         [Test]
         [Author("T Porter")]

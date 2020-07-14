@@ -75,7 +75,8 @@
     <Compile Include="ApiObjectModels\Scout\ScoutConfigReader.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\CAD\CadErrorTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidBodyTypeTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidParamTests.cs" />
     <Compile Include="Tests\CAD\CadSpecificBodyTests.cs" />
     <Compile Include="Tests\CAD\CadLimitedRequestTests.cs" />
     <Compile Include="Tests\CAD\CadSpecificClassTests.cs" />
