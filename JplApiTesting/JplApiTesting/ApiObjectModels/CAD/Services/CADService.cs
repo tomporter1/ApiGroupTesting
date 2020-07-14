@@ -14,24 +14,20 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
         public string liveCurrent;
         public JObject json_current;
 
-        public CADService()
-        {            
-        }
-
         protected void Setup()
         {
             dto.DeserializeLatestCAD(liveCurrent);
             json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
-        }       
+        }
 
         internal bool AllDataItemsHaveSameNumOfFields(int numOfFields)
         {
-            foreach(List<string> dataItem in dto.LatestCAD.data)
+            foreach (List<string> dataItem in dto.LatestCAD.data)
             {
                 if (dataItem.Count != numOfFields)
                     return false;
             }
             return true;
-        }        
+        }
     }
 }
