@@ -16,30 +16,35 @@ namespace JplApiTesting.Tests.CAD
         }
 
         [Test]
+        [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectCountOfDataItems()
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.LessThanOrEqualTo(_limit));
         }
-        
+
         [Test]
+        [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectNumberOfDataItems()
         {
             Assert.That(_cadService.dto.LatestCAD.data.Count, Is.LessThanOrEqualTo(_limit));
         }
 
         [Test]
+        [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectNumberOfFields()
         {
             Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
         }
 
         [Test]
+        [Author("T Porter")]
         public void FrameworkThrowsException_WithNegativeLimit()
         {
-           Assert.That(() => new CadLimitService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
+            Assert.That(() => new CadLimitService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
         }
 
         [Test]
+        [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectNumberFieldsInEachDataItem()
         {
             int numOfFields = _cadService.dto.LatestCAD.fields.Count;
