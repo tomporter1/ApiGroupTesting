@@ -90,7 +90,7 @@
     <None Include="obj\Debug\JplApiTesting.csproj.CopyComplete" />
     <None Include="obj\Debug\JplApiTesting.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\JplApiTesting.csprojAssemblyReference.cache" />
-    <Compile Include="ApiObjectModels\FireballConfigReader.cs" />
+    <Compile Include="ApiObjectModels\Fireball\FireballConfigReader.cs" />
     <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballDTO.cs" />
     <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballModel.cs" />
     <Compile Include="ApiObjectModels\Fireball\HTTPManager\FireballManager.cs" />
