@@ -15,7 +15,7 @@ namespace JplApiTesting.Tests.Scout
 
 
         [Test]
-        public void CheckCallSignature() 
+        public void CheckReturnsCorrectCallSignature() 
         {
             Assert.That(_scoutService.dto.LatestScout.signature.source.ToString(),Is.EqualTo("NASA/JPL Scout API"));
         }

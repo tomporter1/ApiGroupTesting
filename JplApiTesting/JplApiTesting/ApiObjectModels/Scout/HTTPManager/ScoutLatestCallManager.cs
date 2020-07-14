@@ -15,7 +15,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
 
         public string GetAllScoutData()
         {
-            var request = new RestRequest("/");
+            var request = new RestRequest();
             var response = _client.Execute(request, Method.GET);
             return response.Content;
         }
