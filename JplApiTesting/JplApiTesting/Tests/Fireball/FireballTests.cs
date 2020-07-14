@@ -17,7 +17,7 @@ namespace JplApiTesting
             _fireballService = new FireballService();
         }
         
-        [Test]
+        [Test] // Rename this to fit the conventions
         public void UrlIsCorrect()
         {
             Assert.That(
