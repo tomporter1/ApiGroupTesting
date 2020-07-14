@@ -2,6 +2,7 @@ using JplApiTesting.DataHandling;
 using JplApiTesting.HTTPManager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Services
 {
@@ -13,11 +14,16 @@ namespace JplApiTesting.Services
         public string fireballReport;
         public JObject json_report;
 
-        public FireballService()
+        public FireballService(in int desiredLimit = 0)
         {
-            fireballReport = fireballManager.GetReport();
+            fireballReport = fireballManager.GetReport(desiredLimit);
             fireballDTO.DeserialiseLatest(fireballReport);
             json_report = JsonConvert.DeserializeObject<JObject>(fireballReport);
+        }
+
+        public List<string> GetFields()
+        {
+            return fireballDTO.LatestReport.fields;
         }
 
         public int GetCount()
