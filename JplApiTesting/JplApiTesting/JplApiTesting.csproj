@@ -101,7 +101,7 @@
     <Compile Include="Tests\Fireball\FireballTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests\CAD\CadTests.cs" />
+    <Compile Include="Tests\CAD\CadTestsAllData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace JplApiTesting.Tests.CAD
 {
-    public class CadTests
+    public class CadTestsAllData
     {
         private CADService _cadService;
         private const int _expectedNumOfFields = 12;
@@ -36,6 +36,13 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_ReturnsCorrectNumberOfFields()
         {
             Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
+        }
+
+        [Test]
+        public void CallingTheAPI_ReturnsCorrectNumberFieldsInEachDataItem()
+        {
+            int numOfFields = _cadService.dto.LatestCAD.fields.Count;
+            Assert.That(_cadService.AllDataItemsHaveSameNumOfFields(numOfFields));
         }
     }
 }

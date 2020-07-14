@@ -36,7 +36,7 @@ namespace JplApiTesting.Tests.CAD
         [Test]
         public void FrameworkThrowsException_WithNegativeLimit()
         {
-           Assert.That(() => new CADService(-1), Throws.ArgumentException);
+           Assert.That(() => new CADService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
         }
 
         [Test]

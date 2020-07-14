@@ -20,5 +20,18 @@ namespace JplApiTesting.Tests.CAD
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_expectedNUmOfDataItems).And.EqualTo(_cadService.dto.LatestCAD.data.Count));
         }
+
+        [Test]
+        public void FrameworkThrowsException_WithEmptyStringBody()
+        {
+            Assert.That(() => new CADService(""), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
+        }
+
+        [Test]
+        public void CallingTheAPI_ReturnsCorrectNumberFieldsInEachDataItem()
+        {
+            int numOfFields = _cadService.dto.LatestCAD.fields.Count;
+            Assert.That(_cadService.AllDataItemsHaveSameNumOfFields(numOfFields));
+        }
     }
 }

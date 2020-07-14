@@ -25,7 +25,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
         public CADService(int limit)
         {
             if (limit < 0)
-                throw new ArgumentException();
+                throw new ArgumentException("The limit for the request cannot be negative");
 
             liveCurrent = callManager.GetLimitData(limit);
             dto.DeserializeLatestCAD(liveCurrent);
@@ -35,7 +35,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
         public CADService(string body)
         {
             if (body == string.Empty)
-                throw new ArgumentException();
+                throw new ArgumentException("The body cannot be an empty string");
 
             liveCurrent = callManager.GetSpecificBodyData(body);
             dto.DeserializeLatestCAD(liveCurrent);
