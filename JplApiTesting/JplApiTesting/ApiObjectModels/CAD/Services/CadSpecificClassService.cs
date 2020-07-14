@@ -2,7 +2,7 @@
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
-    public class CadSpecificClassService:CADService
+    public class CadSpecificClassService : CADService
     {
         public CadSpecificClassService(string specificClass)
         {
