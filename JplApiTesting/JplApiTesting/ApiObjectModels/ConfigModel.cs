@@ -5,7 +5,10 @@
         public Info CAD { get; set; }
         public Info Fireball { get; set; }
 
+        public Info Scout { get; set; }
+
         public Info Sentry { get; set; }
+
     }
 
     public class Info
