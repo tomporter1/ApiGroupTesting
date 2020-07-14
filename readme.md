@@ -112,3 +112,4 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 
 ☄️ Underscores for private members ```private int _myInt;```<br/>
 ☄️ Leave Json classes formatted as they come (except from making arrays into List\<T> ```int[] json_objects``` -> ```List<int> json_objects```)
+☄️ All git branches should be all lowercase, with underscores ```KieranFireball``` -> ```kieran_fireball```<br/>
