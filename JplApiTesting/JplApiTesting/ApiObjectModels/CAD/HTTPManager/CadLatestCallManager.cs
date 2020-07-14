@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using System;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {

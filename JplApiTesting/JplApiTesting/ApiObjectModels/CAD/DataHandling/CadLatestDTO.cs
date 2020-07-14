@@ -6,7 +6,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.DataHandling
     {
         public CadLatestRoot LatestCAD { get; private set; }
 
-        public void DeserializeLatestCAD(string LatestCADResponse)
+        public void DeserializeLatestCAD(in string LatestCADResponse)
         {
             LatestCAD = JsonConvert.DeserializeObject<CadLatestRoot>(LatestCADResponse);
         }
