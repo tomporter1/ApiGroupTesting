@@ -16,6 +16,7 @@ namespace JplApiTesting.Tests.CAD
         }
 
         [Test]
+        [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectNumberOfDataItems()
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_expectedNUmOfDataItems).And.EqualTo(_cadService.dto.LatestCAD.data.Count));
