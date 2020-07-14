@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiObjectModels\CAD\CADConfigReader.cs" />
+    <Compile Include="ApiObjectModels\ConfigReader.cs" />
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestModel.cs" />
     <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
