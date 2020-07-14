@@ -4,10 +4,8 @@ using System.IO;
 
 namespace JplApiTesting.ApiObjectModels.CAD
 {
-    public class CADConfigReader
+    public class CADConfigReader : ConfigReader
     {
-        private static ConfigRoot Json => JsonConvert.DeserializeObject<ConfigRoot>(File.ReadAllText(JsonFilePath));
-        public static readonly string BaseUrl = Json.CAD.url;
-        private static readonly string JsonFilePath = AppDomain.CurrentDomain.BaseDirectory + @"..\ApiObjectModels\Config.json";
+          public static readonly string BaseUrl = _configObj.CAD.url;
     }
 }
