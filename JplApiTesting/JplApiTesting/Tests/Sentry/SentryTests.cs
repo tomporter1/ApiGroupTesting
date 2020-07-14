@@ -12,6 +12,7 @@ namespace JplApiTesting.Tests.Sentry
 {
 	public class SentryTests
 	{
+
 		private SentryService sentryService = new SentryService();
 
 		[Test]
