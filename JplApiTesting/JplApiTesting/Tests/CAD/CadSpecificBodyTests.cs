@@ -20,14 +20,7 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_ReturnsCorrectNumberOfDataItems()
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_expectedNUmOfDataItems).And.EqualTo(_cadService.dto.LatestCAD.data.Count));
-        }
-
-        [Test]
-        [Author("T Porter")]
-        public void FrameworkThrowsException_WithEmptyStringBody()
-        {
-            Assert.That(() => new CadSpecificBodyService(""), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
-        }
+        }       
 
         [Test]
         [Author("T Porter")]

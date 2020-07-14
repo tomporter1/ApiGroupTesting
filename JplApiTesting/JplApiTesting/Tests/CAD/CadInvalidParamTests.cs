@@ -25,13 +25,6 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_WithInvalidParameters_ReturnsCorrectMessage()
         {
             Assert.That(_cadService.dto.ErrorCAD.message, Is.EqualTo("one or more query parameter was not recognized"));
-        }         
-
-        [Test]
-        [Author("T Porter")]
-        public void FrameworkThrowsException_WithEmptyRequestString()
-        {
-            Assert.That(() => new CadCustomRequestService(""), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
-        }
+        }             
     }
 }

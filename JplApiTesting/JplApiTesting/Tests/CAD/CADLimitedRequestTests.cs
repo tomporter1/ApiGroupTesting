@@ -34,14 +34,7 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_ReturnsCorrectNumberOfFields()
         {
             Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
-        }
-
-        [Test]
-        [Author("T Porter")]
-        public void FrameworkThrowsException_WithNegativeLimit()
-        {
-            Assert.That(() => new CadLimitService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
-        }
+        }        
 
         [Test]
         [Author("T Porter")]
