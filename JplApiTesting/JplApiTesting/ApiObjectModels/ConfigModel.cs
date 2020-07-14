@@ -8,11 +8,10 @@
         public Info Scout { get; set; }
 
         public Info Sentry { get; set; }
-
     }
 
     public class Info
-    {     
+    {
         public string url { get; set; }
     }
 }

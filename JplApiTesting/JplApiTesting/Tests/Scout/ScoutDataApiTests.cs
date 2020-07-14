@@ -7,7 +7,6 @@ namespace JplApiTesting.Tests.Scout
     public class ScoutDataApiTests
     {
         private ScoutService _scoutService = new ScoutService();
-
         [Test]
         public void CheckReturnsCorrectCallSignature()
         {
@@ -24,6 +23,10 @@ namespace JplApiTesting.Tests.Scout
         public void CheckReturnsCorrectDataCount()
         {
             Assert.That(_scoutService.dto.LatestScout.count, Is.EqualTo(_scoutService.dto.LatestScout.data.Count().ToString()));
+        [Test]
+        public void CheckReturnsCorrectCallSignature()
+        {
+            Assert.That(_scoutService.dto.LatestScout.signature.source.ToString(), Is.EqualTo("NASA/JPL Scout API"));
         }
     }
 }
