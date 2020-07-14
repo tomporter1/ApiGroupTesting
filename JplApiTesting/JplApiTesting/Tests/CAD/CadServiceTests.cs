@@ -30,7 +30,7 @@ namespace JplApiTesting.Tests.CAD
         [Author("T Porter")]
         public void FrameworkThrowsException_WithEmptyRequestString()
         {
-            Assert.That(() => new CadCustomRequestService(""), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
+            Assert.That(() => new CadErrorRespService(""), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
         }
     }
 }

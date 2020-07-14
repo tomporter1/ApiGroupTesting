@@ -4,9 +4,9 @@ using System;
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
-    public class CadCustomRequestService : CadService
+    public class CadErrorRespService : CadService
     {
-        public CadCustomRequestService(string requestStr)
+        public CadErrorRespService(string requestStr)
         {
             if (requestStr == string.Empty)
                 throw new ArgumentException("The request cannot be an empty string");

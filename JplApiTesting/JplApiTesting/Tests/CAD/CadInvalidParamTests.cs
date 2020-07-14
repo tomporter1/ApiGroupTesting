@@ -5,12 +5,12 @@ namespace JplApiTesting.Tests.CAD
 {
     public class CadInvalidParamTests
     {
-        private CadCustomRequestService _cadService;
+        private CadErrorRespService _cadService;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadCustomRequestService("?InvalidParameter");
+            _cadService = new CadErrorRespService("?InvalidParameter");
         }
 
         [Test]

@@ -37,7 +37,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             return true;
         }
 
-        private string MonthNameToNum(string monthName)
+        private static string MonthNameToNum(string monthName)
         {
             switch (monthName)
             {
