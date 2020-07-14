@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
@@ -37,5 +38,6 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
         internal string GetLimitData(int limit) => CreateGetRequest($"?body=All&limit={limit}");
         internal string GetSpecificBodyData(string body) => CreateGetRequest($"?body={body}");
         internal string GetSpecificClassData(string classRequest) => CreateGetRequest($"?body=All&class={classRequest}");
+        internal string GetCustomRequestData(string requestStr) => CreateGetRequest(requestStr);
     }
 }
