@@ -11,9 +11,17 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 	{
 		public SentryRoot LatestSentry { get; private set; }
 
+		public SentrySpecifiedRoot specifiedSentry { get; private set; }
+
 		public void DeserializeLatestSentry(string LatestSentryResponse)
 		{
 			LatestSentry = JsonConvert.DeserializeObject<SentryRoot>(LatestSentryResponse);
 		}
+
+		public void DeserializeSpecifiedSentry(string specifiedSentryResponse)
+		{
+			specifiedSentry = JsonConvert.DeserializeObject<SentrySpecifiedRoot>(specifiedSentryResponse);
+		}
+
 	}
 }

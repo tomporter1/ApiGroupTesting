@@ -17,15 +17,29 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 		public string GetSentryInfo() 
 		{
 			var request = new RestRequest();
-			var response = _client.Execute(request,Method.GET);
-			return response.Content;
+			_response = _client.Execute(request,Method.GET);
+			return _response.Content;
 		}
 
 		public string GetSentryObjectInfo(string sentryObjectName)
 		{			
 			var request = new RestRequest($"?des={sentryObjectName.Replace(' ', '%')}");
-			var response = _client.Execute(request, Method.GET);
-			return response.Content;
+			_response = _client.Execute(request, Method.GET);
+			return _response.Content;
 		}
+
+		internal Dictionary<string, string> GetContentTypeHeader()
+		{
+			Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
+
+			foreach (var item in _response.Headers)
+			{
+				string[] KeyPairs = item.ToString().Split('=');
+				HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
+			}
+			return HeadersDict;
+		}
+
+		
 	}
 }

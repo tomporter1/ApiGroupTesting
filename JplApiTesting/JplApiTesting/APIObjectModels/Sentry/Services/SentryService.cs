@@ -1,4 +1,5 @@
-﻿using JplApiTesting.ApiObjectModels.Sentry.DataHandling;
+﻿using System;
+using JplApiTesting.ApiObjectModels.Sentry.DataHandling;
 using JplApiTesting.ApiObjectModels.Sentry.HTTPManager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -22,8 +23,23 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 		public SentryService(string sentryObjectName)
 		{
 			liveCurrent = sentryCallManager.GetSentryObjectInfo(sentryObjectName);
-			dto.DeserializeLatestSentry(liveCurrent);
+			dto.DeserializeSpecifiedSentry(liveCurrent);
 			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+		}
+
+		public bool CheckMassIsOverZero(string mass)
+		{
+			mass.Replace("e+10", "");
+			double value = Double.Parse(mass);
+			if (value > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
 		}
 	}
 }

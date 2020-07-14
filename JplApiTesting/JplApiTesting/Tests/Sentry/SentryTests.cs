@@ -12,6 +12,7 @@ namespace JplApiTesting.Tests.Sentry
 {
 	public class SentryTests
 	{
+		//obtain summary data for all available Sentry objects
 		private SentryService sentryService = new SentryService();
 
 		[Test]
@@ -44,6 +45,11 @@ namespace JplApiTesting.Tests.Sentry
 			Assert.That(sentryService.dto.LatestSentry.data[0].fullname.ToString(), Is.EqualTo("(1979 XB)"));
 		}
 
+		[Test]
+		public void LatestObservation_ReturnsLatest()
+		{
+			Assert.That(sentryService.dto.LatestSentry.data[1020].last_obs.ToString(), Is.EqualTo("2020-Jun-25.091455"));
+		}
 		
 
 	}
