@@ -1,6 +1,5 @@
-﻿using JplApiTesting.ApiObjectModels;
-using JplApiTesting.Services;
-using Newtonsoft.Json.Linq;
+﻿using JplApiTesting.ApiObjectModels.Fireball;
+using JplApiTesting.ApiObjectModels.Fireball.Services;
 using NUnit.Framework;
 
 namespace JplApiTesting.Tests.Fireball

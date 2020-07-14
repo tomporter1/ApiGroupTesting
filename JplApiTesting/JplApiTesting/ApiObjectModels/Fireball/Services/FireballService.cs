@@ -1,10 +1,12 @@
-using JplApiTesting.DataHandling;
-using JplApiTesting.HTTPManager;
+using JplApiTesting.ApiObjectModels.Fireball.DataHandling;
+using JplApiTesting.ApiObjectModels.Fireball.HTTPManager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using static JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel;
 
-namespace JplApiTesting.Services
+namespace JplApiTesting.ApiObjectModels.Fireball.Services
 {
     public class FireballService
     {
@@ -26,9 +28,37 @@ namespace JplApiTesting.Services
             return fireballDTO.LatestReport.fields;
         }
 
+        public List<List<string>> GetData()
+        {
+            return fireballDTO.LatestReport.data;
+        }
+
+        public List<string> GetDataElementAt(in int index)
+        {
+            if(index > 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            return fireballDTO.LatestReport.data[index];
+        }
+
+        public string GetDataSubElementAt(in int index, in EFields field)
+        {
+            if (index > 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            return GetDataElementAt(index)[(int)field];
+        }
+
         public int GetCount()
         {
             return json_report.Value<int>("count");
+        }
+
+        public Signature GetSignature()
+        {
+            return fireballDTO.LatestReport.signature;
         }
     }
 }

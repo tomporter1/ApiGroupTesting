@@ -1,7 +1,7 @@
 using JplApiTesting.ApiObjectModels;
 using RestSharp;
 
-namespace JplApiTesting.HTTPManager
+namespace JplApiTesting.ApiObjectModels.Fireball.HTTPManager
 {
     public class FireballManager
     {
