@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace JplApiTesting.Tests.Scout
 {
+    //Test object data given object name
     public class ScoutDataApiTestsGivenObject
     {
         private static string objectName = "A10nMaI";
@@ -26,26 +27,26 @@ namespace JplApiTesting.Tests.Scout
             Assert.That(float.Parse(_scoutService.dto.LatestScoutQuery.Vmag), Is.GreaterThanOrEqualTo(0));
         }
 
-        [TestCase("A10o9AK", null)]
-        [TestCase("A10o9AM", null)]
-        [TestCase("P112flU", null)]
-        [TestCase("P212vDj", null)]
-        [TestCase("C2XU6W2", null)]
-        public void CheckIfGivenNameIsValid(string ObjectName, string result)
+        [TestCase("A10o9AK")]
+        [TestCase("A10o9AM")]
+        [TestCase("P112flU")]
+        [TestCase("P212vDj")]
+        [TestCase("C2XU6W2")]
+        public void CheckIfGivenNameIsValid(string ObjectName)
         {
             ScoutService _scoutService = new ScoutService(ObjectName);
-            Assert.That(_scoutService.dto.LatestScoutQuery.error, Is.EqualTo(result));
+            Assert.That(_scoutService.dto.LatestScoutQuery.error, Is.EqualTo(null));
         }
 
-        [TestCase("A", "specified object does not exist")]
-        [TestCase("1", "specified object does not exist")]
-        [TestCase("22", "specified object does not exist")]
-        [TestCase("CC", "specified object does not exist")]
-        [TestCase("1D", "specified object does not exist")]
-        public void CheckIfGivenNameIsInValid(string ObjectName, string result)
+        [TestCase("A")]
+        [TestCase("1")]
+        [TestCase("22")]
+        [TestCase("CC")]
+        [TestCase("1D")]
+        public void CheckIfGivenNameIsInValid(string ObjectName)
         {
             ScoutService _scoutService = new ScoutService(ObjectName);
-            Assert.That(_scoutService.dto.LatestScoutQuery.error, Is.EqualTo(result));
+            Assert.That(_scoutService.dto.LatestScoutQuery.error, Is.EqualTo("specified object does not exist"));
         }
     }
 }

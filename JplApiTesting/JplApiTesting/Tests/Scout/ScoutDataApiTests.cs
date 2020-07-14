@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace JplApiTesting.Tests.Scout
 {
+
+    // Test all available summary data
     public class ScoutDataApiTests
     {
         private ScoutService _scoutService = new ScoutService();
