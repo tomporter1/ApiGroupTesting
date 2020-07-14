@@ -6,12 +6,12 @@ using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
-	public class SentryService
-	{
-		public SentryCallManager sentryCallManager = new SentryCallManager();
-		public SentryDTO dto = new SentryDTO();
-		public string liveCurrent;
-		public JObject json_current;
+    public class SentryService
+    {
+        public SentryCallManager sentryCallManager = new SentryCallManager();
+        public SentryDTO dto = new SentryDTO();
+        public string liveCurrent;
+        public JObject json_current;
 
 		public SentryService()
 		{
@@ -43,3 +43,4 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 		}
 	}
 }
+

@@ -1,13 +1,11 @@
 ﻿using RestSharp;
-using System;
-using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 {
-	public class SentryCallManager
-	{
-		private readonly IRestClient _client;
-		private IRestResponse _response;
+    public class SentryCallManager
+    {
+        private readonly IRestClient _client;
+        private IRestResponse _response;
 
 		public SentryCallManager()	
 		{
