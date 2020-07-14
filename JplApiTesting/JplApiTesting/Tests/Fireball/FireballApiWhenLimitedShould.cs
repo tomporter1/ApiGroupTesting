@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace JplApiTesting.Tests.Fireball
 {
+# warning disinherit from this
     [TestFixture]
     [Author("K McEvaddy")]
     public class FireballApiWhenLimitedShould : FireballApiShould
