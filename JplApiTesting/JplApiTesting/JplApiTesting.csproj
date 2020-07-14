@@ -69,7 +69,8 @@
     <Compile Include="ApiObjectModels\Scout\ScoutConfigReader.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\CAD\CADLimitedRequestTests.cs" />
+    <Compile Include="Tests\CAD\CadSpecificBodyTests.cs" />
+    <Compile Include="Tests\CAD\CadLimitedRequestTests.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTests.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />

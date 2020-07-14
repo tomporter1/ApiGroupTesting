@@ -24,5 +24,11 @@ namespace JplApiTesting.Tests.CAD
         {
             Assert.That(_cadService.dto.LatestCAD.signature.version, Is.EqualTo("1.1"));
         }
+
+        [Test]
+        public void CallingTheAPI_ReturnsSameCountAsDataItems()
+        {
+            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_cadService.dto.LatestCAD.data.Count));
+        }
     }
 }

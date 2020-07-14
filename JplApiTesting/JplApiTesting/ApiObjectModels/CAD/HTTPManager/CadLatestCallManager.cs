@@ -26,5 +26,12 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
+
+        internal string GetSpecificBodyData(string body)
+        {
+            RestRequest request = new RestRequest($"?body={body}");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
     }
 }
