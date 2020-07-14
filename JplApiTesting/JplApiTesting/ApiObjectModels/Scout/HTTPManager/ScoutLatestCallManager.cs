@@ -1,6 +1,4 @@
 ﻿using RestSharp;
-using System;
-using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
 {

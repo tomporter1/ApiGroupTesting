@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
 {
@@ -16,6 +11,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         {
             LatestScout = JsonConvert.DeserializeObject<ScoutLatestRoot>(LatestScoutResponse);
         }
+
         public void DeserializeLatestScoutQuery(string LatestScoutQueryResponse)
         {
             LatestScoutQuery = JsonConvert.DeserializeObject<ScoutLatestQueryRoot>(LatestScoutQueryResponse);

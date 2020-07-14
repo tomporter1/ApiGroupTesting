@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using JplApiTesting.ApiObjectModels.Scout;
-using System.Threading.Tasks;
+﻿using JplApiTesting.ApiObjectModels.Scout.Services;
 using NUnit.Framework;
-using JplApiTesting.ApiObjectModels.Scout.Services;
 
 namespace JplApiTesting.Tests.Scout
 {
     public class ScoutDataApiTestsGivenObject
     {
-        static string objectName = "A10nMaI";
+        private static string objectName = "A10nMaI";
         public ScoutService _scoutService = new ScoutService(objectName);
 
         [Test]
@@ -29,7 +23,7 @@ namespace JplApiTesting.Tests.Scout
         [Test]
         public void CheckReturnsPositiveVmag()
         {
-            Assert.That(float.Parse(_scoutService.dto.LatestScoutQuery.Vmag),Is.GreaterThanOrEqualTo(0));
+            Assert.That(float.Parse(_scoutService.dto.LatestScoutQuery.Vmag), Is.GreaterThanOrEqualTo(0));
         }
 
         [TestCase("A10o9AK", null)]
@@ -53,7 +47,5 @@ namespace JplApiTesting.Tests.Scout
             ScoutService _scoutService = new ScoutService(ObjectName);
             Assert.That(_scoutService.dto.LatestScoutQuery.error, Is.EqualTo(result));
         }
-
-
     }
 }
