@@ -15,14 +15,14 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 
         internal string GetAllCadData()
         {
-            RestRequest request = new RestRequest();
+            RestRequest request = new RestRequest($"?body=All");
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
 
         internal string GetLimitData(int limit)
         {
-            RestRequest request = new RestRequest($"?limit={limit}");
+            RestRequest request = new RestRequest($"?body=All&limit={limit}");
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }

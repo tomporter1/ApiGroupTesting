@@ -6,11 +6,12 @@ namespace JplApiTesting.Tests.CAD
     public class CadTests
     {
         private CADService _cadService;
+        private const int _expectedNumOfFields = 12;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CADService();
+            _cadService = new CADService("All");
         }
 
         [Test]
@@ -29,6 +30,12 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_ReturnsSameCountAsDataItems()
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_cadService.dto.LatestCAD.data.Count));
+        }
+
+        [Test]
+        public void CallingTheAPI_ReturnsCorrectNumberOfFields()
+        {
+            Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
         }
     }
 }

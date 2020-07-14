@@ -7,6 +7,7 @@ namespace JplApiTesting.Tests.CAD
     {
         private CADService _cadService;
         private const int _limit = 10;
+        private const int _expectedNumOfFields = 12;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
@@ -29,7 +30,7 @@ namespace JplApiTesting.Tests.CAD
         [Test]
         public void CallingTheAPI_ReturnsCorrectNumberOfFields()
         {
-            Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(11));
+            Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
         }
 
         [Test]
