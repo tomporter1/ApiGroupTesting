@@ -39,5 +39,6 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
         internal string GetSpecificBodyData(string body) => CreateGetRequest($"?body={body}");
         internal string GetSpecificClassData(string classRequest) => CreateGetRequest($"?body=All&class={classRequest}");
         internal string GetCustomRequestData(string requestStr) => CreateGetRequest(requestStr);
+        internal string GetDateFilteredData(string minDate, string maxDate) => CreateGetRequest($"?body=All&date-min={minDate}&date-max={maxDate}");
     }
 }
