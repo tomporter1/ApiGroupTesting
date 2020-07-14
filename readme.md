@@ -40,6 +40,7 @@
 |Name|Assignment|
 |----|----------|
 |**Kieran**|Head of documentation (markdown files & project board)|
+|**Tom**|Github project admin|
 
 <br/>
 
@@ -91,7 +92,7 @@ Other developers at my company can use the API
 
 ☄️ **Sprint Reviews**
 
-*Sprint 1*:
+🌠*Sprint 1*:
 
 _Product owner said_: "What I'm looking for is starting off with MVP". ""you've gone well beyond [that]".<br/> 
 _Product owner requested testing of_: "Use cases", "What are the limits of testing?".
@@ -110,9 +111,9 @@ _Product owner requested testing of_: "Use cases", "What are the limits of testi
 |[Sprint 1: Api Manager class ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41769217)|[Done](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
 
 _What happened to any cards left incomplete?_ All were complete.<br/>
-*Sprint 2*:<br/>
+🌠*Sprint 2*:<br/>
 
-*Sprint 3*:<br/>
+🌠*Sprint 3*:<br/>
 
 ### 3 - Sprint And Project Retrospectives<br/><br/>
 
@@ -122,6 +123,15 @@ _What happened to any cards left incomplete?_ All were complete.<br/>
 *Information useful to steal for the next project*
 
 ☄️ **Sprint Retrospectives**
+
+🌠*Sprint 1*:
+
+|Name|What Went Well?|Improvements|Action Plan|
+|-|-|-|-|
+|**(CAD) Tom**|Getting the initial frameworks set up so we could start working on our own sections|Have set standards and conventions to minimise conflicts in the future|Have set goals for each sprint that are agreed on as a group and refactor any code that can be shared between the different frameworks|
+|**(Fireball) Kieran**|Setting up the framework quickly and using Github efficiently so the team could quickly get started on their own API test framework. Good use of documentation and project management so we were able to stay focussed|Need to get as much Github practice as possible to stay updated|Need to follow the agreed sprint cards on the project board|
+|**(Scout) Thamish**|Worked well as a team. Achieved sprint goal|Time management|In the next sprint I hope to add more tests to the framework|
+|**(Sentry) Sunny**|Was able to construct the base framework for our test project, minimising future risks by creating separate frameworks for each API. Was then able to run basic Tests against the Sentry API. Utilised branches with each milestone of the project in order to have a well-defined history of progress|Familiarised with how GitHub is integrated within Visual Studio|Continue to work closely with team when merging local branches in order to minimise the risk of errors within the project|
 
 ☄️ **Project Retrospective**
 
@@ -144,7 +154,7 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 
 ### Recommended Visual Studio Extensions
 
-☄️ ***[CodeMaid]()*** ~ Quicker refactoring <br/>
+☄️ ***[CodeMaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)*** ~ Quicker refactoring <br/>
 ☄️ ***[SideScroller](https://marketplace.visualstudio.com/items?itemName=drewnoakes.SideScroller)*** ~ Allows horizontal scrolling with ```SHIFT + MOUSEWHEEL```: saves lots of time <br/>
 ☄️ ***[Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)*** ~ Allows live previewing and syntax highlighting of Github-flavoured markdown (what you're reading right now) <br/>
 
