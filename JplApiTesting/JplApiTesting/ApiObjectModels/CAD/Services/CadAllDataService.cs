@@ -1,6 +1,6 @@
 ﻿namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
-    public class CadAllDataService : CADService
+    public class CadAllDataService : CadService
     {
         public CadAllDataService()
         {

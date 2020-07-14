@@ -2,7 +2,7 @@
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
-    public class CadLimitService : CADService
+    public class CadLimitService : CadService
     {
         public CadLimitService(int limit)
         {

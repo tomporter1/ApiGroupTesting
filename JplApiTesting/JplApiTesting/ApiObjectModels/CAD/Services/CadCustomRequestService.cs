@@ -4,7 +4,7 @@ using System;
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
-    public class CadCustomRequestService : CADService
+    public class CadCustomRequestService : CadService
     {
         public CadCustomRequestService(string requestStr)
         {

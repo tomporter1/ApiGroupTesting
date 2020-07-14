@@ -62,7 +62,7 @@
     <Compile Include="ApiObjectModels\CAD\Services\CadCustomRequestService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadLimitService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadSpecificBodyService.cs" />
-    <Compile Include="ApiObjectModels\CAD\Services\CADService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadSpecificClassService.cs" />
     <Compile Include="ApiObjectModels\ConfigReader.cs" />
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
