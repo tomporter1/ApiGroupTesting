@@ -5,14 +5,14 @@ namespace JplApiTesting.Tests.CAD
 {
     public class CadLimitedRequestTests
     {
-        private CADService _cadService;
+        private CadLimitService _cadService;
         private const int _limit = 10;
         private const int _expectedNumOfFields = 12;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CADService(_limit);
+            _cadService = new CadLimitService(_limit);
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace JplApiTesting.Tests.CAD
         [Test]
         public void FrameworkThrowsException_WithNegativeLimit()
         {
-           Assert.That(() => new CADService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
+           Assert.That(() => new CadLimitService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
         }
 
         [Test]

@@ -5,14 +5,14 @@ namespace JplApiTesting.Tests.CAD
 {
     public class CadSpecificBodyTests
     {
-        private CADService _cadService;
+        private CadSpecificBodyService _cadService;
         private const string _body = "Moon";
         private const int _expectedNUmOfDataItems = 2;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CADService(_body);
+            _cadService = new CadSpecificBodyService(_body);
         }
 
         [Test]
@@ -24,7 +24,7 @@ namespace JplApiTesting.Tests.CAD
         [Test]
         public void FrameworkThrowsException_WithEmptyStringBody()
         {
-            Assert.That(() => new CADService(""), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
+            Assert.That(() => new CadSpecificBodyService(""), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
         }
 
         [Test]

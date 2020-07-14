@@ -5,13 +5,13 @@ namespace JplApiTesting.Tests.CAD
 {
     public class CadTestsAllData
     {
-        private CADService _cadService;
+        private CadAllDataService _cadService;
         private const int _expectedNumOfFields = 12;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CADService("All");
+            _cadService = new CadAllDataService();
         }
 
         [Test]

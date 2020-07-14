@@ -33,5 +33,12 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
+        
+        internal string GetSpecificClassData(string classRequest)
+        {
+            RestRequest request = new RestRequest($"?body=All&class={classRequest}");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
     }
 }

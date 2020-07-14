@@ -2,7 +2,6 @@
 using JplApiTesting.ApiObjectModels.CAD.HTTPManager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
@@ -16,31 +15,14 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
         public JObject json_current;
 
         public CADService()
-        {
-            liveCurrent = callManager.GetAllCadData();
-            dto.DeserializeLatestCAD(liveCurrent);
-            json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+        {            
         }
 
-        public CADService(int limit)
+        protected void Setup()
         {
-            if (limit < 0)
-                throw new ArgumentException("The limit for the request cannot be negative");
-
-            liveCurrent = callManager.GetLimitData(limit);
             dto.DeserializeLatestCAD(liveCurrent);
             json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
-        }
-        
-        public CADService(string body)
-        {
-            if (body == string.Empty)
-                throw new ArgumentException("The body cannot be an empty string");
-
-            liveCurrent = callManager.GetSpecificBodyData(body);
-            dto.DeserializeLatestCAD(liveCurrent);
-            json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
-        }
+        }       
 
         internal bool AllDataItemsHaveSameNumOfFields(int numOfFields)
         {
