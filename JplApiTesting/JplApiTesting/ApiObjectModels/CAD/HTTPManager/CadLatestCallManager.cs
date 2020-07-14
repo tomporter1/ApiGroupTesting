@@ -1,6 +1,5 @@
 ﻿using RestSharp;
 using System;
-using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
@@ -11,12 +10,14 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 
         public CadLatestCallManager()
         {
-           
+            _client = new RestClient(CADConfigReader.BaseUrl);
         }
 
         internal string GetAllCadData()
         {
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest();
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
         }
     }
 }
