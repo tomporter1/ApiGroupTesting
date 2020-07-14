@@ -1,12 +1,25 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 {
-	class SentryCallManager
+	public class SentryCallManager
 	{
+		private readonly IRestClient _client;
+		private IRestResponse _response;
+
+		public SentryCallManager()	
+		{
+			string thing = SentryConfigReader.BaseUrl;
+			_client = new RestClient(thing);
+		}
+
+		public string GetSentryObjectInfo() 
+		{
+			var request = new RestRequest();
+			var response = _client.Execute(request,Method.GET);
+			return response.Content;
+		}
 	}
 }

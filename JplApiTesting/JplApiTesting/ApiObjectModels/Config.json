@@ -4,5 +4,8 @@
   },
   "Fireball": {
     "url": "https://ssd-api.jpl.nasa.gov/fireball.api"
+  },
+  "Sentry": {
+    "url": "https://ssd-api.jpl.nasa.gov/sentry.api"
   }
 }
