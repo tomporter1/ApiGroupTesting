@@ -19,5 +19,12 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
+
+        internal string GetLimitData(int limit)
+        {
+            RestRequest request = new RestRequest($"?limit={limit}");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
     }
 }
