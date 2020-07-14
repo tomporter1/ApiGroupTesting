@@ -69,6 +69,8 @@
     <Compile Include="ApiObjectModels\Scout\ScoutConfigReader.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Fireball\FireballApiGeneralShould.cs" />
+    <Compile Include="Tests\Fireball\FireballApiWhenLimitedShould.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTests.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />
@@ -96,7 +98,7 @@
     <Compile Include="ApiObjectModels\Fireball\HTTPManager\FireballManager.cs" />
     <Compile Include="ApiObjectModels\Fireball\Services\FireballService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Fireball\FireballTests.cs" />
+    <Compile Include="Tests\Fireball\FireballApiShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests\CAD\CadTests.cs" />
