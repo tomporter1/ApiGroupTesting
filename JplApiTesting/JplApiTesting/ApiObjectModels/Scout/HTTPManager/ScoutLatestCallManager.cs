@@ -19,5 +19,12 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
             var response = _client.Execute(request, Method.GET);
             return response.Content;
         }
+
+        public string GetScoutDataForGivenName(string objectName)
+        {
+            var request = new RestRequest($"?tdes={objectName}");
+            var response = _client.Execute(request, Method.GET);
+            return response.Content;
+        }
     }
 }
