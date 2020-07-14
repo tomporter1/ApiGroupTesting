@@ -5,7 +5,7 @@ namespace JplApiTesting.DataHandling
 {
     public class FireballDTO
     {
-        private FireballRoot LatestReport { get; set; }
+        public FireballRoot LatestReport { get; set; }
 
         public void DeserialiseLatest(in string fireballResponse)
         {
