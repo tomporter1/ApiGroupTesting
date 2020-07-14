@@ -5,12 +5,33 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     public class CadDateFilteredService : CadService
     {
-        public CadDateFilteredService(string minDate, string maxDate)
+        public CadDateFilteredService(string minDateStr, string maxDateStr)
         {
-            if (minDate == string.Empty || maxDate == string.Empty)
+            //input dates are in the form YYYY-MM-DD
+            if (minDateStr == string.Empty || maxDateStr == string.Empty)
                 throw new ArgumentException("The date cannot be an empty string");
+            
+            try
+            {
+                string[] minDateParts = minDateStr.Split('-');
+                DateTime minDate = new DateTime(int.Parse(minDateParts[0]), int.Parse(minDateParts[1]), int.Parse(minDateParts[2]));
+            }
+            catch
+            {
+                throw new ArgumentException("The minimum date must be valid and in the form YYYY-MM-DD");
+            }
 
-            liveCurrent = callManager.GetDateFilteredData(minDate, maxDate);
+            try
+            {
+                string[] maxDateParts = maxDateStr.Split('-');
+                DateTime maxDate = new DateTime(int.Parse(maxDateParts[0]), int.Parse(maxDateParts[1]), int.Parse(maxDateParts[2]));
+            }
+            catch
+            {
+                throw new ArgumentException("The maximum date must be valid and in the form YYYY-MM-DD");
+            }
+
+            liveCurrent = callManager.GetDateFilteredData(minDateStr, maxDateStr);
 
             Setup();
         }
