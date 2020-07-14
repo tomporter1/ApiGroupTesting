@@ -12,9 +12,12 @@ namespace JplApiTesting.HTTPManager
             _client = new RestClient(FireballConfigReader.BaseUrl);
         }
 
-        public string GetReport()
+#warning Test this: if numToShow <= 0, there will be no limit
+
+        public string GetReport(in int numToShow = 0)
         {
-            IRestRequest request = new RestRequest();
+            IRestRequest request
+                = (numToShow <= 0) ? new RestRequest() : new RestRequest($"limit={numToShow}");
             IRestResponse response = _client.Execute(request, Method.GET);
             return response.Content;
         }

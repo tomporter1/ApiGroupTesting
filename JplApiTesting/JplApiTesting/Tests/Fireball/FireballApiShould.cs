@@ -1,37 +1,41 @@
 ﻿using JplApiTesting.ApiObjectModels;
 using JplApiTesting.Services;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-namespace JplApiTesting
+namespace JplApiTesting.Tests.Fireball
 {
     [TestFixture]
-    public class FireballApi
+    [Author("K McEvaddy")]
+    public class FireballApiShould
     {
         public const int CurrentApproximateCount = 800;
-
         protected FireballService _fireballService = null;
 
         [SetUp]
-        public void Setup()
+        [Author("K McEvaddy")]
+        public virtual void Setup()
         {
             _fireballService = new FireballService();
         }
-        
+
         [Test]
-        public void UrlIsCorrect()
+        [Author("K McEvaddy")]
+        public void Config_Url_ReturnsApiWebsite()
         {
             Assert.That(
                 FireballConfigReader.BaseUrl,
                 Is.EqualTo("https://ssd-api.jpl.nasa.gov/fireball.api"));
         }
 
-        [Test]
-        public void CountIsValid()
+        [TestCase(CurrentApproximateCount)]
+        [Author("K McEvaddy")]
+        public virtual void ApiCall_Count_ReturnsValidCount(in int expectedCount)
         {
             // Arrange, Act
             int response = _fireballService.GetCount();
             // Assert
-            Assert.That(response, Is.GreaterThan(CurrentApproximateCount));
+            Assert.That(response, Is.GreaterThan(expectedCount));
         }
     }
 }
