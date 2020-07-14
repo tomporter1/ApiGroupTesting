@@ -14,7 +14,14 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 
 		public SentryService()
 		{
-			liveCurrent = sentryCallManager.GetSentryObjectInfo();
+			liveCurrent = sentryCallManager.GetSentryInfo();
+			dto.DeserializeLatestSentry(liveCurrent);
+			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+		}
+
+		public SentryService(string sentryObjectName)
+		{
+			liveCurrent = sentryCallManager.GetSentryObjectInfo(sentryObjectName);
 			dto.DeserializeLatestSentry(liveCurrent);
 			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
 		}

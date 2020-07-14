@@ -11,7 +11,7 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 	{
 		public string count { get; set; } 
 		public Signature signature { get; set; }
-		public Datum[] data { get; set; }
+		public List<Datum> data { get; set; }
 	}
 
 	public class Signature

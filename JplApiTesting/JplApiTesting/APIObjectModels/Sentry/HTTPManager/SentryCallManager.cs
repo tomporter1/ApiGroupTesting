@@ -11,14 +11,20 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 
 		public SentryCallManager()	
 		{
-			string thing = SentryConfigReader.BaseUrl;
-			_client = new RestClient(thing);
+			_client = new RestClient(SentryConfigReader.BaseUrl);
 		}
 
-		public string GetSentryObjectInfo() 
+		public string GetSentryInfo() 
 		{
 			var request = new RestRequest();
 			var response = _client.Execute(request,Method.GET);
+			return response.Content;
+		}
+
+		public string GetSentryObjectInfo(string sentryObjectName)
+		{			
+			var request = new RestRequest($"?des={sentryObjectName.Replace(' ', '%')}");
+			var response = _client.Execute(request, Method.GET);
 			return response.Content;
 		}
 	}
