@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
@@ -17,6 +18,19 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             RestRequest request = new RestRequest(RequestString);
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
+        }
+
+        internal Dictionary<string, string> GetContentTypeHeader()
+        {
+            // Creating a dictionary and adding all headers and their values
+            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
+
+            foreach (var item in _response.Headers)
+            {
+                string[] KeyPairs = item.ToString().Split('=');
+                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
+            }
+            return HeadersDict;
         }
 
         internal string GetAllCadData() => CreateGetRequest($"?body=All");

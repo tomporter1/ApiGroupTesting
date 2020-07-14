@@ -49,5 +49,16 @@ namespace JplApiTesting.Tests.CAD
             int numOfFields = _cadService.dto.LatestCAD.fields.Count;
             Assert.That(_cadService.AllDataItemsHaveSameNumOfFields(numOfFields));
         }
+
+        [TestCase("Transfer-Encoding", "chunked")]
+        [TestCase("Connection", "keep-alive")]
+        [TestCase("Access-Control-Allow-Origin", "*")]
+        [TestCase("Content-Type", "application/json")]
+        [TestCase("Server", "nginx")]
+        [Author("T Porter")]
+        public void CallingTheAPI_ReturnsCorrectHeaderInformation(string headerKey, string expectedValue)
+        {
+            Assert.That(_cadService.callManager.GetContentTypeHeader()[headerKey], Is.EqualTo(expectedValue));
+        }
     }
 }
