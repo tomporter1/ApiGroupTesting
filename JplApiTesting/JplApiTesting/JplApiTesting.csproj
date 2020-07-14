@@ -61,9 +61,19 @@
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestModel.cs" />
     <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
-    <Compile Include="ApiObjectModels\CAD\Services\CADService.cs" />
     <Compile Include="ApiObjectModels\ConfigModel.cs" />
+    <Compile Include="ApiObjectModels\FireballConfigReader.cs" />
+    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballDTO.cs" />
+    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballModel.cs" />
+    <Compile Include="ApiObjectModels\Fireball\HTTPManager\FireballManager.cs" />
+    <Compile Include="ApiObjectModels\Fireball\Services\FireballService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Fireball\FireballTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiObjectModels\Config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Tests\CAD\CadTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,15 +83,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApiObjectModels\Fireball\DataHandling\" />
-    <Folder Include="ApiObjectModels\Fireball\HTTPManager\" />
-    <Folder Include="ApiObjectModels\Fireball\Services\" />
+    <Folder Include="ApiObjectModels\CAD\Services\" />
     <Folder Include="ApiObjectModels\Scout\DataHandling\" />
     <Folder Include="ApiObjectModels\Scout\HTTPManager\" />
     <Folder Include="ApiObjectModels\Scout\Services\" />
     <Folder Include="ApiObjectModels\Sentry\DataHandling\" />
     <Folder Include="ApiObjectModels\Sentry\HTTPManager\" />
     <Folder Include="ApiObjectModels\Sentry\Services\" />
+    <Folder Include="Tests\CAD\" />
     <Folder Include="Tests\Fireball\" />
     <Folder Include="Tests\Scout\" />
     <Folder Include="Tests\Sentry\" />

@@ -1,4 +1,8 @@
-﻿namespace JplApiTesting.ApiObjectModels.CAD
+﻿using Newtonsoft.Json;
+using System;
+using System.IO;
+
+namespace JplApiTesting.ApiObjectModels.CAD
 {
     public class CADConfigReader : ConfigReader
     {
