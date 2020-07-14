@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JplApiTesting.ApiObjectModels.Sentry.Services;
 using NUnit.Framework;
-using JplApiTesting.ApiObjectModels.Sentry.Services;
-using Newtonsoft.Json.Bson;
-using JplApiTesting.ApiObjectModels.Sentry;
 
 namespace JplApiTesting.Tests.Sentry
 {
-	public class SentryTests
-	{
-		private SentryService sentryService = new SentryService();
+    public class SentryTests
+    {
+        private SentryService sentryService = new SentryService();
 
 		[Test]
 		public void CountField_ReturnsCorrectAmount()
@@ -43,8 +36,6 @@ namespace JplApiTesting.Tests.Sentry
 		{
 			Assert.That(sentryService.dto.LatestSentry.data[0].fullname.ToString(), Is.EqualTo("(1979 XB)"));
 		}
-
-		
 
 	}
 }

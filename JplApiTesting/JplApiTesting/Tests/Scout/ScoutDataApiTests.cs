@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using JplApiTesting.ApiObjectModels.Scout;
-using System.Threading.Tasks;
+﻿using JplApiTesting.ApiObjectModels.Scout.Services;
 using NUnit.Framework;
-using JplApiTesting.ApiObjectModels.Scout.Services;
 
 namespace JplApiTesting.Tests.Scout
 {
@@ -13,11 +7,10 @@ namespace JplApiTesting.Tests.Scout
     {
         private ScoutService _scoutService = new ScoutService();
 
-
         [Test]
-        public void CheckReturnsCorrectCallSignature()  
+        public void CheckReturnsCorrectCallSignature()
         {
-            Assert.That(_scoutService.dto.LatestScout.signature.source.ToString(),Is.EqualTo("NASA/JPL Scout API"));
+            Assert.That(_scoutService.dto.LatestScout.signature.source.ToString(), Is.EqualTo("NASA/JPL Scout API"));
         }
     }
 }

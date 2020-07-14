@@ -1,5 +1,4 @@
 ﻿using RestSharp;
-using System;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
@@ -15,7 +14,28 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 
         internal string GetAllCadData()
         {
-            RestRequest request = new RestRequest();
+            RestRequest request = new RestRequest($"?body=All");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
+
+        internal string GetLimitData(int limit)
+        {
+            RestRequest request = new RestRequest($"?body=All&limit={limit}");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
+
+        internal string GetSpecificBodyData(string body)
+        {
+            RestRequest request = new RestRequest($"?body={body}");
+            _response = _client.Execute(request, Method.GET);
+            return _response.Content;
+        }
+        
+        internal string GetSpecificClassData(string classRequest)
+        {
+            RestRequest request = new RestRequest($"?body=All&class={classRequest}");
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
