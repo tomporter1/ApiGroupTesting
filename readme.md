@@ -83,7 +83,7 @@ Other developers at my company can use the API
 
 ### 2 - Sprint Breakdown and Reviews<br/><br/>
 
-|Sprint|Timeframe|Done?⬜️✅|Screenshot Start [Files](https://github.com/BrujoCervino/CreditCardApplications/tree/master/SprintScreenshots)|Screenshot End [Files](https://github.com/BrujoCervino/CreditCardApplications/tree/master/SprintScreenshots)
+|Sprint|Timeframe|Done?⬜️✅|Screenshot Start [Files](https://github.com/tomporter1/ApiGroupTesting/tree/dev/SprintScreenshots)|Screenshot End [Files](https://github.com/tomporter1/ApiGroupTesting/tree/dev/SprintScreenshots)
 |------|-----------------------------|---|--|--|
 |1|***Mon:Jul-13-20, 1:30PM*** - <br/> ***Tue:Jul-14-20, 1:30PM***|✅|[<img src="SprintScreenshots/Sprint1_Board_Start.png" alt="Sprint 1 Start" width="250"/>](SprintScreenshots/Sprint1_Board_Start.png)|[<img src="SprintScreenshots/Sprint1_Board_End.png" alt="Sprint 1 End" width="250"/>](SprintScreenshots/Sprint1_Board_End.png)|
 |2|***Tue:Jul-14-20, 1:30PM*** - <br/> ***Thu:Jul-16-20, 9:30AM***|⬜️|[<img src="SprintScreenshots/Sprint2_Board_Start.png" alt="Sprint 2 Start" width="250"/>](SprintScreenshots/Sprint2_Board_Start.png)|[<img src="SprintScreenshots/Sprint2_Board_End.png" alt="Sprint 2 End" width="250"/>](SprintScreenshots/Sprint2_Board_End.png)|
