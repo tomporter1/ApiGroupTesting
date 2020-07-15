@@ -70,6 +70,7 @@
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestModel.cs" />
     <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
     <Compile Include="ApiObjectModels\ConfigModel.cs" />
+    <Compile Include="ApiObjectModels\DateTools.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestDTO.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestModel.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestQueryModel.cs" />
