@@ -16,14 +16,14 @@ namespace JplApiTesting.Tests.CAD
 
         [Test]
         [Author("T Porter")]
-        public void CallingTheAPI_ReturnsCorrectSignatureSource() 
+        public void CallingTheAPI_ReturnsCorrectSignatureSource()
         {
             Assert.That(_cadService.dto.LatestCAD.signature.source, Is.EqualTo("NASA/JPL SBDB Close Approach Data API"));
         }
-        
+
         [Test]
         [Author("T Porter")]
-        public void CallingTheAPI_ReturnsCorrectSignatureVersion() 
+        public void CallingTheAPI_ReturnsCorrectSignatureVersion()
         {
             Assert.That(_cadService.dto.LatestCAD.signature.version, Is.EqualTo("1.1"));
         }

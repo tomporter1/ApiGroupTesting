@@ -19,12 +19,12 @@ namespace JplApiTesting.Tests.CAD
         {
             Assert.That(_cadService.dto.ErrorCAD.code, Is.EqualTo("400"));
         }
-        
+
         [Test]
         [Author("T Porter")]
         public void CallingTheAPI_WithInvalidParameters_ReturnsCorrectMessage()
         {
             Assert.That(_cadService.dto.ErrorCAD.message, Is.EqualTo("one or more query parameter was not recognized"));
-        }             
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace JplApiTesting.ApiObjectModels.CAD.DataHandling
 {
-    public class CadErrorRoot    
+    public class CadErrorRoot
     {
         public string moreInfo { get; set; }
         public string message { get; set; }

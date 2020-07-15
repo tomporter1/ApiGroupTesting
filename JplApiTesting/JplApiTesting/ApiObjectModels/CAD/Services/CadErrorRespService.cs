@@ -11,10 +11,10 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             if (requestStr == string.Empty)
                 throw new ArgumentException("The request cannot be an empty string");
 
-            liveCurrent = callManager.GetCustomRequestData(requestStr);
+            ResponceData = callManager.GetCustomRequestData(requestStr);
 
-            dto.DeserializeCADError(liveCurrent);
-            json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+            dto.DeserializeCADError(ResponceData);
+            JObjectResponce = JsonConvert.DeserializeObject<JObject>(ResponceData);
         }
     }
 }

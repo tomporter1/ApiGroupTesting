@@ -9,7 +9,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             if (limit < 0)
                 throw new ArgumentException("The limit for the request cannot be negative");
 
-            liveCurrent = callManager.GetLimitData(limit);
+            ResponceData = callManager.GetLimitData(limit);
 
             Setup();
         }
