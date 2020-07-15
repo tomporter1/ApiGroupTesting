@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
-
 	public class SentrySpecifiedRoot
 	{
 		public Summary summary { get; set; }
 		public Signature signature { get; set; }
-		public List<Datum> data { get; set; }
+		public List<SpecifiedSentryDatum> data { get; set; }
 	}
 
 	public class Summary
@@ -39,5 +34,19 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 		public string ts_max { get; set; }
 		public string nsat { get; set; }
 		public string des { get; set; }
+	}
+
+	public class SpecifiedSentryDatum
+	{
+		public string energy { get; set; }
+		public string width { get; set; }
+		public string ip { get; set; }
+		public string ts { get; set; }
+		public string stretch { get; set; }
+		public string date { get; set; }
+		public string dist { get; set; }
+		public string sigma_lov { get; set; }
+		public string sigma_imp { get; set; }
+		public string ps { get; set; }
 	}
 }

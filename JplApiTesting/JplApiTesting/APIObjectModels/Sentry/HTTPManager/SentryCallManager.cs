@@ -1,27 +1,36 @@
-﻿using RestSharp;
+﻿using System.Collections.Generic;
+using RestSharp;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 {
-    public class SentryCallManager
-    {
-        private readonly IRestClient _client;
-        private IRestResponse _response;
+	public class SentryCallManager
+	{
+		private readonly IRestClient _client;
+		private IRestResponse _response;
 
-		public SentryCallManager()	
+		public SentryCallManager()
 		{
 			_client = new RestClient(SentryConfigReader.BaseUrl);
 		}
 
-		public string GetSentryInfo() 
+		public string GetSentryInfo()
 		{
 			var request = new RestRequest();
-			_response = _client.Execute(request,Method.GET);
+			_response = _client.Execute(request, Method.GET);
 			return _response.Content;
 		}
 
 		public string GetSentryObjectInfo(string sentryObjectName)
-		{			
+		{
 			var request = new RestRequest($"?des={sentryObjectName.Replace(' ', '%')}");
+			_response = _client.Execute(request, Method.GET);
+			return _response.Content;
+		}
+
+		public string GetSentryIPInfo(int sentryIPValue, int exponent)
+		{
+			//"?all=1" refers to if the impact occurs, true or false (1 ,0)
+			var request = new RestRequest($"?all=1&ip-min={sentryIPValue}e-{exponent}");
 			_response = _client.Execute(request, Method.GET);
 			return _response.Content;
 		}
@@ -37,7 +46,5 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 			}
 			return HeadersDict;
 		}
-
-		
 	}
 }

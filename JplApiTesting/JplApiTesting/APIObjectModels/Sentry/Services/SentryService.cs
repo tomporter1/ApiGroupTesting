@@ -6,12 +6,12 @@ using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
-    public class SentryService
-    {
-        public SentryCallManager sentryCallManager = new SentryCallManager();
-        public SentryDTO dto = new SentryDTO();
-        public string liveCurrent;
-        public JObject json_current;
+	public class SentryService
+	{
+		public SentryCallManager sentryCallManager = new SentryCallManager();
+		public SentryDTO dto = new SentryDTO();
+		public string liveCurrent;
+		public JObject json_current;
 
 		public SentryService()
 		{
@@ -27,7 +27,14 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
 		}
 
-		public bool CheckMassIsOverZero(string mass)
+		public SentryService(int sentryIPValue, int exponent)
+		{
+			liveCurrent = sentryCallManager.GetSentryIPInfo(sentryIPValue, exponent);
+			dto.DeserializeSentryIP(liveCurrent);
+			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+		}
+
+		public bool CheckMassIsOverZeroSpecifiedObject(string mass)
 		{
 			mass.Replace("e+10", "");
 			double value = Double.Parse(mass);
@@ -39,8 +46,18 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 			{
 				return false;
 			}
+		}
 
+		public bool CompareDatesSpecifiedObject(string firstDate, string secondDate)
+		{
+			if (string.Equals(firstDate, secondDate) == false)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			};
 		}
 	}
 }
-
