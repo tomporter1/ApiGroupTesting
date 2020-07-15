@@ -34,8 +34,8 @@ namespace JplApiTesting.Tests.Scout
         [Test]
         public void CheckHeaderReturnsCorrectDate()
         {
-            string date = DateTime.Now.AddHours(-1).ToString("r");
-            Assert.That(_scoutService.callManager.GetContentTypeHeader()["Date"], Is.EqualTo(date));
+            string date = DateTime.Now.AddHours(-1).ToString("r").Remove(22, 7);
+            Assert.That(_scoutService.callManager.GetContentTypeHeader()["Date"], Does.Contain(date));
         }
 
         [TestCase("A10o9AK")]
