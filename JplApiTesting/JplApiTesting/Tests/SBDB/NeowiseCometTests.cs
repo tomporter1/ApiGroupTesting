@@ -60,14 +60,14 @@ namespace JplApiTesting.Tests.SBDB
         [TestCase("Connection", "keep-alive")]
         [TestCase("Server", "nginx")]
         [Author("T Perera")]
-        public void CheckReturnsCorrectHeader(string key, string expected)
+        public void CallingTheAPI_ReturnsCorrectHeader(string key, string expected)
         {
             Assert.That(_sbdbService.callManager.GetContentTypeHeader()[key], Is.EqualTo(expected));
         }
 
         [Test]
         [Author("T Perera")]
-        public void CheckHeaderReturnsCorrectDate()
+        public void CallingTheAPI_HeaderReturnsCorrectDate() 
         {
             string date = DateTime.Now.AddHours(-1).ToString("r").Remove(22, 7);
             Assert.That(_sbdbService.callManager.GetContentTypeHeader()["Date"], Does.Contain(date));
