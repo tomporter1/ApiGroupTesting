@@ -163,7 +163,6 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 <img src="GIFs/Meteor_SouthPark.gif" alt="meteor image" width="250"/> 
 <br/><br/>
 
-☄️ Underscores for private members ```private int _myInt;```<br/>
 ☄️ Leave Json classes formatted as they come (except from making arrays into List\<T> ```int[] json_objects``` -> ```List<int> json_objects```) <br/>
 ☄️ All git branches should be all lowercase, with underscores ```KieranFireball``` -> ```kieran_fireball```<br/>
 ☄️ All tests and test classes should be marked with their author:
