@@ -167,7 +167,7 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 ☄️ Leave Json classes formatted as they come (except from making arrays into List\<T> ```int[] json_objects``` -> ```List<int> json_objects```) <br/>
 ☄️ All git branches should be all lowercase, with underscores ```KieranFireball``` -> ```kieran_fireball```<br/>
 ☄️ All tests and test classes should be marked with their author:
-<br/>**~ Before ~**
+<br/>~ **Before** ~
 ``` C Sharp
 public class FireballShould 
 {
@@ -175,7 +175,7 @@ public class FireballShould
     public void Contains_ValidString() { ... }
 }
 ``` 
-**~ After ~**
+~ **After** ~
 ```C Sharp
 [Author("K McEvaddy")]
 public class FireballShould 
