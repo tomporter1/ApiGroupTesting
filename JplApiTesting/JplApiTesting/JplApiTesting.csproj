@@ -84,6 +84,7 @@
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs" />
+    <Compile Include="ApiObjectModels\TestTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\CAD\CadDateFilterTests.cs" />
     <Compile Include="Tests\CAD\CadInvalidBodyTypeTests.cs" />
@@ -106,8 +107,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenNameAndDate.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
-	  <Compile Include="Tests\Sentry\SentryIPTests.cs" />
-	  <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
+    <Compile Include="Tests\Sentry\SentryIPTests.cs" />
+    <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>

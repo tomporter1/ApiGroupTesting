@@ -1,6 +1,13 @@
 {
     "CAD": {
-        "url": "https://ssd-api.jpl.nasa.gov/cad.api"
+      "url": "https://ssd-api.jpl.nasa.gov/cad.api",
+      "parameters": {
+        "body": "body=",
+        "limit": "limit=",
+        "minDate": "date-min=",
+        "maxDate": "date-max=",
+        "class": "class="
+      }
     },
     "Fireball": {
         "url": "https://ssd-api.jpl.nasa.gov/fireball.api"
