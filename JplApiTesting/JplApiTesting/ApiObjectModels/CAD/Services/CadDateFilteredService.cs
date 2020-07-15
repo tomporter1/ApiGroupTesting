@@ -29,7 +29,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
                 throw new ArgumentException("The maximum date must be valid and in the form YYYY-MM-DD");
             }
 
-            liveCurrent = callManager.GetDateFilteredData(minDateStr, maxDateStr);
+            ResponceData = callManager.GetDateFilteredData(minDateStr, maxDateStr);
 
             Setup();
         }
