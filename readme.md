@@ -185,6 +185,4 @@ public class FireballShould
     public void Contains_ValidString() { ... }
 }
 ``` 
-<br/>
-
 ☄️ Test methods should be named using the [following format (see MethodName_StateUnderTest_ExpectedBehavior)](https://dzone.com/articles/7-popular-unit-test-naming): ```void IsAdult_AgeLessThan18_False()``` <br/>
