@@ -15,7 +15,7 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
 
         public string fireballReport;
         public JObject json_report;
- 
+
         public FireballService(in int desiredLimit = 0)
         {
             fireballReport = fireballManager.GetReport(desiredLimit);
@@ -50,7 +50,7 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
         public int GetYearAt(in int index)
         {
             return int.Parse(GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DateIndex] 
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DateIndex]
                 .Split(DateTimeConstants.DateTools.DateTimeConstants.DateSeparator)[DateTimeConstants.DateTools.DateTimeConstants.YearIndex]);
         }
 

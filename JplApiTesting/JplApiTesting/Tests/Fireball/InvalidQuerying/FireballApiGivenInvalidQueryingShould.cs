@@ -23,7 +23,7 @@ namespace JplApiTesting.Tests.Fireball.InvalidQuerying
         [TestCase("?eightynine=89")]
         [TestCase("?happy=birthday")]
         [Author("K McEvaddy")]
-        public void ContainParameter_MoreInfo_Containing_LinkToDocumentation(in string parameters)
+        public void ContainKey_MoreInfo_Containing_LinkToDocumentation(in string parameters)
         {
             // Arrange, Act
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
@@ -39,8 +39,8 @@ namespace JplApiTesting.Tests.Fireball.InvalidQuerying
         [TestCase("?slime-cube=3")]
         [TestCase("?eightynine=89")]
         [TestCase("?happy=birthday")]
-        [Author("K McEvaddy")] 
-        public void ContainParameter_Message_Containing_UnrecognisedParamError(in string parameters) 
+        [Author("K McEvaddy")]
+        public void ContainKey_Message_Containing_UnrecognisedParamError(in string parameters)
         {
             // Arrange, Act
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
@@ -50,14 +50,14 @@ namespace JplApiTesting.Tests.Fireball.InvalidQuerying
             string[] contentSplitByColons = content.Split(':');
             string message = contentSplitByColons[contentSplitByColons.Length - 2];
             // Assert
-            Assert.That(message,Does.Contain("one or more query parameter was not recognized"));
+            Assert.That(message, Does.Contain("one or more query parameter was not recognized"));
         }
 
         [TestCase("?slime-cube=3")]
         [TestCase("?eightynine=89")]
         [TestCase("?happy=birthday")]
-        [Author("K McEvaddy")] 
-        public void ContainParameter_Code_Containing_InvalidRequestCode(in string parameters) 
+        [Author("K McEvaddy")]
+        public void ContainKey_Code_Containing_InvalidRequestCode(in string parameters)
         {
             // Arrange, Act
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
@@ -67,7 +67,7 @@ namespace JplApiTesting.Tests.Fireball.InvalidQuerying
             string[] contentSplitByColons = content.Split(':');
             string code = contentSplitByColons[contentSplitByColons.Length - 1];
             // Assert
-            Assert.That(code,Does.Contain("400"));
+            Assert.That(code, Does.Contain("400"));
         }
     }
 }
