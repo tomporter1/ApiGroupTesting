@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
 {
     
-    public class EphemerisModelRoot
+    public class EphemerisModelRoot 
     {
         public string count { get; set; }
         [JsonProperty("object")]
         public Object _object { get; set; }
-        public Signature signature { get; set; }
+        public EphemerisSignature signature { get; set; }
         public List<Eph> eph { get; set; }
         public List<string> datafields { get; set; }
         [JsonProperty("orbit-count")]
@@ -44,7 +44,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         public string Vmag { get; set; }
     }
 
-    public class Signature
+    public class EphemerisSignature 
     {
         public string source { get; set; }
         public string version { get; set; }
