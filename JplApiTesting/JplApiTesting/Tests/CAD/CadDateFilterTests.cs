@@ -6,7 +6,8 @@ namespace JplApiTesting.Tests.CAD
     public class CadDateFilterTests
     {
         private CadDateFilteredService _cadService;
-        private readonly string _minDate = "2020-07-01", _maxDate = "2020-07-30";
+        private readonly string _minDate = "2020-06-01", _maxDate = "2020-06-30";
+        private const int _numberOfCloseApproachItemsInJune2020 = 82;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
@@ -18,14 +19,14 @@ namespace JplApiTesting.Tests.CAD
         [Author("T Porter")]
         public void CallingTheAPI_WithFilteredDates_ReturnsCorrectCount()
         {
-            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(38));
+            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_numberOfCloseApproachItemsInJune2020));
         }
         
         [Test]
         [Author("T Porter")]
         public void CallingTheAPI_WithFilteredDates_ReturnsCorrectNUmOfDataItems()
         {
-            Assert.That(_cadService.dto.LatestCAD.data.Count, Is.EqualTo(38));
+            Assert.That(_cadService.dto.LatestCAD.data.Count, Is.EqualTo(_numberOfCloseApproachItemsInJune2020));
         }
         
         [Test]
