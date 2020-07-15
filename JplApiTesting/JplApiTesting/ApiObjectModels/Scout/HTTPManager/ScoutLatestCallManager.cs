@@ -1,6 +1,4 @@
 ﻿using RestSharp;
-using System;
-using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
 {
@@ -16,6 +14,13 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
         public string GetAllScoutData()
         {
             var request = new RestRequest();
+            var response = _client.Execute(request, Method.GET);
+            return response.Content;
+        }
+
+        public string GetScoutDataForGivenName(string objectName)
+        {
+            var request = new RestRequest($"?tdes={objectName}");
             var response = _client.Execute(request, Method.GET);
             return response.Content;
         }

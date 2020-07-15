@@ -1,19 +1,6 @@
 ﻿namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
 {
-    public class ScoutLatestRoot
-    {
-        public string count { get; set; }
-        public Signature signature { get; set; }
-        public Datum[] data { get; set; }
-    }
-
-    public class Signature
-    {
-        public string source { get; set; }
-        public string version { get; set; }
-    }
-
-    public class Datum
+    public class ScoutLatestQueryRoot
     {
         public string neo1kmScore { get; set; }
         public string lastRun { get; set; }
@@ -36,8 +23,16 @@
         public string H { get; set; }
         public string rmsN { get; set; }
         public string ieoScore { get; set; }
+        public QuerySignature signature { get; set; }
         public string geocentricScore { get; set; }
         public string moid { get; set; }
         public string Vmag { get; set; }
+        public string error { get; set; }
+    }
+
+    public class QuerySignature
+    {
+        public string source { get; set; }
+        public string version { get; set; }
     }
 }

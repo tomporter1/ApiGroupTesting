@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
-
 	public class SentryRoot
 	{
 		public string count { get; set; } 
 		public Signature signature { get; set; }
-		public Datum[] data { get; set; }
+		public List<Datum> data { get; set; }
 	}
 
 	public class Signature
@@ -37,5 +32,4 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 		public string id { get; set; }
 		public string des { get; set; }
 	}
-
-}
+ }
