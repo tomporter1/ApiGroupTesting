@@ -6,7 +6,7 @@ namespace JplApiTesting.ApiObjectModels.Fireball.HTTPManager
     {
         public FireballManager()
         {
-            _client = new RestClient(FireballConfigReader.BaseUrl);
+            client = new RestClient(FireballConfigReader.BaseUrl);
         }
 
         // Would be good to test this
@@ -14,14 +14,14 @@ namespace JplApiTesting.ApiObjectModels.Fireball.HTTPManager
         {
             IRestRequest request
                 = (numToShow <= 0) ? new RestRequest() : new RestRequest($"limit={numToShow}");
-            IRestResponse response = _client.Execute(request, Method.GET);
+            response = client.Execute(request, Method.GET);
             return response.Content;
         }
 
         public string GetInvalidReport()
         {
             IRestRequest request = new RestRequest($"slime-cube=3");
-            response = _client.Execute(request, Method.GET);
+            response = client.Execute(request, Method.GET);
             return response.Content;
         }
     }

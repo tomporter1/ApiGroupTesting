@@ -2,6 +2,6 @@
 {
     public class FireballConfigReader : ConfigReader
     {
-        public static readonly string BaseUrl = _configObj.Fireball.url;
+        public static readonly string BaseUrl = configObj.Fireball.url;
     }
 }

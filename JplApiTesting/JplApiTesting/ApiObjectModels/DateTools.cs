@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JplApiTesting.ApiObjectModels
+namespace JplApiTesting.ApiObjectModels.DateTimeConstants
 {
     public static class DateTools
     {
@@ -48,6 +48,24 @@ namespace JplApiTesting.ApiObjectModels
                 default:
                     return "";
             }
+        }
+
+        internal static class DateTimeConstants
+        {
+            public const char DateTimeSeparator = ' ';
+            public const char DateSeparator = '-';
+            public const char TimeSeparator = ':';
+
+            public const int DateIndex = 0;
+            public const int TimeIndex = 1;
+
+            public const int YearIndex = 0;
+            public const int MonthIndex = 1;
+            public const int DayIndex = 2;
+
+            public const int HourIndex = 0;
+            public const int MinuteIndex = 1;
+            public const int SecondIndex = 2;
         }
     }
 }

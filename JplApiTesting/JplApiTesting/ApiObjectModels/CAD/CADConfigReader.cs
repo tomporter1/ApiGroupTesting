@@ -2,6 +2,6 @@
 {
 	public class CADConfigReader : ConfigReader
 	{
-		public static readonly string BaseUrl = _configObj.CAD.url;
+		public static readonly string BaseUrl = configObj.CAD.url;
 	}
 }
