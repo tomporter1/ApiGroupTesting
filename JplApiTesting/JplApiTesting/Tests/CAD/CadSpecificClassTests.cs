@@ -7,7 +7,7 @@ namespace JplApiTesting.Tests.CAD
     {
         private CadSpecificClassService _cadService;
         private const string _class = "ATE";
-        private const int _expectedNUmOfDataItems = 15;
+        private const int _expectedNUmOfDataItems = 14;
 
         [OneTimeSetUp]
         public void OneTimeSetup()

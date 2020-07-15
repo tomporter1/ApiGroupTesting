@@ -1,12 +1,15 @@
 ﻿using JplApiTesting.ApiObjectModels.Scout.Services;
 using NUnit.Framework;
+using System;
 using System.Linq;
 
 namespace JplApiTesting.Tests.Scout
 {
+
+    // Test all available summary data
     public class ScoutDataApiTests
     {
-        private ScoutService _scoutService = new ScoutService();
+        private ScoutAllDataService _scoutService = new ScoutAllDataService();
         [Test]
         public void CheckReturnsCorrectCallSignature()
         {
@@ -23,6 +26,22 @@ namespace JplApiTesting.Tests.Scout
         public void CheckReturnsCorrectDataCount()
         {
             Assert.That(_scoutService.dto.LatestScout.count, Is.EqualTo(_scoutService.dto.LatestScout.data.Count().ToString()));
+        }
+
+        [TestCase("Content-Type", "application/json")]
+        [TestCase("Transfer-Encoding", "chunked")]
+        [TestCase("Connection", "keep-alive")]
+        [TestCase("Server", "nginx")]
+        public void CheckReturnsCorrectHeader(string key, string expected)
+        {
+            Assert.That(_scoutService.callManager.GetContentTypeHeader()[key], Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void CheckHeaderReturnsCorrectDate()
+        {
+            string date = DateTime.Now.AddHours(-1).ToString("r");
+            Assert.That(_scoutService.callManager.GetContentTypeHeader()["Date"], Is.EqualTo(date));
         }
     }
 }
