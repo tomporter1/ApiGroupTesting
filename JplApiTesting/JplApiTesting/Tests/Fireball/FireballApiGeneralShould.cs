@@ -1,5 +1,9 @@
-﻿using JplApiTesting.Services;
+﻿using JplApiTesting.ApiObjectModels.Fireball.DataHandling;
+using JplApiTesting.ApiObjectModels.Fireball.Services;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace JplApiTesting.Tests.Fireball
 {
@@ -7,14 +11,15 @@ namespace JplApiTesting.Tests.Fireball
     [Author("K McEvaddy")]
     public class FireballApiGeneralShould
     {
-        const int ExpectedNumFields = 9;
+        protected readonly int ExpectedNumFields = Enum.GetNames(typeof(EFields)).Length;
+        protected const int NumToQuery = 20;
         protected FireballService _fireballService = null;
 
         [SetUp]
         [Author("K McEvaddy")]
         public virtual void Setup()
         {
-            _fireballService = new FireballService();
+            _fireballService = new FireballService(NumToQuery);
         }
 
         [Test]
@@ -30,23 +35,46 @@ namespace JplApiTesting.Tests.Fireball
         {
             Assert.That(_fireballService.GetFields(), Is.Not.Empty);
         }
-        // Assert that "data" contains "count" number of elements
-        [Test]
+
+        [TestCase(7)]
+        [TestCase(19)]
+        [TestCase(0)]
+        [TestCase(13)]
         [Author("K McEvaddy")]
-        public void EachDatumContains_CountElements()
+        public void EachDatum_Contains_CountElements(in int index)
         {
-            Assert.Fail();
+            Assert.That(_fireballService.GetDataElementAt(index).Count, Is.EqualTo(ExpectedNumFields));
         }
 
+        [Test]
+        [Author("K McEvaddy")]
+        public void Signature_Contains_ProperApiName()
+        {
+            Assert.That(_fireballService.GetSignature().source, Is.EqualTo("NASA/JPL Fireball Data API"));
+        }
 
-        // Assert that "signature".source == "NASA/JPL Fireball Data API"
+        [TestCase(3)]
+        [TestCase(9)]
+        [TestCase(16)]
+        [TestCase(14)]
+        [Author("K McEvaddy")]
+        public void EachDatum_Contains_ValidLatitudeDirection(in int index)
+        {
+            List<string> latitudeDirections = Enum.GetNames(typeof(ELatitudeDirectionNames)).ToList();
+            string latitudeDirection = _fireballService.GetDataSubElementAt(index, EFields.lat_dir);
+            Assert.That(latitudeDirections, Does.Contain(latitudeDirection));
+        }
 
-        // Assert that "data"[TEST_CASE_INT]."date" is a valid date
-
-        // Assert that "data"[TEST_CASE_INT]."date" is a valid time
-
-        // Assert that "data"[TEST_CASE_INT]."lat-dir" is "N" or "S"
-
-        // Assert that "data"[TEST_CASE_INT]."lon-dir" is "E" or "W"
+        [TestCase(18)]
+        [TestCase(11)]
+        [TestCase(1)]
+        [TestCase(5)]
+        [Author("K McEvaddy")]
+        public void EachDatum_Contains_ValidLongitudeDirection(in int index)
+        {
+            List<string> longitudeDirections = Enum.GetNames(typeof(ELongitudeDirectionNames)).ToList();
+            string longitudeDirection = _fireballService.GetDataSubElementAt(index, EFields.lon_dir);
+            Assert.That(longitudeDirections, Does.Contain(longitudeDirection));
+        }
     }
 }

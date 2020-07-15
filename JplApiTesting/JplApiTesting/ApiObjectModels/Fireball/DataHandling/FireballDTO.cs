@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
-using static JplApiTesting.DataHandling.FireballModel;
+using static JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel;
 
-namespace JplApiTesting.DataHandling
+namespace JplApiTesting.ApiObjectModels.Fireball.DataHandling
 {
     public class FireballDTO
     {

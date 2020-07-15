@@ -1,4 +1,4 @@
-﻿namespace JplApiTesting.ApiObjectModels
+﻿namespace JplApiTesting.ApiObjectModels.Fireball
 {
     public class FireballConfigReader : ConfigReader
     {
