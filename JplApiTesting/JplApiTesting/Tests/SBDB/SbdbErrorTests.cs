@@ -1,10 +1,5 @@
 ﻿using JplApiTesting.ApiObjectModels.SBDB.Services;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.Tests.SBDB
 {
@@ -25,7 +20,7 @@ namespace JplApiTesting.Tests.SBDB
         {
             Assert.That(_sbdbErrorService.DTO.SbdbError.code, Is.EqualTo("200"));
         }
-        
+
         [Test]
         [Author("T Porter")]
         public void CallingTheAPI_WithInvalidBodyName_ReturnsCorrectMessage()

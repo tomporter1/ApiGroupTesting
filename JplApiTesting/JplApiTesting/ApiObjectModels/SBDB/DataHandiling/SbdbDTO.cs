@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 
 namespace JplApiTesting.ApiObjectModels.SBDB.DataHandiling
 {
