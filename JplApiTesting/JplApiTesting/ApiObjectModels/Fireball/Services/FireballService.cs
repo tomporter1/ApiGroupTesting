@@ -35,7 +35,7 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
 
         public List<string> GetDataElementAt(in int index)
         {
-            if(index > 0)
+            if (index < 0)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -44,11 +44,28 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
 
         public string GetDataSubElementAt(in int index, in EFields field)
         {
-            if (index > 0)
-            {
-                throw new IndexOutOfRangeException();
-            }
             return GetDataElementAt(index)[(int)field];
+        }
+
+        public int GetYearAt(in int index)
+        {
+            const int dateIndex = 0;
+            const int yearIndex = 0;
+            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[yearIndex]);
+        }
+
+        public int GetMonthAt(in int index)
+        {
+            const int dateIndex = 0;
+            const int monthIndex = 1;
+            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[monthIndex]);
+        }
+
+        public int GetDayAt(in int index)
+        {
+            const int dateIndex = 0;
+            const int dayIndex = 2;
+            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[dayIndex]);
         }
 
         public int GetCount()

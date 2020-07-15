@@ -1,4 +1,3 @@
-using JplApiTesting.ApiObjectModels;
 using RestSharp;
 
 namespace JplApiTesting.ApiObjectModels.Fireball.HTTPManager
