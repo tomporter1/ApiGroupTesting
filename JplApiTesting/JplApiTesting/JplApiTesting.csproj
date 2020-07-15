@@ -72,6 +72,12 @@
     <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
     <Compile Include="ApiObjectModels\ConfigModel.cs" />
     <Compile Include="ApiObjectModels\DateTools.cs" />
+    <Compile Include="ApiObjectModels\SBDB\DataHandiling\CometInfoModel.cs" />
+    <Compile Include="ApiObjectModels\SBDB\DataHandiling\SbdbDTO.cs" />
+    <Compile Include="ApiObjectModels\SBDB\HTTPManager\SbdbCallManager.cs" />
+    <Compile Include="ApiObjectModels\SBDB\SbdbConfigReader.cs" />
+    <Compile Include="ApiObjectModels\SBDB\Services\SbdbService.cs" />
+    <Compile Include="ApiObjectModels\SBDB\Services\SbdbSpecificSmallBodyService.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestDTO.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestEphemerisModel.cs" />
     <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestModel.cs" />
@@ -98,6 +104,7 @@
     <Compile Include="Tests\CAD\CadSpecificClassTests.cs" />
     <Compile Include="Tests\Fireball\Data\FireballApi_EachDatum_Date_Should.cs" />
     <Compile Include="Tests\Fireball\InvalidQuerying\FireballApiGivenInvalidQueryingShould.cs" />
+    <Compile Include="Tests\SBDB\NeowiseCometTests.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTests.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />
