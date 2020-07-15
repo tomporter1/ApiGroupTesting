@@ -1,4 +1,6 @@
 ﻿using RestSharp;
+using System;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
@@ -12,32 +14,31 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             _client = new RestClient(CADConfigReader.BaseUrl);
         }
 
-        internal string GetAllCadData()
+        private string CreateGetRequest(string RequestString)
         {
-            RestRequest request = new RestRequest($"?body=All");
+            RestRequest request = new RestRequest(RequestString);
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }
 
-        internal string GetLimitData(int limit)
+        internal Dictionary<string, string> GetContentTypeHeader()
         {
-            RestRequest request = new RestRequest($"?body=All&limit={limit}");
-            _response = _client.Execute(request, Method.GET);
-            return _response.Content;
+            // Creating a dictionary and adding all headers and their values
+            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
+
+            foreach (var item in _response.Headers)
+            {
+                string[] KeyPairs = item.ToString().Split('=');
+                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
+            }
+            return HeadersDict;
         }
 
-        internal string GetSpecificBodyData(string body)
-        {
-            RestRequest request = new RestRequest($"?body={body}");
-            _response = _client.Execute(request, Method.GET);
-            return _response.Content;
-        }
-        
-        internal string GetSpecificClassData(string classRequest)
-        {
-            RestRequest request = new RestRequest($"?body=All&class={classRequest}");
-            _response = _client.Execute(request, Method.GET);
-            return _response.Content;
-        }
+        internal string GetAllCadData() => CreateGetRequest($"?body=All");
+        internal string GetLimitData(int limit) => CreateGetRequest($"?body=All&limit={limit}");
+        internal string GetSpecificBodyData(string body) => CreateGetRequest($"?body={body}");
+        internal string GetSpecificClassData(string classRequest) => CreateGetRequest($"?body=All&class={classRequest}");
+        internal string GetCustomRequestData(string requestStr) => CreateGetRequest(requestStr);
+        internal string GetDateFilteredData(string minDate, string maxDate) => CreateGetRequest($"?body=All&date-min={minDate}&date-max={maxDate}");
     }
 }

@@ -57,10 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiObjectModels\CAD\CADConfigReader.cs" />
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadErrorModel.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadAllDataService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadErrorRespService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadLimitService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadDateFilteredService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadSpecificBodyService.cs" />
-    <Compile Include="ApiObjectModels\CAD\Services\CADService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadSpecificClassService.cs" />
     <Compile Include="ApiObjectModels\ConfigReader.cs" />
     <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
@@ -74,6 +77,11 @@
     <Compile Include="ApiObjectModels\Scout\ScoutConfigReader.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\CAD\CadDateFilterTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidBodyTypeTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidDateTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidParamTests.cs" />
+    <Compile Include="Tests\CAD\CadServiceTests.cs" />
     <Compile Include="Tests\Fireball\FireballApiGeneralShould.cs" />
     <Compile Include="Tests\Fireball\FireballApiWhenLimitedShould.cs" />
     <Compile Include="Tests\CAD\CadSpecificBodyTests.cs" />
