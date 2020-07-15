@@ -4,7 +4,7 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
 	public class SentryRoot
 	{
-		public string count { get; set; } 
+		public string count { get; set; }
 		public Signature signature { get; set; }
 		public List<Datum> data { get; set; }
 	}
@@ -32,4 +32,4 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 		public string id { get; set; }
 		public string des { get; set; }
 	}
- }
+}
