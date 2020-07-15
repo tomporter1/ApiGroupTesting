@@ -36,21 +36,25 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             Setup();
         }
 
+        private static DateTime DateParser(string date)
+        {
+            string[] dateParts = date.Split('-');
+            if (!int.TryParse(dateParts[1], out int result))
+                dateParts[1] = MonthNameToNum(dateParts[1]);
+
+            return new DateTime(int.Parse(dateParts[0]), int.Parse(dateParts[1]), int.Parse(dateParts[2]));
+        }
+
         public bool AllDatesAreWithinRange(string minDateStr, string maxDateStr)
         {
             //input dates are in the form YYYY-MM-DD
-            string[] minDateParts = minDateStr.Split('-');
-            string[] maxDateParts = maxDateStr.Split('-');
-            DateTime minDate = new DateTime(int.Parse(minDateParts[0]), int.Parse(minDateParts[1]), int.Parse(minDateParts[2]));
-            DateTime maxDate = new DateTime(int.Parse(maxDateParts[0]), int.Parse(maxDateParts[1]), int.Parse(maxDateParts[2]));
+            DateTime minDate = DateParser(minDateStr);
+            DateTime maxDate = DateParser(maxDateStr);
 
             foreach (List<string> dataItem in dto.LatestCAD.data)
             {
-                //resp date format YYYY-MMM-DD where MMM is the month name abbreviation
-                string[] respDateParts = dataItem[3].Substring(0, 11).Split('-');
-                respDateParts[1] = MonthNameToNum(respDateParts[1]);
-
-                DateTime respDate = new DateTime(int.Parse(respDateParts[0]), int.Parse(respDateParts[1]), int.Parse(respDateParts[2]));
+                //resp date format YYYY-MMM-DD where MMM is the month name abbreviation               
+                DateTime respDate = DateParser(dataItem[3].Substring(0, 11));
 
                 if (respDate < minDate || respDate > maxDate)
                     return false;
