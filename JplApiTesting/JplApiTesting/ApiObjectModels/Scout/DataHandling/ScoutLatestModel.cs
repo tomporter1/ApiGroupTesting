@@ -3,11 +3,11 @@
     public class ScoutLatestRoot
     {
         public string count { get; set; }
-        public Signature signature { get; set; }
+        public ASignature signature { get; set; }
         public Datum[] data { get; set; }
     }
 
-    public class Signature
+    public class ASignature
     {
         public string source { get; set; }
         public string version { get; set; }

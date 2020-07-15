@@ -1,4 +1,6 @@
-﻿namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
+﻿using System.Collections.Generic;
+
+namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
 	public class SentryRoot
 	{
