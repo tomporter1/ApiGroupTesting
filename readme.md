@@ -186,3 +186,10 @@ public class FireballShould
 }
 ``` 
 ☄️ Test methods should be named using the [following format (see MethodName_StateUnderTest_ExpectedBehavior)](https://dzone.com/articles/7-popular-unit-test-naming): ```void IsAdult_AgeLessThan18_False()``` <br/>
+☄️ Naming conventions for ```public```, ```private``` and ```protected``` fields: <br/>
+
+|Access modifier|Naming Convention|Case|Underscore?⬜️✅|
+|---------------|-----------------|----|---------------|
+|**public**|```public int MyInt;```|```PascalCase```|⬜️|
+|**protected**|```protected int myInt;```|```camelCase```|⬜️|
+|**private**|```private int _myInt;```|```camelCase```|✅|
