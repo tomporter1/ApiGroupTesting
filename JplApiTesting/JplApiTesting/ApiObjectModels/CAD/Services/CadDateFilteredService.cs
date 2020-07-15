@@ -13,8 +13,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             
             try
             {
-                string[] minDateParts = minDateStr.Split('-');
-                DateTime minDate = new DateTime(int.Parse(minDateParts[0]), int.Parse(minDateParts[1]), int.Parse(minDateParts[2]));
+                DateParser(minDateStr);
             }
             catch
             {
@@ -23,8 +22,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
 
             try
             {
-                string[] maxDateParts = maxDateStr.Split('-');
-                DateTime maxDate = new DateTime(int.Parse(maxDateParts[0]), int.Parse(maxDateParts[1]), int.Parse(maxDateParts[2]));
+                DateParser(maxDateStr);
             }
             catch
             {
