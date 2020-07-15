@@ -11,7 +11,7 @@ namespace JplApiTesting.Tests.Fireball
     [Author("K McEvaddy")]
     public class FireballApiGeneralShould
     {
-        protected const int ExpectedNumFields = 9;
+        protected readonly int ExpectedNumFields = Enum.GetNames(typeof(EFields)).Length;
         protected const int NumToQuery = 20;
         protected FireballService _fireballService = null;
 
@@ -43,7 +43,7 @@ namespace JplApiTesting.Tests.Fireball
         [Author("K McEvaddy")]
         public void EachDatum_Contains_CountElements(in int index)
         {
-            Assert.That(_fireballService.GetData()[index].Count, Is.EqualTo(ExpectedNumFields));
+            Assert.That(_fireballService.GetDataElementAt(index).Count, Is.EqualTo(ExpectedNumFields));
         }
 
         [Test]

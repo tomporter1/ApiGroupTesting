@@ -16,6 +16,21 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
         public string fireballReport;
         public JObject json_report;
 
+        const char DateTimeSeparator = ' ';
+        const char DateSeparator = '-';
+        const char TimeSeparator = ':';
+
+        const int DateIndex = 0;
+        const int TimeIndex = 1;
+
+        const int YearIndex = 0;
+        const int MonthIndex = 1;
+        const int DayIndex = 2;
+
+        const int HourIndex = 0;
+        const int MinuteIndex = 1;
+        const int SecondIndex = 2;
+
         public FireballService(in int desiredLimit = 0)
         {
             fireballReport = fireballManager.GetReport(desiredLimit);
@@ -49,23 +64,48 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
 
         public int GetYearAt(in int index)
         {
-            const int dateIndex = 0;
-            const int yearIndex = 0;
-            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[yearIndex]);
+            return int.Parse(GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[DateIndex]
+                .Split(DateSeparator)[YearIndex]);
         }
 
         public int GetMonthAt(in int index)
         {
-            const int dateIndex = 0;
-            const int monthIndex = 1;
-            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[monthIndex]);
+            return int.Parse(GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[DateIndex]
+                .Split(DateSeparator)[MonthIndex]);
         }
 
         public int GetDayAt(in int index)
         {
-            const int dateIndex = 0;
-            const int dayIndex = 2;
-            return int.Parse(GetDataSubElementAt(index, EFields.date).Split(' ')[dateIndex].Split('-')[dayIndex]);
+            return int.Parse(
+                GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[DateIndex]
+                .Split(DateSeparator)[DayIndex]);
+        }
+
+        public int GetHourAt(in int index)
+        {
+            return int.Parse(
+                GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[TimeIndex]
+                .Split(TimeSeparator)[HourIndex]);
+        }
+
+        public int GetMinuteAt(int index)
+        {
+            return int.Parse(
+                GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[TimeIndex]
+                .Split(TimeSeparator)[MinuteIndex]);
+        }
+
+        public int GetSecondAt(int index)
+        {
+            return int.Parse(
+                GetDataSubElementAt(index, EFields.date)
+                .Split(DateTimeSeparator)[TimeIndex]
+                .Split(TimeSeparator)[SecondIndex]);
         }
 
         public int GetCount()

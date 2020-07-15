@@ -26,7 +26,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Contains_ValidTime_Hour(in int index)
         {
-            int hour = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[0]);
+            int hour = _fireballService.GetHourAt(index);
             Assert.That(hour, Is.LessThan(HoursPerDay));
         }
 
@@ -37,7 +37,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Time_Contains_PositiveHour(in int index)
         {
-            int hour = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[0]);
+            int hour = _fireballService.GetHourAt(index);
             Assert.That(hour, Is.GreaterThanOrEqualTo(0));
         }
 
@@ -48,7 +48,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Contains_ValidTime_Minutes(in int index)
         {
-            int minute = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[1]);
+            int minute = _fireballService.GetMinuteAt(index);
             Assert.That(minute, Is.LessThan(60));
         }
 
@@ -59,7 +59,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Time_Contains_PositiveMinute(in int index)
         {
-            int minute = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[1]);
+            int minute = _fireballService.GetMinuteAt(index);
             Assert.That(minute, Is.GreaterThanOrEqualTo(0));
         }
 
@@ -70,7 +70,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Contains_ValidTime_Seconds(in int index)
         {
-            int second = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[2]);
+            int second = _fireballService.GetSecondAt(index);
             Assert.That(second, Is.LessThan(60));
         }
 
@@ -81,7 +81,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [Author("K McEvaddy")]
         public void EachDatum_Time_Contains_PositiveSecond(in int index)
         {
-            int second = int.Parse(_fireballService.GetDataSubElementAt(index, EFields.date).Split(' ')[1].Split(':')[2]);
+            int second = _fireballService.GetSecondAt(index);
             Assert.That(second, Is.GreaterThanOrEqualTo(0));
         }
     }

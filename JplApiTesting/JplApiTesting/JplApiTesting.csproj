@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiObjectModels\BaseCallManager.cs" />
     <Compile Include="ApiObjectModels\CAD\CADConfigReader.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadAllDataService.cs" />
     <Compile Include="ApiObjectModels\CAD\Services\CadLimitService.cs" />
@@ -75,11 +76,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Fireball\Data\FireballApi_EachDatum_Time_Should.cs" />
     <Compile Include="Tests\Fireball\FireballApiGeneralShould.cs" />
-    <Compile Include="Tests\Fireball\FireballApiWhenLimitedShould.cs" />
     <Compile Include="Tests\CAD\CadSpecificBodyTests.cs" />
     <Compile Include="Tests\CAD\CadLimitedRequestTests.cs" />
     <Compile Include="Tests\CAD\CadSpecificClassTests.cs" />
     <Compile Include="Tests\Fireball\Data\FireballApi_EachDatum_Date_Should.cs" />
+    <Compile Include="Tests\Fireball\InvalidQuerying\FireballApiGivenInvalidQueryingShould.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTests.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />
