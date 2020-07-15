@@ -4,21 +4,11 @@ using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 {
-    public class CadLatestCallManager
+    public class CadLatestCallManager : BaseCallManager
     {
-        private readonly IRestClient _client;
-        private IRestResponse _response;
-
         public CadLatestCallManager()
         {
             _client = new RestClient(CADConfigReader.BaseUrl);
-        }
-
-        private string CreateGetRequest(string RequestString)
-        {
-            RestRequest request = new RestRequest(RequestString);
-            _response = _client.Execute(request, Method.GET);
-            return _response.Content;
         }
 
         internal Dictionary<string, string> GetContentTypeHeader()
@@ -26,7 +16,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
             // Creating a dictionary and adding all headers and their values
             Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
 
-            foreach (var item in _response.Headers)
+            foreach (var item in response.Headers)
             {
                 string[] KeyPairs = item.ToString().Split('=');
                 HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
