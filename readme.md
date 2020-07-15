@@ -155,6 +155,13 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 ### Recommended Visual Studio Extensions
 
 ☄️ ***[CodeMaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)*** ~ Quicker refactoring <br/>
+```
+Agreed CodeMaid workflow:
+1. Click your own folder -> Cleanup Selected Code
+2. Do this for both your Service Object Model(s) and test(s)
+``` 
+
+<img src="DocumentationImages/AgrdCodMaiWorkflow.png" alt="meteor image" width="250"/> <br/>
 ☄️ ***[SideScroller](https://marketplace.visualstudio.com/items?itemName=drewnoakes.SideScroller)*** ~ Allows horizontal scrolling with ```SHIFT + MOUSEWHEEL```: saves lots of time <br/>
 ☄️ ***[Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)*** ~ Allows live previewing and syntax highlighting of Github-flavoured markdown (what you're reading right now) <br/>
 
@@ -163,10 +170,11 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 <img src="GIFs/Meteor_SouthPark.gif" alt="meteor image" width="250"/> 
 <br/><br/>
 
+☄️ Underscores for private members ```private int _myInt;```<br/>
 ☄️ Leave Json classes formatted as they come (except from making arrays into List\<T> ```int[] json_objects``` -> ```List<int> json_objects```) <br/>
 ☄️ All git branches should be all lowercase, with underscores ```KieranFireball``` -> ```kieran_fireball```<br/>
 ☄️ All tests and test classes should be marked with their author:
-<br/>~ **Before** ~
+<br/>**~ Before ~**
 ``` C Sharp
 public class FireballShould 
 {
@@ -174,7 +182,7 @@ public class FireballShould
     public void Contains_ValidString() { ... }
 }
 ``` 
-~ **After** ~
+**~ After ~**
 ```C Sharp
 [Author("K McEvaddy")]
 public class FireballShould 
@@ -185,10 +193,3 @@ public class FireballShould
 }
 ``` 
 ☄️ Test methods should be named using the [following format (see MethodName_StateUnderTest_ExpectedBehavior)](https://dzone.com/articles/7-popular-unit-test-naming): ```void IsAdult_AgeLessThan18_False()``` <br/>
-☄️ Naming conventions for ```public```, ```private``` and ```protected``` fields: <br/>
-
-|Access modifier|Naming Convention|Case|Underscore?⬜️✅|
-|---------------|-----------------|----|---------------|
-|**public**|```public int MyInt;```|```PascalCase```|⬜️|
-|**protected**|```protected int myInt;```|```camelCase```|⬜️|
-|**private**|```private int _myInt;```|```camelCase```|✅|
