@@ -1,5 +1,4 @@
-﻿using JplApiTesting.ApiObjectModels.Fireball.DataHandling;
-using JplApiTesting.ApiObjectModels.Fireball.Services;
+﻿using JplApiTesting.ApiObjectModels.Fireball.Services;
 using NUnit.Framework;
 using System;
 
@@ -81,7 +80,7 @@ namespace JplApiTesting.Tests.Fireball.Data
         [TestCase(11)]
         [TestCase(17)]
         [Author("K McEvaddy")]
-        public void Contains_ValidDate_Day_LessThanOrEqualToMax(in int index) 
+        public void Contains_ValidDate_Day_LessThanOrEqualToMax(in int index)
         {
             int day = _fireballService.GetDayAt(index);
             Assert.That(day, Is.LessThanOrEqualTo(LastPossibleDayOfMonth));

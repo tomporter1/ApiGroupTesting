@@ -16,7 +16,5 @@ namespace JplApiTesting.Tests.Fireball.InvalidQuerying
         {
             _fireballService = new FireballService(NumToQuery);
         }
-
-
     }
 }

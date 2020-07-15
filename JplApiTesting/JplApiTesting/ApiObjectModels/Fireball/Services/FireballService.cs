@@ -16,20 +16,20 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
         public string fireballReport;
         public JObject json_report;
 
-        const char DateTimeSeparator = ' ';
-        const char DateSeparator = '-';
-        const char TimeSeparator = ':';
+        private const char DateTimeSeparator = ' ';
+        private const char DateSeparator = '-';
+        private const char TimeSeparator = ':';
 
-        const int DateIndex = 0;
-        const int TimeIndex = 1;
+        private const int DateIndex = 0;
+        private const int TimeIndex = 1;
 
-        const int YearIndex = 0;
-        const int MonthIndex = 1;
-        const int DayIndex = 2;
+        private const int YearIndex = 0;
+        private const int MonthIndex = 1;
+        private const int DayIndex = 2;
 
-        const int HourIndex = 0;
-        const int MinuteIndex = 1;
-        const int SecondIndex = 2;
+        private const int HourIndex = 0;
+        private const int MinuteIndex = 1;
+        private const int SecondIndex = 2;
 
         public FireballService(in int desiredLimit = 0)
         {
