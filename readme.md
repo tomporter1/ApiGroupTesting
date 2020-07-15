@@ -139,7 +139,7 @@ _What happened to any cards left incomplete?_ All were complete.<br/>
 ## Code
 
 <img src="GIFs/MeteorTravel.gif" alt="meteor image" width="250"/> 
-<br/>
+<br/><br/>
 
 
 ### Projects
@@ -159,6 +159,9 @@ Find class diagrams via [the class diagrams page](ClassDiagrams.md).
 ☄️ ***[Markdown Editor](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)*** ~ Allows live previewing and syntax highlighting of Github-flavoured markdown (what you're reading right now) <br/>
 
 ### Agreed conventions (made only when needed)
+
+<img src="GIFs/Meteor_SouthPark.gif" alt="meteor image" width="250"/> 
+<br/><br/>
 
 ☄️ Underscores for private members ```private int _myInt;```<br/>
 ☄️ Leave Json classes formatted as they come (except from making arrays into List\<T> ```int[] json_objects``` -> ```List<int> json_objects```)
@@ -182,6 +185,4 @@ public class FireballShould
     public void Contains_ValidString() { ... }
 }
 ``` 
-<br/>
-
 ☄️ Test methods should be named using the [following format (see MethodName_StateUnderTest_ExpectedBehavior)](https://dzone.com/articles/7-popular-unit-test-naming): ```void IsAdult_AgeLessThan18_False()``` <br/>
