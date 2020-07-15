@@ -8,6 +8,7 @@ namespace JplApiTesting.ApiObjectModels
         public Info Fireball { get; set; }
         public Info Scout { get; set; }
         public Info Sentry { get; set; }
+        public Info SBDB { get; set; }
     }
 
     public class Info
