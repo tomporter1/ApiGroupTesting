@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.SBDB.HTTPManager
 {
@@ -10,5 +11,6 @@ namespace JplApiTesting.ApiObjectModels.SBDB.HTTPManager
         }
 
         internal string GetSpecificBodyData(string bodyName) => CreateGetRequest($"?sstr={bodyName}");
+        internal Dictionary<string, string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
     }
 }
