@@ -7,6 +7,11 @@ namespace JplApiTesting.ApiObjectModels
         protected IRestClient _client;
         protected IRestResponse response;
 
+        public virtual string GetReport(in int numToShow = 0)
+        {
+            return "";
+        }
+
         protected virtual string CreateGetRequest(string RequestString)
         {
             RestRequest request = new RestRequest(RequestString);
