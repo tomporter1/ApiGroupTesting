@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace JplApiTesting.Tests.CAD
 {
     public class CadInvalidDateTests
-    {      
+    {
         private CadErrorRespService _cadService;
         private readonly string _minDate = "2020-07-32", _maxDate = "2020-07-38";
 

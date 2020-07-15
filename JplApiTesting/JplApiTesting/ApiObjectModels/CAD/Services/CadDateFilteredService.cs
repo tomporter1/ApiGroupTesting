@@ -42,7 +42,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
 
             foreach (List<string> dataItem in dto.LatestCAD.data)
             {
-                //resp date format YYYY-MMM-DD where MMM is the month name abbreviation               
+                //resp date format YYYY-MMM-DD where MMM is the month name abbreviation
                 DateTime respDate = DateTools.DateParser(dataItem[3].Substring(0, 11));
 
                 if (respDate < minDate || respDate > maxDate)
