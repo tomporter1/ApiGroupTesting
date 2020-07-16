@@ -4,7 +4,7 @@
     {
         public CadAllDataService()
         {
-            ResponceData = callManager.GetAllCadData();
+            ResponseData = callManager.GetAllCadData();
 
             Setup();
         }

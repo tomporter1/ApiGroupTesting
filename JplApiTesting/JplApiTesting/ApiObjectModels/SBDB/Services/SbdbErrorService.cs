@@ -11,10 +11,10 @@ namespace JplApiTesting.ApiObjectModels.SBDB.Services
             if (requestStr == string.Empty)
                 throw new ArgumentException("The request cannot be an empty string");
 
-            ResponceData = callManager.GetCustomRequestData(requestStr);
+            ResponseData = callManager.GetCustomRequestData(requestStr);
 
-            DTO.DeserializeSBDBError(ResponceData);
-            JObjectResponce = JsonConvert.DeserializeObject<JObject>(ResponceData);
+            DTO.DeserializeSBDBError(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
     }
 }
