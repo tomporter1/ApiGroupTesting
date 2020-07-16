@@ -14,6 +14,6 @@ namespace JplApiTesting.ApiObjectModels.SBDB.HTTPManager
 
         internal string GetCustomRequestData(string requestStr) => CreateGetRequest(requestStr);
 
-        internal Dictionary<string, string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
+        public Dictionary<string, string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
     }
 }
