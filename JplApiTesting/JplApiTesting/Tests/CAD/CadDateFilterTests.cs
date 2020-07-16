@@ -21,19 +21,19 @@ namespace JplApiTesting.Tests.CAD
         {
             Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_numberOfCloseApproachItemsInJune2020));
         }
-        
+
         [Test]
         [Author("T Porter")]
         public void CallingTheAPI_WithFilteredDates_ReturnsCorrectNUmOfDataItems()
         {
             Assert.That(_cadService.dto.LatestCAD.data.Count, Is.EqualTo(_numberOfCloseApproachItemsInJune2020));
         }
-        
+
         [Test]
         [Author("T Porter")]
         public void CallingTheAPI_WithFilteredDates_ReturnsDataItemsWithinDateRange()
         {
-            Assert.That(_cadService.AllDatesAreWithinRange(_minDate,_maxDate));
+            Assert.That(_cadService.AllDatesAreWithinRange(_minDate, _maxDate));
         }
     }
 }

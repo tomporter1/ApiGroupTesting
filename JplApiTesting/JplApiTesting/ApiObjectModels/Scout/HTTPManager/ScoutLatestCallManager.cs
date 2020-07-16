@@ -28,7 +28,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
         }
         public string GetScoutEphemerisData(string Name,string date)
         {
-            var request = new RestRequest("?tdes=A10o9AK&eph-start=2020-07-15");
+            var request = new RestRequest($"?tdes={Name}&eph-start={date}");
             _response = _client.Execute(request, Method.GET);
             return _response.Content;
         }

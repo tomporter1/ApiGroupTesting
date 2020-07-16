@@ -9,7 +9,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             if (body == string.Empty)
                 throw new ArgumentException("The body cannot be an empty string");
 
-            liveCurrent = callManager.GetSpecificBodyData(body);
+            ResponceData = callManager.GetSpecificBodyData(body);
 
             Setup();
         }

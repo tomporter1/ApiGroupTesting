@@ -33,10 +33,10 @@ namespace JplApiTesting.Tests.CAD
             Assert.That(() => new CadErrorRespService(""), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
         }
 
-        [TestCase("2020-07-32","2020-08-01", "The minimum date must be valid and in the form YYYY-MM-DD")]
-        [TestCase("2020-07-01","2020-08-33", "The maximum date must be valid and in the form YYYY-MM-DD")]
-        [TestCase("2020-07-01","", "The date cannot be an empty string")]
-        [TestCase("","2020-08-01", "The date cannot be an empty string")]
+        [TestCase("2020-07-32", "2020-08-01", "The minimum date must be valid and in the form YYYY-MM-DD")]
+        [TestCase("2020-07-01", "2020-08-33", "The maximum date must be valid and in the form YYYY-MM-DD")]
+        [TestCase("2020-07-01", "", "The date cannot be an empty string")]
+        [TestCase("", "2020-08-01", "The date cannot be an empty string")]
         [Author("T Porter")]
         public void FrameworkThrowsException_WithInvalidMinDate(string minDate, string maxDate, string expectedMsg)
         {
