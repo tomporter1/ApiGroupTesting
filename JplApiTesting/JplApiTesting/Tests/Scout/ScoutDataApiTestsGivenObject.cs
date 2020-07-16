@@ -68,13 +68,6 @@ namespace JplApiTesting.Tests.Scout
 
         [Test]
         [Author("T Perera")]
-        public void CheckReturnsPositiveVmag()
-        {
-            Assert.That(float.Parse(_scoutService.dto.LatestScoutQueryName.Vmag), Is.GreaterThanOrEqualTo(0));
-        }
-
-        [Test]
-        [Author("T Perera")]
         public void CheckNeoScoreReturnsValidScore()
         {
             Assert.That(int.Parse(_scoutService.dto.LatestScoutQueryName.neoScore), Is.InRange(0, 100));
