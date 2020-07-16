@@ -45,6 +45,7 @@
       <HintPath>..\packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -55,10 +56,132 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiObjectModels\BaseCallManager.cs" />
+    <Compile Include="ApiObjectModels\CAD\CADConfigReader.cs" />
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadErrorModel.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadAllDataService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadErrorRespService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadLimitService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadDateFilteredService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadSpecificBodyService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadService.cs" />
+    <Compile Include="ApiObjectModels\CAD\Services\CadSpecificClassService.cs" />
+    <Compile Include="ApiObjectModels\ConfigReader.cs" />
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs" />
+    <Compile Include="ApiObjectModels\CAD\DataHandling\CadLatestModel.cs" />
+    <Compile Include="ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs" />
+    <Compile Include="ApiObjectModels\ConfigModel.cs" />
+    <Compile Include="ApiObjectModels\DateTools.cs" />
+    <Compile Include="ApiObjectModels\SBDB\DataHandiling\CometInfoModel.cs" />
+    <Compile Include="ApiObjectModels\SBDB\DataHandiling\SbdbDTO.cs" />
+    <Compile Include="ApiObjectModels\SBDB\DataHandiling\SbdbErrorModel.cs" />
+    <Compile Include="ApiObjectModels\SBDB\HTTPManager\SbdbCallManager.cs" />
+    <Compile Include="ApiObjectModels\SBDB\SbdbConfigReader.cs" />
+    <Compile Include="ApiObjectModels\SBDB\Services\SbdbErrorService.cs" />
+    <Compile Include="ApiObjectModels\SBDB\Services\SbdbService.cs" />
+    <Compile Include="ApiObjectModels\SBDB\Services\SbdbSpecificSmallBodyService.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestDTO.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestEphemerisModel.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestModel.cs" />
+    <Compile Include="ApiObjectModels\Scout\DataHandling\ScoutLatestNameQueryModel.cs" />
+    <Compile Include="ApiObjectModels\Scout\HTTPManager\ScoutLatestCallManager.cs" />
+    <Compile Include="ApiObjectModels\Scout\ScoutConfigReader.cs" />
+    <Compile Include="ApiObjectModels\Scout\Services\ScoutAllDataService.cs" />
+    <Compile Include="ApiObjectModels\Scout\Services\ScoutNameQueryDataService.cs" />
+    <Compile Include="ApiObjectModels\Scout\Services\ScoutEphemerisDataService.cs" />
+    <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryErrorModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryRemovedModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryErrorService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryIPService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryRemovedService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentrySpecifiedObjectService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentrySummaryDataService.cs" />
+    <Compile Include="ApiObjectModels\ServiceBase.cs" />
+    <Compile Include="ApiObjectModels\TestTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\CAD\CadDateFilterTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidBodyTypeTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidDateTests.cs" />
+    <Compile Include="Tests\CAD\CadInvalidParamTests.cs" />
+    <Compile Include="Tests\CAD\CadServiceTests.cs" />
+    <Compile Include="Tests\Fireball\FireballApiGeneralShould.cs" />
+    <Compile Include="Tests\CAD\CadSpecificBodyTests.cs" />
+    <Compile Include="Tests\CAD\CadLimitedRequestTests.cs" />
+    <Compile Include="Tests\CAD\CadSpecificClassTests.cs" />
+    <Compile Include="Tests\Fireball\Data\FireballApi_EachDatum_Date_Should.cs" />
+    <Compile Include="Tests\Fireball\FireballApiHeaderShould.cs" />
+    <Compile Include="Tests\Fireball\InvalidQuerying\FireballApiGivenInvalidQueryingShould.cs" />
+    <Compile Include="Tests\SBDB\NeowiseCometTests.cs" />
+    <Compile Include="Tests\SBDB\SbdbErrorTests.cs" />
+    <Compile Include="Tests\SBDB\SbdbServiceTests.cs" />
+    <Compile Include="Tests\Scout\ScoutDataApiTests.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryDTO.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\HTTPManager\SentryCallManager.cs" />
+    <Compile Include="ApiObjectModels\Sentry\SentryConfigReader.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryService.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Scout\ScoutDataApiTestsGivenNameAndDate.cs" />
+    <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
+    <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
+    <Compile Include="Tests\Sentry\SentryInvalidSpecifiedObjectTests.cs" />
+    <Compile Include="Tests\Sentry\SentryIPTests.cs" />
+    <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
+    <Compile Include="Tests\Sentry\SentryRemovedTests.cs" />
+    <Compile Include="Tests\Sentry\SentryTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApiObjectModels\Config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\JplApiTesting.csproj.CopyComplete" />
+    <None Include="obj\Debug\JplApiTesting.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\JplApiTesting.csprojAssemblyReference.cache" />
+    <Compile Include="ApiObjectModels\Fireball\FireballConfigReader.cs" />
+    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballDTO.cs" />
+    <Compile Include="ApiObjectModels\Fireball\DataHandling\FireballModel.cs" />
+    <Compile Include="ApiObjectModels\Fireball\HTTPManager\FireballManager.cs" />
+    <Compile Include="ApiObjectModels\Fireball\Services\FireballService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Fireball\FireballApiShould.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tests\CAD\CadTestsAllData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\JplApiTesting.dll" />
+    <Content Include="bin\Debug\JplApiTesting.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\nunit.engine.api.dll" />
+    <Content Include="bin\Debug\nunit.engine.core.dll" />
+    <Content Include="bin\Debug\nunit.engine.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\nunit.framework.pdb" />
+    <Content Include="bin\Debug\nunit.framework.xml" />
+    <Content Include="bin\Debug\NUnit3.TestAdapter.dll" />
+    <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
+    <Content Include="bin\Debug\RestSharp.dll" />
+    <Content Include="bin\Debug\RestSharp.xml" />
+    <Content Include="obj\Debug\JplApiTesting.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\JplApiTesting.dll" />
+    <Content Include="obj\Debug\JplApiTesting.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
