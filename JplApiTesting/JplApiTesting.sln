@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SbdbApiFramework", "SbdbApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SbdbFrameworkTests", "SbdbFrameworkTests\SbdbFrameworkTests.csproj", "{162884AD-BB3D-4C2D-9ED2-02E35DD5891B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoutApiFramework", "ScoutApiFramework\ScoutApiFramework.csproj", "{2737D038-5026-4FAF-A7A6-2CA72EB0F8C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoutFrameworkTests", "ScoutFrameworkTests\ScoutFrameworkTests.csproj", "{97080AB8-99FB-439D-9C1A-A4D49F7FD29C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{162884AD-BB3D-4C2D-9ED2-02E35DD5891B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162884AD-BB3D-4C2D-9ED2-02E35DD5891B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162884AD-BB3D-4C2D-9ED2-02E35DD5891B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2737D038-5026-4FAF-A7A6-2CA72EB0F8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2737D038-5026-4FAF-A7A6-2CA72EB0F8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2737D038-5026-4FAF-A7A6-2CA72EB0F8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2737D038-5026-4FAF-A7A6-2CA72EB0F8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97080AB8-99FB-439D-9C1A-A4D49F7FD29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97080AB8-99FB-439D-9C1A-A4D49F7FD29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97080AB8-99FB-439D-9C1A-A4D49F7FD29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97080AB8-99FB-439D-9C1A-A4D49F7FD29C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
