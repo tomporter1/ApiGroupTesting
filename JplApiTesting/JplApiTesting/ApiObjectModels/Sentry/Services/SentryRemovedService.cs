@@ -8,20 +8,12 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
 	public class SentryRemovedService : SentryService
 	{
-		private int state = 0;
-		public SentryRemovedService(bool removedValue)
+		public SentryRemovedService(string removedValue)
 		{
-			if (removedValue == true)
-			{
-				state = 1;
-			}
-			else
-			{
-				state = 0;
-			}
-			liveCurrent = sentryCallManager.GetSentryRemovedInfo(state);
-			dto.DeserializeSentryRemoved(liveCurrent);
+			ResponseData = sentryCallManager.GetSentryRemovedInfo(removedValue);
+			dto.DeserializeSentryRemoved(ResponseData);
 			SetupService();
+
 		}
 	}
 }

@@ -132,6 +132,7 @@
     <Compile Include="Tests\Sentry\SentryIPTests.cs" />
     <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
     <Compile Include="Tests\Sentry\SentryRemovedTests.cs" />
+    <Compile Include="Tests\Sentry\SentryRemovedValueTests.cs" />
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>
   <ItemGroup>
