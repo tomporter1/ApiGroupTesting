@@ -7,7 +7,6 @@ namespace JplApiTesting.Tests.CAD
     {
         private CadSpecificClassService _cadService;
         private const string _class = "ATE";
-        private const int _expectedNUmOfDataItems = 15;
 
         [OneTimeSetUp]
         public void OneTimeSetup()
@@ -19,7 +18,7 @@ namespace JplApiTesting.Tests.CAD
         [Author("T Porter")]
         public void CallingTheAPI_ReturnsCorrectNumberOfDataItems()
         {
-            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_expectedNUmOfDataItems).And.EqualTo(_cadService.dto.LatestCAD.data.Count));
+            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_cadService.dto.LatestCAD.data.Count));
         }
     }
 }
