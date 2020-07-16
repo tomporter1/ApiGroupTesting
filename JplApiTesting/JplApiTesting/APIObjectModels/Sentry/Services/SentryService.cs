@@ -6,16 +6,14 @@ using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
-	public abstract class SentryService
+	public abstract class SentryService : ServiceBase
 	{
 		public SentryCallManager sentryCallManager = new SentryCallManager();
 		public SentryDTO dto = new SentryDTO();
-		public string liveCurrent;
-		public JObject json_current;
 
 		public void SetupService()
 		{
-			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+			JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
 		}
 
 		

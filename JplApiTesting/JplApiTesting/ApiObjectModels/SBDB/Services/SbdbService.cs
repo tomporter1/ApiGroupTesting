@@ -12,8 +12,8 @@ namespace JplApiTesting.ApiObjectModels.SBDB.Services
 
         protected void SetUp()
         {
-            DTO.DeserializeLatestSBDB(ResponceData);
-            JObjectResponce = JsonConvert.DeserializeObject<JObject>(ResponceData);
+            DTO.DeserializeLatestSBDB(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
     }
 }

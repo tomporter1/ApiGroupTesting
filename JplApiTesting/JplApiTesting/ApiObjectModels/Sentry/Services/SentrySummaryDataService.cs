@@ -10,8 +10,8 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 	{
 		public SentrySummaryDataService()
 		{		
-			liveCurrent = sentryCallManager.GetSentryInfo();
-			dto.DeserializeLatestSentry(liveCurrent);
+			ResponseData = sentryCallManager.GetSentryInfo();
+			dto.DeserializeLatestSentry(ResponseData);
 			SetupService();
 		}
 	}

@@ -10,7 +10,7 @@ namespace JplApiTesting.Tests.Sentry
 {
 	public class SentryRemovedTests
 	{
-		private bool showRemoved = true;
+		private readonly string showRemoved = "true";
 		private SentryRemovedService sentryRemovedService;
 
 		[OneTimeSetUp]
@@ -18,7 +18,6 @@ namespace JplApiTesting.Tests.Sentry
 		{
 			sentryRemovedService = new SentryRemovedService(showRemoved);
 		}
-
 
 		[TestCase("Transfer-Encoding", "chunked")]
 		[TestCase("Connection", "keep-alive")]
@@ -45,13 +44,5 @@ namespace JplApiTesting.Tests.Sentry
 			Assert.That(sentryRemovedService.dto.SentryRemoved.signature.version.ToString(), Is.EqualTo("1.1"));
 		}
 
-
-		[Test]
-		[Author("N Sahota")]
-		public void CountNumPotentialMeteorImpacts_ReturnsCountOfPredictedStrikes()
-		{
-			int countGivenInAPI = Int32.Parse(sentryRemovedService.dto.SentryRemoved.count);
-			Assert.That(sentryRemovedService.dto.SentryRemoved.data.Count, Is.EqualTo(countGivenInAPI));
-		}
 	}
 }

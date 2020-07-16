@@ -14,8 +14,8 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
 
         protected void Setup()
         {
-            dto.DeserializeLatestCAD(ResponceData);
-            JObjectResponce = JsonConvert.DeserializeObject<JObject>(ResponceData);
+            dto.DeserializeLatestCAD(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
 
         internal bool AllDataItemsHaveSameNumOfFields(int numOfFields)

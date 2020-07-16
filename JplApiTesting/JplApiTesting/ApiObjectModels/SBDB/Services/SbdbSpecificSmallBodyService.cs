@@ -9,7 +9,7 @@ namespace JplApiTesting.ApiObjectModels.SBDB.Services
             if (bodyName == string.Empty)
                 throw new ArgumentException("The body cannot be an empty string");
 
-            ResponceData = callManager.GetSpecificBodyData(bodyName);
+            ResponseData = callManager.GetSpecificBodyData(bodyName);
 
             SetUp();
         }
