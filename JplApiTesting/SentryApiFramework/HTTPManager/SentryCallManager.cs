@@ -18,6 +18,6 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 
 		internal string GetSentryRemovedInfo(string removedValue) => CreateGetRequest($"?removed={removedValue}");
 
-		internal Dictionary<string,string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
+		public Dictionary<string,string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
 	}
 }

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JplApiTesting.ApiObjectModels.Sentry.Services;
+﻿using JplApiTesting.ApiObjectModels.Sentry.Services;
 using NUnit.Framework;
 
 namespace JplApiTesting.Tests.Sentry
 {
-	public class SentryInvalidSpecifiedObjectTests
+    public class SentryInvalidSpecifiedObjectTests
 	{
         private SentryErrorService sentryErrorService;
 
