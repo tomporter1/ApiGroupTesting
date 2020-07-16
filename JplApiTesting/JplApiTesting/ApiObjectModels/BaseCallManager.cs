@@ -1,5 +1,4 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.HTTPManager;
-using RestSharp;
+﻿using RestSharp;
 using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels
