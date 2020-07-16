@@ -1,4 +1,6 @@
-﻿using RestSharp;
+﻿using JplApiTesting.ApiObjectModels.CAD.HTTPManager;
+using RestSharp;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels
 {
@@ -17,6 +19,23 @@ namespace JplApiTesting.ApiObjectModels
             RestRequest request = new RestRequest(RequestString);
             response = client.Execute(request, Method.GET);
             return response.Content;
+        }
+
+        internal string MakeRequest(Dictionary<RequestParametersTypes, RequestParameterInfo> paramDict)
+        {
+            if(paramDict.Count == 0)
+                return CreateGetRequest("");
+
+            string requestStr = "?";
+            int x = 0;
+            foreach (KeyValuePair<RequestParametersTypes, RequestParameterInfo> pair in paramDict)
+            {
+                requestStr += $"{pair.Value.Label}{pair.Value.Data}&";
+                if (x < paramDict.Count)
+                    requestStr += "&";
+                x++;
+            }
+            return CreateGetRequest(requestStr);
         }
     }
 }
