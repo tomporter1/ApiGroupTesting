@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib", "SharedLib\Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadApiFramework", "CadApiFramework\CadApiFramework.csproj", "{60E66FBF-FBD4-422F-9DDF-BC2F0AD80360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FDA30592-F250-43CB-B7D6-D6B154DD65FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadFrameworkTests", "Tests\CadFrameworkTests.csproj", "{FDA30592-F250-43CB-B7D6-D6B154DD65FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
