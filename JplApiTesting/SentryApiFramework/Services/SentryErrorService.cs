@@ -3,16 +3,16 @@
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
     public class SentryErrorService : SentryService
-	{
-		public SentryErrorService(string request)
-		{
-			if (request == string.Empty)
-				throw new ArgumentException("The request string is empty");
+    {
+        public SentryErrorService(string request)
+        {
+            if (request == string.Empty)
+                throw new ArgumentException("The request string is empty");
 
-			ResponseData = sentryCallManager.GetSentryObjectInfo(request);
+            ResponseData = sentryCallManager.GetSentryObjectInfo(request);
 
-			dto.DeserializeSentryError(ResponseData);
-			SetupService();
-		}
-	}
+            dto.DeserializeSentryError(ResponseData);
+            SetupService();
+        }
+    }
 }

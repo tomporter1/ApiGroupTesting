@@ -8,7 +8,6 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         public ScoutLatestNameQueryRoot LatestScoutQueryName { get; set; }
         public EphemerisModelRoot LatestScoutEphemeris { get; set; }
 
-
         public void DeserializeLatestScout(string LatestScoutResponse)
         {
             LatestScout = JsonConvert.DeserializeObject<ScoutLatestRoot>(LatestScoutResponse);
@@ -20,7 +19,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
                 (LatestScoutQueryResponse);
         }
 
-        public void DeserializeLatestScoutEphemeris(string LatestScoutQueryResponse) 
+        public void DeserializeLatestScoutEphemeris(string LatestScoutQueryResponse)
         {
             LatestScoutEphemeris = JsonConvert.DeserializeObject<EphemerisModelRoot>
                 (LatestScoutQueryResponse);

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace JplApiTesting.Tests.Sentry
 {
     public class SentryInvalidSpecifiedObjectTests
-	{
+    {
         private SentryErrorService sentryErrorService;
 
         [OneTimeSetUp]

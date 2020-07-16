@@ -86,7 +86,5 @@ namespace JplApiTesting.Tests.Scout
         {
             Assert.That(int.Parse(_scoutService.dto.LatestScoutQueryName.geocentricScore), Is.InRange(0, 100));
         }
-
-
     }
 }

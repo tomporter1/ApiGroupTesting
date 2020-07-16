@@ -22,7 +22,7 @@ namespace JplApiTesting.ApiObjectModels
 
         public string MakeRequest(Dictionary<RequestParametersTypes, RequestParameterInfo> paramDict)
         {
-            if(paramDict.Count == 0)
+            if (paramDict.Count == 0)
                 return CreateGetRequest("");
 
             string requestStr = "?";

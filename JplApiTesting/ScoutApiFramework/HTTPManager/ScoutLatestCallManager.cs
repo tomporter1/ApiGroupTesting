@@ -11,15 +11,15 @@ namespace JplApiTesting.ApiObjectModels.Scout.HTTPManager
         }
 
         public string AllScoutData => CreateGetRequest("/");
-        
-        public string GetScoutDataForGivenName(string name) => 
+
+        public string GetScoutDataForGivenName(string name) =>
             CreateGetRequest($"?{ScoutConfigReader.TdesParam}{name}");
-        
-        public string GetScoutEphemerisData(string name, string date) => 
+
+        public string GetScoutEphemerisData(string name, string date) =>
             CreateGetRequest($"?{ScoutConfigReader.TdesParam}{name}&" +
                 $"{ScoutConfigReader.DateParam}{date}");
-        
-        public Dictionary<string, string> GetContentTypeHeader() => 
+
+        public Dictionary<string, string> GetContentTypeHeader() =>
             TestTools.GetContentTypeHeader(response.Headers);
     }
 }

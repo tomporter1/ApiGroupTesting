@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JplApiTesting.ApiObjectModels.Scout.Services
+﻿namespace JplApiTesting.ApiObjectModels.Scout.Services
 {
     public class ScoutNameQueryDataService : ScoutService
     {
@@ -13,6 +7,5 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
             ResponseData = callManager.GetScoutDataForGivenName(name);
             SetupForGivenName();
         }
-        
     }
 }

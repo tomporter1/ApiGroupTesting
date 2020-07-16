@@ -3,17 +3,20 @@ using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
 {
-    
-    public class EphemerisModelRoot 
+    public class EphemerisModelRoot
     {
         public string count { get; set; }
+
         [JsonProperty("object")]
         public Object _object { get; set; }
+
         public EphemerisSignature signature { get; set; }
         public List<Eph> eph { get; set; }
         public List<string> datafields { get; set; }
+
         [JsonProperty("orbit-count")]
         public int orbitcount { get; set; }
+
         public string message { get; set; }
         public string error { get; set; }
     }
@@ -46,7 +49,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         public string Vmag { get; set; }
     }
 
-    public class EphemerisSignature 
+    public class EphemerisSignature
     {
         public string source { get; set; }
         public string version { get; set; }
@@ -166,5 +169,4 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         public string min { get; set; }
         public string max { get; set; }
     }
-
 }

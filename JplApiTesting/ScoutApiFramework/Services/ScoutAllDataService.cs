@@ -1,12 +1,4 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JplApiTesting.ApiObjectModels.Scout.Services
+﻿namespace JplApiTesting.ApiObjectModels.Scout.Services
 {
     public class ScoutAllDataService : ScoutService
     {
@@ -15,6 +7,5 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
             ResponseData = callManager.AllScoutData;
             SetupForAll();
         }
-  
     }
 }

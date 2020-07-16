@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JplApiTesting.ApiObjectModels.Scout.Services;
+﻿using JplApiTesting.ApiObjectModels.Scout.Services;
 using NUnit.Framework;
+using System;
 
 namespace JplApiTesting.Tests.Scout
 {
     public class ScoutDataApiTestsGivenNameAndDate
     {
-
         private static string _name = "A10nMaI";
+
         // select a date that's either one month in the future or in the past of the current day
         private static string _date = "2020-07-22"; // Format = "YYYY-MM-DD"
+
         private ScoutEphemerisDataService _scoutService =
             new ScoutEphemerisDataService(_name, _date);
 
@@ -61,9 +58,8 @@ namespace JplApiTesting.Tests.Scout
         [Author("T Perera")]
         public void CheckMessageReturnsCorrectErrorGivenInvalidName(string givenName)
         {
-            ScoutEphemerisDataService _scoutService = new ScoutEphemerisDataService(givenName,_date);
+            ScoutEphemerisDataService _scoutService = new ScoutEphemerisDataService(givenName, _date);
             Assert.That(_scoutService.dto.LatestScoutEphemeris.error, Is.EqualTo("specified object does not exist"));
         }
     }
-
 }

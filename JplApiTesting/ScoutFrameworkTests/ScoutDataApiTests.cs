@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace JplApiTesting.Tests.Scout
 {
-
     // Test all available summary data
     public class ScoutDataApiTests
     {
         private ScoutAllDataService _scoutService = new ScoutAllDataService();
+
         [Test]
         [Author("T Perera")]
         public void CheckReturnsCorrectCallSignature()
@@ -46,7 +46,7 @@ namespace JplApiTesting.Tests.Scout
         public void CheckHeaderReturnsCorrectDate()
         {
             string date = DateTime.Now.AddHours(-1).ToString("r").Remove(22, 7);
-            Assert.That(_scoutService.callManager.GetContentTypeHeader()["Date"],Does.Contain(date));
+            Assert.That(_scoutService.callManager.GetContentTypeHeader()["Date"], Does.Contain(date));
         }
     }
 }
