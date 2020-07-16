@@ -6,7 +6,7 @@ namespace JplApiTesting.ApiObjectModels
     {
         public CadInfo CAD { get; set; }
         public Info Fireball { get; set; }
-        public Info Scout { get; set; }
+        public ScoutInfo Scout { get; set; }
         public Info Sentry { get; set; }
         public Info SBDB { get; set; }
     }
@@ -14,6 +14,18 @@ namespace JplApiTesting.ApiObjectModels
     public class Info
     {
         public string url { get; set; }
+    }
+
+    public class ScoutInfo
+    {
+        public string url { get; set; }
+        public ScoutParameters parameters { get; set; }
+    }
+
+    public class ScoutParameters
+    {
+        public string tdes { get; set; }
+        public string date { get; set; }
     }
 
     public class CadInfo
