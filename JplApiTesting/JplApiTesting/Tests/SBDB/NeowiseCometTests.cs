@@ -1,11 +1,6 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
-using JplApiTesting.ApiObjectModels.SBDB.Services;
+﻿using JplApiTesting.ApiObjectModels.SBDB.Services;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.Tests.SBDB
 {
@@ -36,7 +31,7 @@ namespace JplApiTesting.Tests.SBDB
 
         [Test]
         [Author("T Perera")]
-        public void CallingTheAPI_ReturnsCorrectFirstObservation() 
+        public void CallingTheAPI_ReturnsCorrectFirstObservation()
         {
             Assert.That(_sbdbService.DTO.SbdbInfo.orbit.first_obs, Is.EqualTo("2020-03-27"));
         }
@@ -67,7 +62,7 @@ namespace JplApiTesting.Tests.SBDB
 
         [Test]
         [Author("T Perera")]
-        public void CallingTheAPI_HeaderReturnsCorrectDate() 
+        public void CallingTheAPI_HeaderReturnsCorrectDate()
         {
             string date = DateTime.Now.AddHours(-1).ToString("r").Remove(22, 7);
             Assert.That(_sbdbService.callManager.GetContentTypeHeader()["Date"], Does.Contain(date));
