@@ -6,27 +6,27 @@ using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
-    public class CadSpecificClassTests
+    public class CadGeneralServiceTests
     {
-        private CadSpecificClassService _cadService;
+        private CadGeneralGetService _cadService;
+        private const int _numOfResults = 10;
 
         private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestparams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
         {
             [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" },
-            [RequestParametersTypes.Class] = new RequestParameterInfo() { Label = CADConfigReader.ClassParam, Data = "ATE" }
+            [RequestParametersTypes.Limit] = new RequestParameterInfo() { Label = CADConfigReader.LimitParam, Data = _numOfResults.ToString() }
         };
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadSpecificClassService(_requestparams);
+            _cadService = new CadGeneralGetService(_requestparams);
         }
 
         [Test]
-        [Author("T Porter")]
-        public void CallingTheAPI_ReturnsCorrectNumberOfDataItems()
+        public void CallingAPI_ReturnsCorrectNumOfItems()
         {
-            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_cadService.dto.LatestCAD.data.Count));
+            Assert.That(int.Parse(_cadService.dto.LatestCAD.count), Is.EqualTo(_numOfResults));
         }
     }
 }
