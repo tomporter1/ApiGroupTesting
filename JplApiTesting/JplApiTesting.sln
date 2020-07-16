@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadApiFramework", "CadApiFr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadFrameworkTests", "Tests\CadFrameworkTests.csproj", "{FDA30592-F250-43CB-B7D6-D6B154DD65FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireballApiFramework", "FireballFramework\FireballApiFramework.csproj", "{279796AF-DBF6-4434-BBCF-28E41146F859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireballFrameworkTests", "FireballFrameworkTests\FireballFrameworkTests.csproj", "{0E52CDA3-0CF3-4E06-9449-59A1219C95A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{FDA30592-F250-43CB-B7D6-D6B154DD65FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA30592-F250-43CB-B7D6-D6B154DD65FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA30592-F250-43CB-B7D6-D6B154DD65FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279796AF-DBF6-4434-BBCF-28E41146F859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279796AF-DBF6-4434-BBCF-28E41146F859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279796AF-DBF6-4434-BBCF-28E41146F859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279796AF-DBF6-4434-BBCF-28E41146F859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E52CDA3-0CF3-4E06-9449-59A1219C95A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E52CDA3-0CF3-4E06-9449-59A1219C95A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E52CDA3-0CF3-4E06-9449-59A1219C95A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E52CDA3-0CF3-4E06-9449-59A1219C95A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,7 +58,7 @@ namespace JplApiTesting.ApiObjectModels.DateTimeConstants
             }
         }
 
-        internal static class DateTimeConstants
+        public static class DateTimeConstants
         {
             public const char DateTimeSeparator = ' ';
             public const char DateSeparator = '-';
