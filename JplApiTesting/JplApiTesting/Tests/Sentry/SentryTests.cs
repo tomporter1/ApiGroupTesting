@@ -1,4 +1,5 @@
-﻿using JplApiTesting.ApiObjectModels.Sentry.Services;
+﻿using System;
+using JplApiTesting.ApiObjectModels.Sentry.Services;
 using NUnit.Framework;
 
 namespace JplApiTesting.Tests.Sentry
@@ -6,7 +7,13 @@ namespace JplApiTesting.Tests.Sentry
 	public class SentryTests
 	{
 		//obtain summary data for all available Sentry objects
-		private SentryService sentryService = new SentryService();
+		private SentrySummaryDataService sentryService;
+
+		[OneTimeSetUp]
+		public void Setup()
+		{
+			sentryService = new SentrySummaryDataService();
+		}
 
 		[TestCase("Transfer-Encoding", "chunked")]
 		[TestCase("Connection", "keep-alive")]
@@ -23,14 +30,8 @@ namespace JplApiTesting.Tests.Sentry
 		[Author("N Sahota")]
 		public void CountField_ReturnsCorrectAmount()
 		{
-			Assert.That(sentryService.dto.LatestSentry.count.ToString(), Is.EqualTo("1022"));
-		}
-
-		[Test]
-		[Author("N Sahota")]
-		public void ManualCountDataList_ReturnsCountOfElements()
-		{
-			Assert.That(sentryService.dto.LatestSentry.data.Count, Is.EqualTo(1022));
+			int countGivenInAPI = Int32.Parse(sentryService.dto.LatestSentry.count);
+			Assert.That(sentryService.dto.LatestSentry.data.Count, Is.EqualTo(countGivenInAPI));
 		}
 
 		[Test]
@@ -58,7 +59,7 @@ namespace JplApiTesting.Tests.Sentry
 		[Author("N Sahota")]
 		public void LatestObservation_ReturnsLatest()
 		{
-			Assert.That(sentryService.dto.LatestSentry.data[1020].last_obs.ToString(), Is.EqualTo("2020-Jun-25.091455"));
+			Assert.That(sentryService.dto.LatestSentry.data[0].last_obs.ToString(), Is.EqualTo("1979-Dec-15.42951"));
 		}
 	}
 }
