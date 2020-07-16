@@ -9,7 +9,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.Services
             if (specificClass == string.Empty)
                 throw new ArgumentException("The class cannot be an empty string");
 
-            liveCurrent = callManager.GetSpecificClassData(specificClass);
+            ResponceData = callManager.GetSpecificClassData(specificClass);
 
             Setup();
         }

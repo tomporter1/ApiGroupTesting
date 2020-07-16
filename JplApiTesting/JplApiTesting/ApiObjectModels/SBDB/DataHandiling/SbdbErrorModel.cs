@@ -1,6 +1,6 @@
-﻿namespace JplApiTesting.ApiObjectModels.CAD.DataHandling
+﻿namespace JplApiTesting.ApiObjectModels.SBDB.DataHandiling
 {
-    public class CadErrorRoot
+    public class SbdbErrorRoot
     {
         public string moreInfo { get; set; }
         public string message { get; set; }

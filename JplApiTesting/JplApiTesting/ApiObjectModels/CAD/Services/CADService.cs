@@ -7,17 +7,15 @@ using System.Collections.Generic;
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     //https://ssd-api.jpl.nasa.gov/doc/cad.html
-    public abstract class CadService
+    public abstract class CadService : ServiceBase
     {
         public CadLatestCallManager callManager = new CadLatestCallManager();
         public CadLatestDTO dto = new CadLatestDTO();
-        public string liveCurrent;
-        public JObject json_current;
 
         protected void Setup()
         {
-            dto.DeserializeLatestCAD(liveCurrent);
-            json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+            dto.DeserializeLatestCAD(ResponceData);
+            JObjectResponce = JsonConvert.DeserializeObject<JObject>(ResponceData);
         }
 
         internal bool AllDataItemsHaveSameNumOfFields(int numOfFields)

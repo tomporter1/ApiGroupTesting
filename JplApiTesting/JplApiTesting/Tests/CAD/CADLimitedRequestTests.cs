@@ -34,7 +34,7 @@ namespace JplApiTesting.Tests.CAD
         public void CallingTheAPI_ReturnsCorrectNumberOfFields()
         {
             Assert.That(_cadService.dto.LatestCAD.fields.Count, Is.EqualTo(_expectedNumOfFields));
-        }        
+        }
 
         [Test]
         [Author("T Porter")]
