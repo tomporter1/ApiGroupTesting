@@ -6,58 +6,18 @@ using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
-	public class SentryService
+	public abstract class SentryService
 	{
 		public SentryCallManager sentryCallManager = new SentryCallManager();
 		public SentryDTO dto = new SentryDTO();
 		public string liveCurrent;
 		public JObject json_current;
 
-		public SentryService()
+		public void SetupService()
 		{
-			liveCurrent = sentryCallManager.GetSentryInfo();
-			dto.DeserializeLatestSentry(liveCurrent);
 			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
 		}
 
-		public SentryService(string sentryObjectName)
-		{
-			liveCurrent = sentryCallManager.GetSentryObjectInfo(sentryObjectName);
-			dto.DeserializeSpecifiedSentry(liveCurrent);
-			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
-		}
-
-		public SentryService(int sentryIPValue, int exponent)
-		{
-			liveCurrent = sentryCallManager.GetSentryIPInfo(sentryIPValue, exponent);
-			dto.DeserializeSentryIP(liveCurrent);
-			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
-		}
-
-		public bool CheckMassIsOverZeroSpecifiedObject(string mass)
-		{
-			mass.Replace("e+10", "");
-			double value = Double.Parse(mass);
-			if (value > 0)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-
-		public bool CompareDatesSpecifiedObject(string firstDate, string secondDate)
-		{
-			if (string.Equals(firstDate, secondDate) == false)
-			{
-				return false;
-			}
-			else
-			{
-				return true;
-			};
-		}
+		
 	}
 }

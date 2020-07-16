@@ -90,8 +90,15 @@
     <Compile Include="ApiObjectModels\Scout\Services\ScoutNameQueryDataService.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutEphemerisDataService.cs" />
     <Compile Include="ApiObjectModels\Scout\Services\ScoutService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryErrorModel.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\DataHandling\SentryRemovedModel.cs" />
     <Compile Include="ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryErrorService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryIPService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentryRemovedService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentrySpecifiedObjectService.cs" />
+    <Compile Include="ApiObjectModels\Sentry\Services\SentrySummaryDataService.cs" />
     <Compile Include="ApiObjectModels\ServiceBase.cs" />
     <Compile Include="ApiObjectModels\TestTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,9 +126,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenNameAndDate.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
+    <Compile Include="Tests\Sentry\SentryInvalidSpecifiedObjectTests.cs" />
     <Compile Include="Tests\Sentry\SentryIPTests.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
+    <Compile Include="Tests\Sentry\SentryRemovedTests.cs" />
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>
   <ItemGroup>

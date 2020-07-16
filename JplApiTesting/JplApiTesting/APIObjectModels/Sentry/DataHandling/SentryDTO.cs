@@ -6,9 +6,13 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 	{
 		public SentryRoot LatestSentry { get; private set; }
 
-		public SentrySpecifiedRoot specifiedSentry { get; private set; }
+		public SentrySpecifiedRoot SpecifiedSentry { get; private set; }
 
-		public SentryIPRoot sentryIP { get; private set; }
+		public SentryErrorRoot ErrorSentry { get; private set; }
+
+		public SentryIPRoot SentryIP { get; private set; }
+
+		public SentryRemovedRoot SentryRemoved { get; private set; }
 
 		public void DeserializeLatestSentry(string LatestSentryResponse)
 		{
@@ -17,12 +21,21 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 
 		public void DeserializeSpecifiedSentry(string specifiedSentryResponse)
 		{
-			specifiedSentry = JsonConvert.DeserializeObject<SentrySpecifiedRoot>(specifiedSentryResponse);
+			SpecifiedSentry = JsonConvert.DeserializeObject<SentrySpecifiedRoot>(specifiedSentryResponse);
 		}
 
 		public void DeserializeSentryIP(string SentryIPResponse)
 		{
-			sentryIP = JsonConvert.DeserializeObject<SentryIPRoot>(SentryIPResponse);
+			SentryIP = JsonConvert.DeserializeObject<SentryIPRoot>(SentryIPResponse);
+		}
+		public void DeserializeSentryRemoved(string sentryRemovedResponse)
+		{
+			SentryRemoved = JsonConvert.DeserializeObject<SentryRemovedRoot>(sentryRemovedResponse);
+		}
+
+		public void DeserializeSentryError(string sentryResponse)
+		{
+			ErrorSentry = JsonConvert.DeserializeObject<SentryErrorRoot>(sentryResponse);
 		}
 	}
 }

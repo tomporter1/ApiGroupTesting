@@ -27,10 +27,17 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 			return _response.Content;
 		}
 
-		public string GetSentryIPInfo(int sentryIPValue, int exponent)
+		public string GetSentryIPInfo(double sentryIPValue, int exponent)
 		{
 			//"?all=1" refers to if the impact occurs, true or false (1 ,0)
 			var request = new RestRequest($"?all=1&ip-min={sentryIPValue}e-{exponent}");
+			_response = _client.Execute(request, Method.GET);
+			return _response.Content;
+		}
+
+		public string GetSentryRemovedInfo(int removedValue)
+		{
+			var request = new RestRequest($"?removed={removedValue}");
 			_response = _client.Execute(request, Method.GET);
 			return _response.Content;
 		}
