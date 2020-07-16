@@ -16,21 +16,6 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
         public string fireballReport;
         public JObject json_report;
 
-        const char DateTimeSeparator = ' ';
-        const char DateSeparator = '-';
-        const char TimeSeparator = ':';
-
-        const int DateIndex = 0;
-        const int TimeIndex = 1;
-
-        const int YearIndex = 0;
-        const int MonthIndex = 1;
-        const int DayIndex = 2;
-
-        const int HourIndex = 0;
-        const int MinuteIndex = 1;
-        const int SecondIndex = 2;
-
         public FireballService(in int desiredLimit = 0)
         {
             fireballReport = fireballManager.GetReport(desiredLimit);
@@ -65,47 +50,47 @@ namespace JplApiTesting.ApiObjectModels.Fireball.Services
         public int GetYearAt(in int index)
         {
             return int.Parse(GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[DateIndex]
-                .Split(DateSeparator)[YearIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DateIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateSeparator)[DateTimeConstants.DateTools.DateTimeConstants.YearIndex]);
         }
 
         public int GetMonthAt(in int index)
         {
             return int.Parse(GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[DateIndex]
-                .Split(DateSeparator)[MonthIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DateIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateSeparator)[DateTimeConstants.DateTools.DateTimeConstants.MonthIndex]);
         }
 
         public int GetDayAt(in int index)
         {
             return int.Parse(
                 GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[DateIndex]
-                .Split(DateSeparator)[DayIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DateIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateSeparator)[DateTimeConstants.DateTools.DateTimeConstants.DayIndex]);
         }
 
         public int GetHourAt(in int index)
         {
             return int.Parse(
                 GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[TimeIndex]
-                .Split(TimeSeparator)[HourIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.TimeIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.TimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.HourIndex]);
         }
 
         public int GetMinuteAt(int index)
         {
             return int.Parse(
                 GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[TimeIndex]
-                .Split(TimeSeparator)[MinuteIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.TimeIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.TimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.MinuteIndex]);
         }
 
         public int GetSecondAt(int index)
         {
             return int.Parse(
                 GetDataSubElementAt(index, EFields.date)
-                .Split(DateTimeSeparator)[TimeIndex]
-                .Split(TimeSeparator)[SecondIndex]);
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.DateTimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.TimeIndex]
+                .Split(DateTimeConstants.DateTools.DateTimeConstants.TimeSeparator)[DateTimeConstants.DateTools.DateTimeConstants.SecondIndex]);
         }
 
         public int GetCount()

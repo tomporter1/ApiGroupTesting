@@ -9,7 +9,7 @@ namespace JplApiTesting.ApiObjectModels.CAD.HTTPManager
 
         public CadLatestCallManager()
         {
-            _client = new RestClient(CADConfigReader.BaseUrl);
+            client = new RestClient(CADConfigReader.BaseUrl);
         }
 
         internal Dictionary<string, string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
