@@ -1,22 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
 	public class SentryErrorService : SentryService
 	{
-		public SentryErrorService(string request)
+		public SentryErrorService(string SentryAPIUnderTest, string request)
 		{
 			if (request == string.Empty)
 				throw new ArgumentException("The request string is empty");
 
-			ResponseData = sentryCallManager.GetSentryObjectInfo(request);
+			if (SentryAPIUnderTest == "SentrySpecifiedObject")
+			{
+				ResponseData = sentryCallManager.GetSentryObjectInfo(sentryObjectName: request);
+			}
+			else if (SentryAPIUnderTest == "SentryRemoved")
+			{
+				ResponseData = sentryCallManager.GetSentryRemovedInfo(removedValue: request);
+			}
 
+			dto.DeserializeSentryError(ResponseData);
+			SetupService();
+		}
+
+		public SentryErrorService(string SentryAPIUnderTest, string invalidIPValue, string invalidExponent)
+		{
+			if (SentryAPIUnderTest == "SentryIP")
+			{
+				ResponseData = sentryCallManager.GetSentryIPInfo(sentryIPValue: invalidIPValue, exponent: invalidExponent);
+			}
 			dto.DeserializeSentryError(ResponseData);
 			SetupService();
 		}

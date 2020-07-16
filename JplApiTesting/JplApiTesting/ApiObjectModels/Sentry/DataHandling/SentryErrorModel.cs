@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
+﻿namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 {
 	public class SentryErrorRoot
 	{
@@ -12,5 +6,4 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 		public string message { get; set; }
 		public string code { get; set; }
 	}
-
 }

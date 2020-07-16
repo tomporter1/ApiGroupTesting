@@ -28,6 +28,7 @@ namespace JplApiTesting.ApiObjectModels.Sentry.DataHandling
 		{
 			SentryIP = JsonConvert.DeserializeObject<SentryIPRoot>(SentryIPResponse);
 		}
+
 		public void DeserializeSentryRemoved(string sentryRemovedResponse)
 		{
 			SentryRemoved = JsonConvert.DeserializeObject<SentryRemovedRoot>(sentryRemovedResponse);
