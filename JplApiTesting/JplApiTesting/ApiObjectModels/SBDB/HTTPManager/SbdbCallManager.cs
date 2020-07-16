@@ -7,7 +7,7 @@ namespace JplApiTesting.ApiObjectModels.SBDB.HTTPManager
     {
         public SbdbCallManager()
         {
-            _client = new RestClient(SbdbConfigReader.BaseUrl);
+            client = new RestClient(SbdbConfigReader.BaseUrl);
         }
 
         internal string GetSpecificBodyData(string bodyName) => CreateGetRequest($"?sstr={bodyName}");

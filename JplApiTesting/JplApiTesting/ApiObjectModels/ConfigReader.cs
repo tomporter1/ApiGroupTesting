@@ -6,7 +6,7 @@ namespace JplApiTesting.ApiObjectModels
 {
     public class ConfigReader
     {
-        protected static ConfigRoot _configObj => JsonConvert.DeserializeObject<ConfigRoot>(File.ReadAllText(_jsonFilePath));
-        protected static readonly string _jsonFilePath = AppDomain.CurrentDomain.BaseDirectory + @"ApiObjectModels\Config.json";
+        protected static ConfigRoot configObj => JsonConvert.DeserializeObject<ConfigRoot>(File.ReadAllText(jsonFilePath));
+        protected static readonly string jsonFilePath = AppDomain.CurrentDomain.BaseDirectory + @"ApiObjectModels\Config.json";
     }
 }
