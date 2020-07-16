@@ -14,6 +14,8 @@ namespace JplApiTesting.ApiObjectModels.Scout.DataHandling
         public List<string> datafields { get; set; }
         [JsonProperty("orbit-count")]
         public int orbitcount { get; set; }
+        public string message { get; set; }
+        public string error { get; set; }
     }
 
     public class Object
