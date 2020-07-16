@@ -116,7 +116,6 @@
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenNameAndDate.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Sentry\SentryIPTests.cs" />
-    <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>
