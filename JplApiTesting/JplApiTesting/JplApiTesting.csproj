@@ -56,22 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiObjectModels\BaseCallManager.cs" />
-    <Compile Include="ApiObjectModels\ConfigReader.cs" />
-    <Compile Include="ApiObjectModels\ConfigModel.cs" />
-    <Compile Include="ApiObjectModels\DateTools.cs" />
-    <Compile Include="ApiObjectModels\RequestParameterInfo.cs" />
-    <Compile Include="ApiObjectModels\RequestParametersTypes.cs" />
-    <Compile Include="ApiObjectModels\ServiceBase.cs" />
-    <Compile Include="ApiObjectModels\TestTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ApiObjectModels\Config.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ApiObjectModels\" />
     <Folder Include="bin\Release\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\" />
