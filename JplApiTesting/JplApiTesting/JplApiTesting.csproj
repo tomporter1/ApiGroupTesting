@@ -133,16 +133,18 @@
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Scout\ScoutDataApiTestsGivenObject.cs" />
     <Compile Include="Tests\Sentry\SentryErrorTests.cs" />
+    <Compile Include="Tests\Sentry\SentryMethods\SentryIPServiceTests.cs" />
     <Compile Include="Tests\Sentry\SentryIPTests.cs" />
     <Compile Include="Tests\Sentry\SentryObjectTests.cs" />
+    <Compile Include="Tests\Sentry\SentryMethods\SentryRemovedServiceTest.cs" />
     <Compile Include="Tests\Sentry\SentryRemovedTests.cs" />
-    <Compile Include="Tests\Sentry\SentryRemovedValueTests.cs" />
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ApiObjectModels\Config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ApiObjectModels\Sentry\SentryClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
