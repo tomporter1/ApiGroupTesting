@@ -241,13 +241,23 @@ _What happened to any cards left incomplete?_
 |***dev***|For developers to combine builds|
 |***master***|Master branch: only ever contains working code|
 |***split_up_projects***|Didn't have time to implement this into the codebase, but this contains the project split into library and implementation .csproj files|
-|***class_diagrams***|Contains class diagrams|
+|***class_diagrams***|Contains class diagrams|  [gigudhfdjh]()
 
 ### Class Diagrams
 
-|Name|Purpose|Picture|Location|
-|-|-|-|-|
-||<img src="ClassDiagramImages/CadClassDiagram.png" alt="meteor image" width="250"/>|[]()|
+|Name|Picture|
+|-|-|
+|***CadClassDiagram***|<img src="ClassDiagramImages/CadClassDiagram.png" alt="cd image" width="250"/>|
+|***CadTestClassDiagram***|<img src="ClassDiagramImages/CadTestClassDiagram.png" alt="cd image" width="250"/>|
+|***ConfigReaderClassDiagram***|<img src="ClassDiagramImages/ConfigReaderClassDiagram.png" alt="cd image" width="250"/>|
+|***FireballClassDiagram***|<img src="ClassDiagramImages/FireballClassDiagram.png" alt="cd image" width="250"/>          |
+|***FireballTestsClassDiagram***|<img src="ClassDiagramImages/FireballTestsClassDiagram.png" alt="cd image" width="250"/>|
+|***SbdbClassDiagram***|<img src="ClassDiagramImages/SbdbClassDiagram.png" alt="cd image" width="250"/>                  |
+|***SbdbTestsClassDiagram***|<img src="ClassDiagramImages/SbdbTestsClassDiagram.png" alt="cd image" width="250"/>        |
+|***ScoutClassDiagram***|<img src="ClassDiagramImages/ScoutClassDiagram.png" alt="cd image" width="250"/>                |
+|***ScoutTestsClassDiagram***|<img src="ClassDiagramImages/ScoutTestsClassDiagram.png" alt="cd image" width="250"/>      |
+|***SentryClassDiagram***|<img src="ClassDiagramImages/SentryClassDiagram.png" alt="cd image" width="250"/>              |
+|***SentryTestsClassDiagram***|<img src="ClassDiagramImages/SentryTestsClassDiagram.png" alt="cd image" width="250"/>    |
 
 ### Recommended Visual Studio Extensions
 
