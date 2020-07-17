@@ -211,7 +211,7 @@ _What happened to any cards left incomplete?_
 
 |Name|What have you learned?| What would you do differently next time?| What would you do next?|
 |-|-|-|-|
-|**(CAD) Tom**|||
+|**(CAD) Tom**|How version control as a group should be done and what are the best practices in terms of the dev and master branches being protected by pull requests. Tom also learnt the importance of using feature branches especially when working as a team|Start with more general code in each API’s service so there is less repeated code|Have a full suite of frameworks that can evaluate all of the different APIs that JPL has to offer|
 |**(Fireball) Kieran**|Extensive documentation<br/>Quickly was able to write Fireball codebase<br/>Learnt a lot about source control<br/>|Could have tested my own code more<br/>Could have tested for exceptions<br/>Could have focussed more on expanding my codebase|If the project were to continue past the prototype stage, Kieran would test more APIs and write tests for more edge cases (negative numbers, overflow etc.)|
 |**(Scout) Thamish**|Improved communication and teamwork skills<br>Improved understanding of git and source control|Use more shared code<br/>Manage our time better|Test more Apis<br/>Write more tests for each framework to improve test coverage|
 |**(Sentry) Sunny**|During this project Narinder learned how to interact with a source control environment within a team. The daily sprints allowed him to merge often and fully utilise branches to separate features within the project. He then utilised inheritance by extending from base classes to keep code dry. A broad set of tests where created against Sentry API|Implement more error handling of methods created when testing data within API, such as testing against a meteor’s mass value|Implement what he learned from the previous API’s to the rest of the available NASA API’s. Create more base classes in order to reduce duplicated code within different API. Create more tests for the comet over stone hedge with a larger range of API’s to get a larger set of data| 
@@ -247,7 +247,7 @@ _What happened to any cards left incomplete?_
 
 |Name|Purpose|Picture|Location|
 |-|-|-|-|
-||<img src="ClassDiagramImages/CadClassDiagram.png" alt="meteor image" width="250"/>||
+||<img src="ClassDiagramImages/CadClassDiagram.png" alt="meteor image" width="250"/>|[]()|
 
 ### Recommended Visual Studio Extensions
 
