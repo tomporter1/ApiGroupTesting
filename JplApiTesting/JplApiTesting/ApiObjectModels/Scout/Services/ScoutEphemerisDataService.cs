@@ -8,9 +8,9 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
 {
     public class ScoutEphemerisDataService : ScoutService
     {
-        public ScoutEphemerisDataService(string Name,string date)
+        public ScoutEphemerisDataService(string name,string date)
         {
-            NEOdata = callManager.GetScoutEphemerisData(Name, date);
+            ResponseData = callManager.GetScoutEphemerisData(name, date);
             SetupForEphemeris();
         }   
     }

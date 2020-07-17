@@ -1,5 +1,8 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
@@ -9,10 +12,16 @@ namespace JplApiTesting.Tests.CAD
         private const int _limit = 10;
         private const int _expectedNumOfFields = 12;
 
+        private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+        {
+            [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" },
+            [RequestParametersTypes.Limit] = new RequestParameterInfo() { Label = CADConfigReader.LimitParam, Data = _limit.ToString() }
+        };
+
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadLimitService(_limit);
+            _cadService = new CadLimitService(_requestParams);
         }
 
         [Test]

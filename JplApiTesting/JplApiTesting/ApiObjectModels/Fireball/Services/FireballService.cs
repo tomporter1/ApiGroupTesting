@@ -8,7 +8,7 @@ using static JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel;
 
 namespace JplApiTesting.ApiObjectModels.Fireball.Services
 {
-    public class FireballService
+    public class FireballService : ServiceBase
     {
         public FireballManager fireballManager = new FireballManager();
         public FireballDTO fireballDTO = new FireballDTO();

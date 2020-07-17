@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,22 +11,15 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 	{
 		public SentrySpecifiedObjectService(string sentryObjectName)
 		{
-			liveCurrent = sentryCallManager.GetSentryObjectInfo(sentryObjectName);
-			dto.DeserializeSpecifiedSentry(liveCurrent);
+			ResponseData = sentryCallManager.GetSentryObjectInfo(sentryObjectName);
+			dto.DeserializeSpecifiedSentry(ResponseData);
 			SetupService();
 		}
 		public bool CheckMassIsOverZeroSpecifiedObject(string mass)
 		{
 			mass.Replace("e+10", "");
 			double value = Double.Parse(mass);
-			if (value > 0)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			return (value > 0) ?  true : false;
 		}
 
 		public bool CompareDatesSpecifiedObject(string firstDate, string secondDate)

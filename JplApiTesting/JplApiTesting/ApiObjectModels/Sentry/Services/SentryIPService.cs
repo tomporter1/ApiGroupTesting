@@ -14,8 +14,8 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 			{
 				throw new ArgumentException("Error: IP value and Exponent must be greater than 0");
 			}
-			liveCurrent = sentryCallManager.GetSentryIPInfo(sentryIPValue, exponent);
-			dto.DeserializeSentryIP(liveCurrent);
+			ResponseData = sentryCallManager.GetSentryIPInfo(sentryIPValue, exponent);
+			dto.DeserializeSentryIP(ResponseData);
 			SetupService();
 		}
 	}

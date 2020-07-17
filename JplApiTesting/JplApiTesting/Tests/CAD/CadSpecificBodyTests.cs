@@ -1,18 +1,25 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
     public class CadSpecificBodyTests
     {
         private CadSpecificBodyService _cadService;
-        private const string _body = "Moon";
         private const int _expectedNUmOfDataItems = 2;
+
+        private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestparams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+        {
+            [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "Moon" }
+        };
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadSpecificBodyService(_body);
+            _cadService = new CadSpecificBodyService(_requestparams);
         }
 
         [Test]
