@@ -247,7 +247,7 @@ _What happened to any cards left incomplete?_
 
 |Name|Purpose|Picture|Location|
 |-|-|-|-|
-||||
+||<img src="ClassDiagramImages/CadClassDiagram.png" alt="meteor image" width="250"/>||
 
 ### Recommended Visual Studio Extensions
 
