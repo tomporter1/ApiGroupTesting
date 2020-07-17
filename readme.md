@@ -2,6 +2,8 @@
 
 ### A framework for testing [JPL’s SSD (Solar System Dynamics) and CNEOS (Center for Near-Earth Object Studies) API](https://ssd-api.jpl.nasa.gov/)
 
+#### Please note: Though the main submission exists in the "master" branch, please find the combined project within branch "split_up_projects"
+
 ## The Project
 
 ~ ***[Please refer to the Github Project board here](https://github.com/tomporter1/ApiGroupTesting/projects/1)*** ~
@@ -160,8 +162,11 @@ _Product owner said/requested_:
 
 |Card|Moved into column...|
 |-|-|
-||[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
-||[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3 Definition of Done ☄️✨](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41843668)|[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
+|[Sprint 3 Goal: Refine, Refactor, Unify ☄️✨](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41843123)|[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
+|[Sprint 3 Merge ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-42044361)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3 - Need to update documentation to reflect SBDB assignments by Tom and Thamish ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41973731)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3: Inherit from base classes in prep. for migrating to per-project Service Object Models ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41978637)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
 
 _What happened to any cards left incomplete?_
 
@@ -196,20 +201,20 @@ _What happened to any cards left incomplete?_
 
 |Name|What Went Well?|Improvements|Action Plan|
 |-|-|-|-|
-|**(CAD) Tom**|        ||
-|**(Fireball) Kieran**|||
-|**(Scout) Thamish**|  ||
-|**(Sentry) Sunny**|   ||
+|**(CAD) Tom**|Pull requests and mergers from the dev branch have gone a lot smoother as we have become more familiar with GIT and GitHub. Also splitting up the projects into their own separate projects went surprisingly well as we put considerable effort into minimising conflicts and dependencies at the start of the project|For the different frameworks to use generalised code to simplify them and have them being less hard coded to specific use cases|If this project were to continue past the prototype stage, then it would be good to include more APIs and to generalise the framework more|
+|**(Fireball) Kieran**|Great documentation: explains the project well.|Wish he had focussed more on the code in this sprint|If the project were to be worked on past the prototype week, Kieran would refine his codebase more and test his own functions more.|
+|**(Scout) Thamish**|Worked well as a team<br/>Achieved sprint goal<br/>Refactored code<br/>Achieved stakeholder requirements|Minimise conflicts<br/>Framework needs to use more shared code modules|Test more APIs|
+|**(Sentry) Sunny**|Was able to test the error responses given for each API when invalid data was given to methods. Implemented tests for specific argument exceptions when sending invalid data given to sentry service methods|Make services more robust when accepting input data, by defining specific exceptions|To refactor the sentry config so that it inherits from a shared parent class between all APIs|
 
 
 ☄️ **Project Retrospective**
 
-|Name|What Went Well?|Improvements|Action Plan|
+|Name|What have you learned?| What would you do differently next time?| What would you do next?|
 |-|-|-|-|
-|**(CAD) Tom**|        ||
-|**(Fireball) Kieran**|||
-|**(Scout) Thamish**|  ||
-|**(Sentry) Sunny**|   ||
+|**(CAD) Tom**|How version control as a group should be done and what are the best practices in terms of the dev and master branches being protected by pull requests. Tom also learnt the importance of using feature branches especially when working as a team|Start with more general code in each API’s service so there is less repeated code|Have a full suite of frameworks that can evaluate all of the different APIs that JPL has to offer|
+|**(Fireball) Kieran**|Extensive documentation<br/>Quickly was able to write Fireball codebase<br/>Learnt a lot about source control<br/>|Could have tested my own code more<br/>Could have tested for exceptions<br/>Could have focussed more on expanding my codebase|If the project were to continue past the prototype stage, Kieran would test more APIs and write tests for more edge cases (negative numbers, overflow etc.)|
+|**(Scout) Thamish**|Improved communication and teamwork skills<br>Improved understanding of git and source control|Use more shared code<br/>Manage our time better|Test more Apis<br/>Write more tests for each framework to improve test coverage|
+|**(Sentry) Sunny**|During this project Narinder learned how to interact with a source control environment within a team. The daily sprints allowed him to merge often and fully utilise branches to separate features within the project. He then utilised inheritance by extending from base classes to keep code dry. A broad set of tests where created against Sentry API|Implement more error handling of methods created when testing data within API, such as testing against a meteor’s mass value|Implement what he learned from the previous API’s to the rest of the available NASA API’s. Create more base classes in order to reduce duplicated code within different API. Create more tests for the comet over stone hedge with a larger range of API’s to get a larger set of data| 
 
 ## Code
 
@@ -217,15 +222,42 @@ _What happened to any cards left incomplete?_
 <br/><br/>
 
 
-### Projects
+### Projects (within master)
 
 | .csproj | Purpose |
 |---------|---------|
 |***JplApiTesting***|Everything (so far)|
 
+### Branches
+
+|Name|Purpose|
+|--|--|
+|***cad_api_tests***|Testing CAD API|
+|***fireball_api_tests***|Testing Fireball API|
+|***sbdb_api***|Service object model for SBDB testing|
+|***sbdb_api_tests***|Testing SBDB API|
+|***scout_api_tests***|Testing Scout API|
+|***sentry_api_tests***|Testing Scout API|
+|***dev***|For developers to combine builds|
+|***master***|Master branch: only ever contains working code|
+|***split_up_projects***|Didn't have time to implement this into the codebase, but this contains the project split into library and implementation .csproj files|
+|***class_diagrams***|Contains class diagrams|  [gigudhfdjh]()
+
 ### Class Diagrams
 
-Find class diagrams via [the class diagrams page](ClassDiagrams.md).
+|Name|Picture|
+|-|-|
+|***CadClassDiagram***|<img src="ClassDiagramImages/CadClassDiagram.png" alt="cd image" width="250"/>|
+|***CadTestClassDiagram***|<img src="ClassDiagramImages/CadTestClassDiagram.png" alt="cd image" width="250"/>|
+|***ConfigReaderClassDiagram***|<img src="ClassDiagramImages/ConfigReaderClassDiagram.png" alt="cd image" width="250"/>|
+|***FireballClassDiagram***|<img src="ClassDiagramImages/FireballClassDiagram.png" alt="cd image" width="250"/>          |
+|***FireballTestsClassDiagram***|<img src="ClassDiagramImages/FireballTestsClassDiagram.png" alt="cd image" width="250"/>|
+|***SbdbClassDiagram***|<img src="ClassDiagramImages/SbdbClassDiagram.png" alt="cd image" width="250"/>                  |
+|***SbdbTestsClassDiagram***|<img src="ClassDiagramImages/SbdbTestsClassDiagram.png" alt="cd image" width="250"/>        |
+|***ScoutClassDiagram***|<img src="ClassDiagramImages/ScoutClassDiagram.png" alt="cd image" width="250"/>                |
+|***ScoutTestsClassDiagram***|<img src="ClassDiagramImages/ScoutTestsClassDiagram.png" alt="cd image" width="250"/>      |
+|***SentryClassDiagram***|<img src="ClassDiagramImages/SentryClassDiagram.png" alt="cd image" width="250"/>              |
+|***SentryTestsClassDiagram***|<img src="ClassDiagramImages/SentryTestsClassDiagram.png" alt="cd image" width="250"/>    |
 
 ### Recommended Visual Studio Extensions
 
