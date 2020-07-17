@@ -222,15 +222,32 @@ _What happened to any cards left incomplete?_
 <br/><br/>
 
 
-### Projects
+### Projects (within master)
 
 | .csproj | Purpose |
 |---------|---------|
 |***JplApiTesting***|Everything (so far)|
 
+### Branches
+
+|Name|Purpose|
+|--|--|
+|***cad_api_tests***|Testing CAD API|
+|***fireball_api_tests***|Testing Fireball API|
+|***sbdb_api***|Service object model for SBDB testing|
+|***sbdb_api_tests***|Testing SBDB API|
+|***scout_api_tests***|Testing Scout API|
+|***sentry_api_tests***|Testing Scout API|
+|***dev***|For developers to combine builds|
+|***master***|Master branch: only ever contains working code|
+|***split_up_projects***|Didn't have time to implement this into the codebase, but this contains the project split into library and implementation .csproj files|
+|***class_diagrams***|Contains class diagrams|
+
 ### Class Diagrams
 
-Find class diagrams via [the class diagrams page](ClassDiagrams.md).
+|Name|Purpose|Picture|Location|
+|-|-|-|-|
+||||
 
 ### Recommended Visual Studio Extensions
 
