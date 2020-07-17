@@ -10,6 +10,8 @@ namespace JplApiTesting.Tests.Fireball
     [Author("K McEvaddy")]
     public class FireballApiHeaderShould
     {
+        // Very duplicated: just use test cases in future.
+
         [Test]
         public void ContainKey_TransferEncoding_Equalling_Chunked()
         {
@@ -17,17 +19,9 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
-            string transferEncoding = HeadersDict["Transfer-Encoding"];
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             // Assert
-            Assert.That(transferEncoding, Is.EqualTo("chunked"));
+            Assert.That(HeadersDict["Transfer-Encoding"], Is.EqualTo("chunked"));
         }
 
         [Test]
@@ -37,17 +31,9 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
-            string connection = HeadersDict["Connection"];
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             // Assert
-            Assert.That(connection, Is.EqualTo("keep-alive"));
+            Assert.That(HeadersDict["Connection"], Is.EqualTo("keep-alive"));
         }
 
         [Test]
@@ -57,17 +43,9 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
-            string accessCOntrolAllowOrigin = HeadersDict["Access-Control-Allow-Origin"];
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             // Assert
-            Assert.That(accessCOntrolAllowOrigin, Is.EqualTo("*"));
+            Assert.That(HeadersDict["Access-Control-Allow-Origin"], Is.EqualTo("*"));
         }
 
         [Test]
@@ -77,17 +55,9 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
-            string contentType = HeadersDict["Content-Type"];
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             // Assert
-            Assert.That(contentType, Is.EqualTo("application/json"));
+            Assert.That(HeadersDict["Content-Type"], Is.EqualTo("application/json"));
         }
 
         [Test]
@@ -97,14 +67,7 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             string year = HeadersDict["Date"].Split(' ')[3];
             // Assert
             Assert.That(year, Is.EqualTo(DateTime.Today.Year.ToString()));
@@ -117,17 +80,9 @@ namespace JplApiTesting.Tests.Fireball
             IRestClient client = new RestClient(FireballConfigReader.BaseUrl);
             IRestRequest request = new RestRequest("$limit=20");
             IRestResponse response = client.Execute(request, Method.GET);
-            // Credit to Tom for the header deserialisation
-            // Creating a dictionary and adding all headers and their values
-            Dictionary<string, string> HeadersDict = new Dictionary<string, string>();
-            foreach (var item in response.Headers)
-            {
-                string[] KeyPairs = item.ToString().Split('=');
-                HeadersDict.Add(KeyPairs[0], KeyPairs[1]);
-            }
-            string server = HeadersDict["Server"];
+            Dictionary<string, string> HeadersDict = JplApiTesting.ApiObjectModels.TestTools.GetContentTypeHeader(response.Headers);
             // Assert
-            Assert.That(server, Is.EqualTo("nginx"));
+            Assert.That(HeadersDict["Server"], Is.EqualTo("nginx"));
         }
     }
 }
