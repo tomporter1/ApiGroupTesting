@@ -149,6 +149,7 @@
     <None Include="ApiObjectModels\SBDB\SbdbClassDiagram.cd" />
     <None Include="ApiObjectModels\Scout\ScoutClassDiagram.cd" />
     <None Include="ApiObjectModels\Sentry\SentryClassDiagram.cd" />
+    <None Include="ConfigReaderClassDiagram.cd" />
     <None Include="packages.config" />
     <None Include="Tests\CAD\CadTestClassDiagram.cd" />
     <None Include="Tests\Fireball\FireballTestsClassDiagram.cd" />
