@@ -5,7 +5,7 @@ namespace JplApiTesting.ApiObjectModels
     public class ConfigRoot
     {
         public CadInfo CAD { get; set; }
-        public Info Fireball { get; set; }
+        public FireballInfo Fireball { get; set; }
         public ScoutInfo Scout { get; set; }
         public Info Sentry { get; set; }
         public Info SBDB { get; set; }

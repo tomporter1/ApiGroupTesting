@@ -3,7 +3,7 @@ using JplApiTesting.ApiObjectModels.Fireball.Services;
 using NUnit.Framework;
 using RestSharp;
 
-namespace JplApiTesting.Tests.Fireball.InvalidQuerying
+namespace JplApiTesting.Tests.Fireball
 {
     [TestFixture]
     [Author("K McEvaddy")]
