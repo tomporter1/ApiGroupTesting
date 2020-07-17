@@ -1,17 +1,26 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
     public class CadInvalidDateTests
     {
         private CadErrorRespService _cadService;
-        private readonly string _minDate = "2020-07-32", _maxDate = "2020-07-38";
+
+        private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+        {
+            [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" },
+            [RequestParametersTypes.MinDate] = new RequestParameterInfo() { Label = CADConfigReader.MinDateParam, Data = "2020-07-32" },
+            [RequestParametersTypes.MaxDate] = new RequestParameterInfo() { Label = CADConfigReader.MaxDateParam, Data = "2020-07-38" },
+        };
 
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadErrorRespService($"?body=All&date-min={_minDate}&date-max={_maxDate}");
+            _cadService = new CadErrorRespService(_requestParams);
         }
 
         [Test]

@@ -1,5 +1,8 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
@@ -7,10 +10,15 @@ namespace JplApiTesting.Tests.CAD
     {
         private CadErrorRespService _cadService;
 
+        private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+        {
+            [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "Invalid" }
+        };
+
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadErrorRespService("?body=Invalid");
+            _cadService = new CadErrorRespService(_requestParams);
         }
 
         [Test]

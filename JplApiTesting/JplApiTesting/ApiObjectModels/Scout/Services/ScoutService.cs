@@ -5,33 +5,27 @@ using Newtonsoft.Json.Linq;
 
 namespace JplApiTesting.ApiObjectModels.Scout.Services
 {
-    public class ScoutService
+    public abstract class ScoutService : ServiceBase
     {
         public ScoutLatestCallManager callManager = new ScoutLatestCallManager();
         public ScoutLatestDTO dto = new ScoutLatestDTO();
-        public string NEOdata;
-        public JObject json_current;
-
         public ScoutService()
         {
         }
-
         public void SetupForAll()
         {
-            dto.DeserializeLatestScout(NEOdata);
-            json_current = JsonConvert.DeserializeObject<JObject>(NEOdata);
+            dto.DeserializeLatestScout(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
-
         public void SetupForGivenName()
         {
-            dto.DeserializeLatestScoutQueryName(NEOdata);
-            json_current = JsonConvert.DeserializeObject<JObject>(NEOdata);
+            dto.DeserializeLatestScoutQueryName(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
-
         public void SetupForEphemeris()
         {
-            dto.DeserializeLatestScoutEphemeris(NEOdata);
-            json_current = JsonConvert.DeserializeObject<JObject>(NEOdata);
+            dto.DeserializeLatestScoutEphemeris(ResponseData);
+            JObjectResponse = JsonConvert.DeserializeObject<JObject>(ResponseData);
         }
     }
 }

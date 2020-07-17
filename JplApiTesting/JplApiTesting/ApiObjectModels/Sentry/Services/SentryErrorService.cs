@@ -15,10 +15,10 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 			if (request == string.Empty)
 				throw new ArgumentException("The request string is empty");
 
-			liveCurrent = sentryCallManager.GetSentryObjectInfo(request);
+			ResponseData = sentryCallManager.GetSentryObjectInfo(request);
 
-			dto.DeserializeSentryError(liveCurrent);
-			json_current = JsonConvert.DeserializeObject<JObject>(liveCurrent);
+			dto.DeserializeSentryError(ResponseData);
+			SetupService();
 		}
 	}
 }

@@ -1,5 +1,8 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
@@ -9,28 +12,43 @@ namespace JplApiTesting.Tests.CAD
         [Author("T Porter")]
         public void FrameworkThrowsException_WithEmptyStringBody()
         {
-            Assert.That(() => new CadSpecificBodyService(""), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
+            Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+            {
+                [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "" }
+            };
+
+            Assert.That(() => new CadSpecificBodyService(requestParams), Throws.ArgumentException.And.Message.EqualTo("The body cannot be an empty string"));
         }
 
         [Test]
         [Author("T Porter")]
         public void FrameworkThrowsException_WithEmptyStringClass()
         {
-            Assert.That(() => new CadSpecificClassService(""), Throws.ArgumentException.And.Message.EqualTo("The class cannot be an empty string"));
+            Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+            {
+                [RequestParametersTypes.Class] = new RequestParameterInfo() { Label = CADConfigReader.ClassParam, Data = "" }
+            };
+
+            Assert.That(() => new CadSpecificClassService(requestParams), Throws.ArgumentException.And.Message.EqualTo("The class cannot be an empty string"));
         }
 
         [Test]
         [Author("T Porter")]
         public void FrameworkThrowsException_WithNegativeLimit()
         {
-            Assert.That(() => new CadLimitService(-1), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
+            Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+            {
+                [RequestParametersTypes.Limit] = new RequestParameterInfo() { Label = CADConfigReader.LimitParam, Data = "-1" }
+            };
+
+            Assert.That(() => new CadLimitService(requestParams), Throws.ArgumentException.And.Message.EqualTo("The limit for the request cannot be negative"));
         }
 
         [Test]
         [Author("T Porter")]
         public void FrameworkThrowsException_WithEmptyRequestString()
         {
-            Assert.That(() => new CadErrorRespService(""), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
+            Assert.That(() => new CadErrorRespService(new Dictionary<RequestParametersTypes, RequestParameterInfo>()), Throws.ArgumentException.And.Message.EqualTo("The request cannot be an empty string"));
         }
 
         [TestCase("2020-07-32", "2020-08-01", "The minimum date must be valid and in the form YYYY-MM-DD")]
@@ -40,7 +58,14 @@ namespace JplApiTesting.Tests.CAD
         [Author("T Porter")]
         public void FrameworkThrowsException_WithInvalidMinDate(string minDate, string maxDate, string expectedMsg)
         {
-            Assert.That(() => new CadDateFilteredService(minDate, maxDate), Throws.ArgumentException.And.Message.EqualTo(expectedMsg));
+            Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+            {
+                [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" },
+                [RequestParametersTypes.MinDate] = new RequestParameterInfo() { Label = CADConfigReader.MinDateParam, Data = minDate },
+                [RequestParametersTypes.MaxDate] = new RequestParameterInfo() { Label = CADConfigReader.MaxDateParam, Data = maxDate }
+            };
+
+            Assert.That(() => new CadDateFilteredService(requestParams), Throws.ArgumentException.And.Message.EqualTo(expectedMsg));
         }
     }
 }
