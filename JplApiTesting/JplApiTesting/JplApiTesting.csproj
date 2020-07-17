@@ -141,11 +141,20 @@
     <Compile Include="Tests\Sentry\SentryTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ApiObjectModels\CAD\CadClassDiagram.cd" />
     <None Include="ApiObjectModels\Config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ApiObjectModels\Fireball\FireballClassDiagram.cd" />
+    <None Include="ApiObjectModels\SBDB\SbdbClassDiagram.cd" />
+    <None Include="ApiObjectModels\Scout\ScoutClassDiagram.cd" />
     <None Include="ApiObjectModels\Sentry\SentryClassDiagram.cd" />
     <None Include="packages.config" />
+    <None Include="Tests\CAD\CadTestClassDiagram.cd" />
+    <None Include="Tests\Fireball\FireballTestsClassDiagram.cd" />
+    <None Include="Tests\SBDB\SbdbTestsClassDiagram.cd" />
+    <None Include="Tests\Scout\ScoutTestsClassDiagram.cd" />
+    <None Include="Tests\Sentry\SentryTestsClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
