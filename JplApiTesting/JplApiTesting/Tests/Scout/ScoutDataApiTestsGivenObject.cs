@@ -46,7 +46,7 @@ namespace JplApiTesting.Tests.Scout
         [TestCase("A10o9AM")]
         [TestCase("P112eHp")]
         [TestCase("N00gs7n")]
-        [TestCase("P112eHp")]
+        [TestCase("C2XU6W2")]
         [Author("T Perera")]
         public void CheckIfGivenNameIsValid(string ObjectName)
         {
