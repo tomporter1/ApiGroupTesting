@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JplApiTesting.Tests.Fireball.FireballApi_EachDatum_Date_Should">
+    <Position X="5.75" Y="2" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgCESAAAACAAAABAAAAAAAAAAAAAAAAABAAAEAA=</HashCode>
+      <FileName>Tests\Fireball\Data\FireballApi_EachDatum_Date_Should.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_fireballService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Fireball.FireballApiGivenInvalidQueryingShould">
+    <Position X="0.5" Y="2" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAICAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\Fireball\InvalidQuerying\FireballApiGivenInvalidQueryingShould.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Fireball.FireballApiGeneralShould">
+    <Position X="10.5" Y="2" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACCgAACAAAASAAAAQAAAAAAAAIAAAAAEAAAIAAAAA=</HashCode>
+      <FileName>Tests\Fireball\FireballApiGeneralShould.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_fireballService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Fireball.FireballApiHeaderShould">
+    <Position X="0.5" Y="4.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAABAAAAAAAAAAAAAAEAABAAACAAAAAAAAEAA=</HashCode>
+      <FileName>Tests\Fireball\FireballApiHeaderShould.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Fireball.FireballApiShould">
+    <Position X="14.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAACAAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAA=</HashCode>
+      <FileName>Tests\Fireball\FireballApiShould.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_fireballService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Fireball.Services.FireballService" Collapsed="true">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAQAAAkCAgAAAAAAAAAAAAAIUAEgAAAAABAIBCAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\Services\FireballService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
