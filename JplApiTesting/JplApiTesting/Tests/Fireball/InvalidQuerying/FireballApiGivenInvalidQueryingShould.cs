@@ -1,5 +1,4 @@
 ﻿using JplApiTesting.ApiObjectModels.Fireball;
-using JplApiTesting.ApiObjectModels.Fireball.Services;
 using NUnit.Framework;
 using RestSharp;
 
@@ -9,15 +8,7 @@ namespace JplApiTesting.Tests.Fireball
     [Author("K McEvaddy")]
     public class FireballApiGivenInvalidQueryingShould
     {
-        protected FireballService _fireballService = null;
         protected const int NumToQuery = 20;
-
-        [SetUp]
-        [Author("K McEvaddy")]
-        public virtual void Setup()
-        {
-            _fireballService = new FireballService(NumToQuery);
-        }
 
         [TestCase("?slime-cube=3")]
         [TestCase("?eightynine=89")]
