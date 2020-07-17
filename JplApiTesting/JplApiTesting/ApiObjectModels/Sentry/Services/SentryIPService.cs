@@ -1,19 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
 	public class SentryIPService : SentryService
 	{
-		public SentryIPService(double sentryIPValue, int exponent)
+		public SentryIPService(string sentryIPValue, string exponent)
 		{
-			if (sentryIPValue < 1 || exponent < 1 || exponent > 10)
+			int ip = -1;
+			int exp = -1;
+
+			try
 			{
-				throw new ArgumentException("Error: IP value and Exponent must be greater than 0");
+				ip = int.Parse(sentryIPValue);
+				exp = int.Parse(exponent);
+
+				if (ip < 1 || exp < 2 || exp > 10)
+				{
+					throw new ArgumentException("IP has to be greater than 1, Exponent cannot be greater than 10");
+				}
 			}
+			catch
+			{
+				throw new ArgumentException("Invalid parameters must be int");
+			}
+
 			ResponseData = sentryCallManager.GetSentryIPInfo(sentryIPValue, exponent);
 			dto.DeserializeSentryIP(ResponseData);
 			SetupService();

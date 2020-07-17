@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System;
 
-namespace JplApiTesting.Tests.Fireball.Data
+namespace JplApiTesting.Tests.Fireball
 {
     [TestFixture]
     [Author("K McEvaddy")]

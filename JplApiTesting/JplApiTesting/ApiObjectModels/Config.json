@@ -19,7 +19,23 @@
   },
 
   "Fireball": {
-    "url": "https://ssd-api.jpl.nasa.gov/fireball.api"
+    "url": "https://ssd-api.jpl.nasa.gov/fireball.api",
+    "parameters": {
+      "minDate": "date-min=",
+      "maxDate": "date-max=",
+      "minEnergy": "energy-min=",
+      "maxEnergy": "energy-max=",
+      "minEstimatedImpact": "impact-e-min=",
+      "maxEstimatedImpact": "impact-e-max=",
+      "minVelocity": "vel-min=",
+      "maxVelocity": "vel-max=",
+      "locationRequired": "req-loc=",
+      "altitudeRequired": "req-alt=",
+      "velocityComponentsRequired": "req-vel-comp=",
+      "velocityComponents": "vel-comp=",
+      "sort": "sort=",
+      "limit": "limit="
+    }
   },
   "Sentry": {
     "url": "https://ssd-api.jpl.nasa.gov/sentry.api"
