@@ -1,10 +1,17 @@
-﻿namespace JplApiTesting.ApiObjectModels.CAD.Services
+﻿using System.Collections.Generic;
+
+namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     public class CadAllDataService : CadService
     {
         public CadAllDataService()
         {
-            ResponseData = callManager.GetAllCadData();
+            Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+            {
+                [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" }
+            };
+
+            ResponseData = callManager.MakeRequest(requestParams);
 
             Setup();
         }

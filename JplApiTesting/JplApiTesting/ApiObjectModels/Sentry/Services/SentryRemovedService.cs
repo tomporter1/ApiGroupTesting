@@ -1,27 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
 	public class SentryRemovedService : SentryService
 	{
-		private int state = 0;
-		public SentryRemovedService(bool removedValue)
+		public SentryRemovedService(string removedValue)
 		{
-			if (removedValue == true)
+			List<string> checkInputMatch = new List<string> { "Y", "1", "true", "N", "0", "false" };
+			if (checkInputMatch.Contains(removedValue))
 			{
-				state = 1;
+				ResponseData = sentryCallManager.GetSentryRemovedInfo(removedValue);
+				dto.DeserializeSentryRemoved(ResponseData);
+				SetupService();
 			}
 			else
 			{
-				state = 0;
+				throw new ArgumentException("Argument given in method is invalid must be: Y, 1, true or N, 0, false");
 			}
-			liveCurrent = sentryCallManager.GetSentryRemovedInfo(state);
-			dto.DeserializeSentryRemoved(liveCurrent);
-			SetupService();
+
+			
 		}
 	}
 }

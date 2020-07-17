@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.Services.SbdbErrorService">
+    <Position X="0.5" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\Services\SbdbErrorService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.Services.SbdbSpecificSmallBodyService">
+    <Position X="4" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\Services\SbdbSpecificSmallBodyService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.Services.SbdbService">
+    <Position X="2" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\Services\SbdbService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="callManager" />
+      <Field Name="DTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.ServiceBase">
+    <Position X="2" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\ServiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.HTTPManager.SbdbCallManager">
+    <Position X="5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAgAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\HTTPManager\SbdbCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.DataHandiling.SbdbDTO">
+    <Position X="7.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAEAgAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\DataHandiling\SbdbDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SbdbError" />
+      <Property Name="SbdbInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.DataHandiling.SbdbErrorRoot">
+    <Position X="6.75" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\DataHandiling\SbdbErrorModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.SBDB.DataHandiling.CometInfoRoot">
+    <Position X="9.25" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>ApiObjectModels\SBDB\DataHandiling\CometInfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.BaseCallManager">
+    <Position X="8.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAIAAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\BaseCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,5 +1,8 @@
-﻿using JplApiTesting.ApiObjectModels.CAD.Services;
+﻿using JplApiTesting.ApiObjectModels;
+using JplApiTesting.ApiObjectModels.CAD;
+using JplApiTesting.ApiObjectModels.CAD.Services;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace JplApiTesting.Tests.CAD
 {
@@ -9,10 +12,17 @@ namespace JplApiTesting.Tests.CAD
         private readonly string _minDate = "2020-06-01", _maxDate = "2020-06-30";
         private const int _numberOfCloseApproachItemsInJune2020 = 82;
 
+        private readonly Dictionary<RequestParametersTypes, RequestParameterInfo> _requestparams = new Dictionary<RequestParametersTypes, RequestParameterInfo>()
+        {
+            [RequestParametersTypes.Body] = new RequestParameterInfo() { Label = CADConfigReader.BodyParam, Data = "All" },
+            [RequestParametersTypes.MinDate] = new RequestParameterInfo() { Label = CADConfigReader.MinDateParam, Data = "2020-06-01" },
+            [RequestParametersTypes.MaxDate] = new RequestParameterInfo() { Label = CADConfigReader.MaxDateParam, Data = "2020-06-30" }
+        };
+
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            _cadService = new CadDateFilteredService(_minDate, _maxDate);
+            _cadService = new CadDateFilteredService(_requestparams);
         }
 
         [Test]

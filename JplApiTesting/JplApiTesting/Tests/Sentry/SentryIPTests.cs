@@ -7,15 +7,15 @@ namespace JplApiTesting.Tests.Sentry
 	{
 		//"2e-3"
 		private SentryIPService sentryService;
-		private readonly int meteorIPValue = 2;
-		private readonly int exponent = 3;
+
+		private readonly string meteorIPValue = "2";
+		private readonly string exponent = "3";
 
 		[OneTimeSetUp]
 		public void Setup()
 		{
 			sentryService = new SentryIPService(sentryIPValue: meteorIPValue, exponent);
 		}
-
 
 		[TestCase("Transfer-Encoding", "chunked")]
 		[TestCase("Connection", "keep-alive")]
@@ -36,7 +36,6 @@ namespace JplApiTesting.Tests.Sentry
 			Assert.That(sentryService.dto.SentryIP.data.Count, Is.EqualTo(countGivenInAPI));
 		}
 
-
 		[Test]
 		[Author("N Sahota")]
 		public void FileSignatureSource_ReturnsCorrectSource()
@@ -50,8 +49,5 @@ namespace JplApiTesting.Tests.Sentry
 		{
 			Assert.That(sentryService.dto.SentryIP.signature.version.ToString(), Is.EqualTo("1.1"));
 		}
-
-
-
 	}
 }

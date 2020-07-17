@@ -8,9 +8,9 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
 {
     public class ScoutNameQueryDataService : ScoutService
     {
-        public ScoutNameQueryDataService(string objectName)
+        public ScoutNameQueryDataService(string name)
         {
-            NEOdata = callManager.GetScoutDataForGivenName(objectName);
+            ResponseData = callManager.GetScoutDataForGivenName(name);
             SetupForGivenName();
         }
         
