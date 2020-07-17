@@ -8,6 +8,7 @@ namespace JplApiTesting.Tests.Sentry
 	{
 		//obtain details related to a specified Sentry object
 		private SentrySpecifiedObjectService sentryService;
+
 		private readonly string meteorObjectName = "99942";
 
 		[OneTimeSetUp]
@@ -67,6 +68,5 @@ namespace JplApiTesting.Tests.Sentry
 
 			Assert.That(sentryService.CompareDatesSpecifiedObject(firstDate, secondDate), Is.False);
 		}
-
 	}
 }

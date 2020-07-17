@@ -14,10 +14,10 @@ namespace JplApiTesting.ApiObjectModels.Sentry.HTTPManager
 
 		internal string GetSentryObjectInfo(string sentryObjectName) => CreateGetRequest($"?des={sentryObjectName.Replace(' ', '%')}");
 
-		internal string GetSentryIPInfo(double sentryIPValue, int exponent) => CreateGetRequest($"?all=1&ip-min={sentryIPValue}e-{exponent}");
+		internal string GetSentryIPInfo(string sentryIPValue, string exponent) => CreateGetRequest($"?all=1&ip-min={sentryIPValue}e-{exponent}");
 
 		internal string GetSentryRemovedInfo(string removedValue) => CreateGetRequest($"?removed={removedValue}");
 
-		internal Dictionary<string,string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
+		internal Dictionary<string, string> GetContentTypeHeader() => TestTools.GetContentTypeHeader(response.Headers);
 	}
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JplApiTesting.ApiObjectModels.Sentry.Services
 {
@@ -10,10 +7,19 @@ namespace JplApiTesting.ApiObjectModels.Sentry.Services
 	{
 		public SentryRemovedService(string removedValue)
 		{
-			ResponseData = sentryCallManager.GetSentryRemovedInfo(removedValue);
-			dto.DeserializeSentryRemoved(ResponseData);
-			SetupService();
+			List<string> checkInputMatch = new List<string> { "Y", "1", "true", "N", "0", "false" };
+			if (checkInputMatch.Contains(removedValue))
+			{
+				ResponseData = sentryCallManager.GetSentryRemovedInfo(removedValue);
+				dto.DeserializeSentryRemoved(ResponseData);
+				SetupService();
+			}
+			else
+			{
+				throw new ArgumentException("Argument given in method is invalid must be: Y, 1, true or N, 0, false");
+			}
 
+			
 		}
 	}
 }

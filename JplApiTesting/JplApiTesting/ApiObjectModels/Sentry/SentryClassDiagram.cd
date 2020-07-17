@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryDTO">
+    <Position X="0.5" Y="1" Width="2.25" />
+    <AssociationLine Name="LatestSentry" Type="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryRoot" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="2.873" />
+        <Point X="2.25" Y="5.312" />
+        <Point X="3" Y="5.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SpecifiedSentry" Type="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentrySpecifiedRoot" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.688" />
+        <Point X="3.592" Y="2.688" />
+        <Point X="3.592" Y="4.052" />
+        <Point X="5" Y="4.052" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAQAAAAACEAAAAASAAMAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ErrorSentry" />
+      <Property Name="SentryIP" />
+      <Property Name="LatestSentry" />
+      <Property Name="SentryRemoved" />
+      <Property Name="SpecifiedSentry" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryErrorRoot">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryErrorModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryIPRoot">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="signature" Type="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Signature" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="0.938" />
+        <Point X="9.312" Y="0.938" />
+        <Point X="9.312" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="signature" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryIPDatum">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAAAACQAQAAAgAAAAAAAABAgAgAgAQACAgA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryRoot">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <AssociationLine Name="signature" Type="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Signature" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.062" Y="6.546" />
+        <Point X="4.062" Y="6.786" />
+        <Point X="9.625" Y="6.786" />
+        <Point X="9.625" Y="3.046" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="signature" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Signature">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Datum">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAAAAAAAIAAAAggAJAAAAAgEAQAAgAAACAgA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryRemovedRoot">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryRemovedModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="signature" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.RemovedDatum">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryRemovedModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentrySpecifiedRoot">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <AssociationLine Name="signature" Type="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Signature" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.719" />
+        <Point X="8.75" Y="3.719" />
+        <Point X="8.75" Y="3.046" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="summary" />
+      <Property Name="signature" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.Summary">
+    <Position X="10" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIQgAAAACAAAACQIABABggEJAAAAAgEAQgBgAAACAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SpecifiedSentryDatum">
+    <Position X="5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAAAAAQAQAAAAAAAAAAAABAgAgAgAQAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
