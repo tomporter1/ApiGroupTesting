@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadAllDataService">
+    <Position X="0.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadAllDataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadDateFilteredService">
+    <Position X="9" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadDateFilteredService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadErrorRespService">
+    <Position X="16" Y="4.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadErrorRespService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadGeneralGetService">
+    <Position X="3.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadGeneralGetService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadLimitService">
+    <Position X="11.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadLimitService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadService">
+    <Position X="7.25" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAACAAAAgAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="callManager" />
+      <Field Name="dto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadSpecificBodyService">
+    <Position X="6.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadSpecificBodyService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.Services.CadSpecificClassService">
+    <Position X="13.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\Services\CadSpecificClassService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.HTTPManager.CadLatestCallManager">
+    <Position X="12.5" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAABgAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\HTTPManager\CadLatestCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.DataHandling.CadLatestRoot">
+    <Position X="18" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\DataHandling\CadLatestModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="signature" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.DataHandling.CadLatestDTO">
+    <Position X="20" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAIAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\DataHandling\CadLatestDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ErrorCAD" />
+      <Property Name="LatestCAD" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.DataHandling.CadErrorRoot">
+    <Position X="21" Y="7" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="JplApiTesting.ApiObjectModels.CAD.DataHandling.CadErrorRoot.Signature">
+        <TypeIdentifier>
+          <NewMemberFileName>ApiObjectModels\CAD\DataHandling\CadErrorModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAEAAAAAIACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ApiObjectModels\CAD\DataHandling\CadErrorModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.BaseCallManager">
+    <Position X="18" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAIAAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\BaseCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.CAD.DataHandling.Signature">
+    <Position X="18.25" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\CAD\DataHandling\CadLatestModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.ServiceBase">
+    <Position X="7.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\ServiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -12,7 +12,7 @@ namespace JplApiTesting.ApiObjectModels.Scout.Services
     {
         public ScoutAllDataService()
         {
-            NEOdata = callManager.GetAllScoutData();
+            ResponseData = callManager.AllScoutData;
             SetupForAll();
         }
   

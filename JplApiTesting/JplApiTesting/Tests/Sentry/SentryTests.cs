@@ -9,6 +9,8 @@ namespace JplApiTesting.Tests.Sentry
 		//obtain summary data for all available Sentry objects
 		private SentrySummaryDataService sentryService;
 
+		private int countGivenInAPI;
+
 		[OneTimeSetUp]
 		public void Setup()
 		{
@@ -30,7 +32,7 @@ namespace JplApiTesting.Tests.Sentry
 		[Author("N Sahota")]
 		public void CountField_ReturnsCorrectAmount()
 		{
-			int countGivenInAPI = Int32.Parse(sentryService.dto.LatestSentry.count);
+			countGivenInAPI = Int32.Parse(sentryService.dto.LatestSentry.count);
 			Assert.That(sentryService.dto.LatestSentry.data.Count, Is.EqualTo(countGivenInAPI));
 		}
 
@@ -50,16 +52,28 @@ namespace JplApiTesting.Tests.Sentry
 
 		[Test]
 		[Author("N Sahota")]
-		public void FirstAsteroidDataFullname_Returns_FullnameOfAsteroid()
+		public void OldestAsteroidDataFullname_Returns_FullnameOfAsteroid()
 		{
 			Assert.That(sentryService.dto.LatestSentry.data[0].fullname.ToString(), Is.EqualTo("(1979 XB)"));
 		}
 
 		[Test]
 		[Author("N Sahota")]
-		public void LatestObservation_ReturnsLatest()
+		public void OldestObservation_ReturnsCorrectDate()
 		{
 			Assert.That(sentryService.dto.LatestSentry.data[0].last_obs.ToString(), Is.EqualTo("1979-Dec-15.42951"));
+		}
+
+		[Test]
+		[Author("N Sahota")]
+		public void CompareDateToCurrent_APIDate_ReturnsStateOfDate()
+		{
+			//SummarySentryAPI only holds current/past data, not future
+			countGivenInAPI = int.Parse(sentryService.dto.LatestSentry.count) - 1;
+			string latestdate = sentryService.dto.LatestSentry.data[countGivenInAPI].last_obs;
+
+			DateTime formatDate = sentryService.CovertAPIDate(latestdate);
+			Assert.That(sentryService.CompareDateToCurrent(formatDate), Is.EqualTo("API Date is before current."));
 		}
 	}
 }

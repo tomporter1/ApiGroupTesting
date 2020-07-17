@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="JplApiTesting.ApiObjectModels.Fireball.Services.FireballService">
+    <Position X="0.5" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQQAQAAAkCAgAAAAAAAAAAAAAIUAEgAAAAABAIBCAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\Services\FireballService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fireballManager" />
+      <Field Name="fireballDTO" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.ServiceBase">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\ServiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Fireball.HTTPManager.FireballManager">
+    <Position X="5.5" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\HTTPManager\FireballManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.BaseCallManager">
+    <Position X="5.5" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAIAAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\BaseCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballDTO">
+    <Position X="5.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\DataHandling\FireballDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel">
+    <Position X="8.75" Y="2.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel.FireballRoot">
+        <TypeIdentifier>
+          <NewMemberFileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.FireballModel.Signature">
+        <TypeIdentifier>
+          <NewMemberFileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.EFields">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAAAAAAQAACQACAAAAAAQAAAAAAAAAQCAAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.ELatitudeDirectionNames">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JplApiTesting.ApiObjectModels.Fireball.DataHandling.ELongitudeDirectionNames">
+    <Position X="11.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAIAAA=</HashCode>
+      <FileName>ApiObjectModels\Fireball\DataHandling\FireballModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

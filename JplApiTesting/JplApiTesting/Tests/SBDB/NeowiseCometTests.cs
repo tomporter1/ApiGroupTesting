@@ -24,9 +24,16 @@ namespace JplApiTesting.Tests.SBDB
 
         [Test]
         [Author("T Perera")]
-        public void CallingTheAPI_ReturnsCorrectSource()
+        public void CallingTheAPI_ReturnsCorrectSignature()
         {
             Assert.That(_sbdbService.DTO.SbdbInfo.signature.source, Is.EqualTo("NASA/JPL Small-Body Database (SBDB) API"));
+        }
+
+        [Test]
+        [Author("T Perera")]
+        public void CallingTheAPI_ReturnsCorrectSource()
+        {
+            Assert.That(_sbdbService.DTO.SbdbInfo.orbit.source, Is.EqualTo("JPL"));
         }
 
         [Test]

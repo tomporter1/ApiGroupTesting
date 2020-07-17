@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JplApiTesting", "JplApiTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E8E335A-FC46-4095-90FF-93B2AFF0565D}"
 	ProjectSection(SolutionItems) = preProject
-		..\ClassDiagrams.md = ..\ClassDiagrams.md
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject

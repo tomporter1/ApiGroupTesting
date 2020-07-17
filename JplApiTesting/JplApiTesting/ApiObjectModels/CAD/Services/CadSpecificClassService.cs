@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     public class CadSpecificClassService : CadService
     {
-        public CadSpecificClassService(string specificClass)
+        public CadSpecificClassService(Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams)
         {
-            if (specificClass == string.Empty)
+            if (requestParams[RequestParametersTypes.Class].Data == string.Empty)
                 throw new ArgumentException("The class cannot be an empty string");
 
-            ResponceData = callManager.GetSpecificClassData(specificClass);
+            ResponseData = callManager.MakeRequest(requestParams);
 
             Setup();
         }

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="JplApiTesting.Tests.Sentry.SentryIPServiceTests">
+    <Position X="0.5" Y="6.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryMethods\SentryIPServiceTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryRemovedServiceTest">
+    <Position X="0.5" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryMethods\SentryRemovedServiceTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryErrorTests">
+    <Position X="4.5" Y="1.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAIAABAAgAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryErrorTests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sentryErrorService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryObjectTests">
+    <Position X="8.5" Y="6.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AACAQAAACAAAAgEAkAAAAQAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryObjectTests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sentryService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryRemovedTests">
+    <Position X="4.5" Y="6.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAkAAgAAAAAAAAIAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryRemovedTests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sentryRemovedService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryTests">
+    <Position X="0.5" Y="1.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAACAAAAAEAkAAIIQAAEAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryTests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sentryService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.Tests.Sentry.SentryIPTests">
+    <Position X="8.75" Y="1.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAACAAAAAEAkBAAAQAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tests\Sentry\SentryIPTests.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sentryService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryErrorService" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryErrorService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentrySummaryDataService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentrySummaryDataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryRemovedService" Collapsed="true">
+    <Position X="4.5" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryRemovedService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentrySpecifiedObjectService" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentrySpecifiedObjectService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryIPService" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryIPService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

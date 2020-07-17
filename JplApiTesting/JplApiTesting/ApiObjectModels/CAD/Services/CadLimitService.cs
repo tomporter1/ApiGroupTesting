@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace JplApiTesting.ApiObjectModels.CAD.Services
 {
     public class CadLimitService : CadService
     {
-        public CadLimitService(int limit)
+        public CadLimitService(Dictionary<RequestParametersTypes, RequestParameterInfo> requestParams)
         {
-            if (limit < 0)
+            if (int.Parse(requestParams[RequestParametersTypes.Limit].Data) < 0)
                 throw new ArgumentException("The limit for the request cannot be negative");
 
-            ResponceData = callManager.GetLimitData(limit);
+            ResponseData = callManager.MakeRequest(requestParams);
 
             Setup();
         }

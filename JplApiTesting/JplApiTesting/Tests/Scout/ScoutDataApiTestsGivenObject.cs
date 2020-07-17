@@ -46,7 +46,7 @@ namespace JplApiTesting.Tests.Scout
         [TestCase("A10o9AM")]
         [TestCase("P112eHp")]
         [TestCase("N00gs7n")]
-        [TestCase("C2XU6W2")]
+        [TestCase("P112eHp")]
         [Author("T Perera")]
         public void CheckIfGivenNameIsValid(string ObjectName)
         {
@@ -64,13 +64,6 @@ namespace JplApiTesting.Tests.Scout
         {
             ScoutNameQueryDataService _scoutService = new ScoutNameQueryDataService(ObjectName);
             Assert.That(_scoutService.dto.LatestScoutQueryName.error, Is.EqualTo("specified object does not exist"));
-        }
-
-        [Test]
-        [Author("T Perera")]
-        public void CheckReturnsPositiveVmag()
-        {
-            Assert.That(float.Parse(_scoutService.dto.LatestScoutQueryName.Vmag), Is.GreaterThanOrEqualTo(0));
         }
 
         [Test]

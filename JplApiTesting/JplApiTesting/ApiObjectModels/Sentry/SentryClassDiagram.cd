@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryErrorService">
+    <Position X="0.5" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryErrorService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryIPService">
+    <Position X="3.25" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryIPService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryRemovedService">
+    <Position X="8.25" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryRemovedService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentryService">
+    <Position X="4.75" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAEAAAAAAAAAAAAQAAAAAAgAQAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentryService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dto" />
+      <Field Name="sentryCallManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentrySpecifiedObjectService">
+    <Position X="5.5" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentrySpecifiedObjectService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.Services.SentrySummaryDataService">
+    <Position X="10.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\Services\SentrySummaryDataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.ServiceBase">
+    <Position X="4.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\ServiceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryDTO">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAQAAAAACEAAAAASAAMAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryDTO.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ErrorSentry" />
+      <Property Name="LatestSentry" />
+      <Property Name="SentryIP" />
+      <Property Name="SentryRemoved" />
+      <Property Name="SpecifiedSentry" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.HTTPManager.SentryCallManager">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEgEAAAAAAAAAAAAAAAAAAIAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\HTTPManager\SentryCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.BaseCallManager">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAAAAAAAAIAAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\BaseCallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryErrorRoot">
+    <Position X="20.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryErrorModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryRoot">
+    <Position X="19" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryIPRoot">
+    <Position X="17.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryIPModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentryRemovedRoot">
+    <Position X="15.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentryRemovedModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JplApiTesting.ApiObjectModels.Sentry.DataHandling.SentrySpecifiedRoot">
+    <Position X="13.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAA=</HashCode>
+      <FileName>ApiObjectModels\Sentry\DataHandling\SentrySpecifiedObjectModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
