@@ -155,6 +155,16 @@ _Product owner said/requested_:
 _What happened to any cards left incomplete?_ Card [Sprints 2-3:  Have written as many tests as you can think of for your API ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41867743) remained in [In Progress](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991889), because only Tom and Thamish had exhausted the potential of their tests for their repectively original given APIs ([**CAD**](https://ssd-api.jpl.nasa.gov/doc/cad.html) and [**Scout**](https://ssd-api.jpl.nasa.gov/doc/scout.html))<br/><br/>
 ###### 🌠 Sprint 3:<br/>
 
+_Product owner said/requested_: 
+> [Product owner was absent from this review]
+
+|Card|Moved into column...|
+|-|-|
+||[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
+||[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+
+_What happened to any cards left incomplete?_
+
 ### 3 - Sprint And Project Retrospectives<br/><br/>
 
 <img src="GIFs/Crab_Fraud.gif" alt="meteor image" width="250"/> 
@@ -170,7 +180,7 @@ _What happened to any cards left incomplete?_ Card [Sprints 2-3:  Have written a
 |-|-|-|-|
 |**(CAD) Tom**|Getting the initial frameworks set up so we could start working on our own sections|Have set standards and conventions to minimise conflicts in the future|Have set goals for each sprint that are agreed on as a group and refactor any code that can be shared between the different frameworks|
 |**(Fireball) Kieran**|Setting up the framework quickly and using Github efficiently so the team could quickly get started on their own API test framework. Good use of documentation and project management so we were able to stay focussed|Need to get as much Github practice as possible to stay updated|Need to follow the agreed sprint cards on the project board|
-|**(Scout) Thamish**|Worked well as a team. Achieved sprint goal|Time management|In the next sprint I hope to add more tests to the framework|
+|**(Scout) Thamish**|Worked well as a team. Achieved sprint goal|Time management|In the next sprint Thamish hopes to add more tests to the framework|
 |**(Sentry) Sunny**|Was able to construct the base framework for our test project, minimising future risks by creating separate frameworks for each API. Was then able to run basic Tests against the Sentry API. Utilised branches with each milestone of the project in order to have a well-defined history of progress|Familiarised with how GitHub is integrated within Visual Studio|Continue to work closely with team when merging local branches in order to minimise the risk of errors within the project|
 
 ###### 🌠Sprint 2:<br/>
@@ -182,8 +192,24 @@ _What happened to any cards left incomplete?_ Card [Sprints 2-3:  Have written a
 |**(Scout) Thamish**|Worked well as a team, achieved sprint goal|Minimise conflicts|In the next sprint Thamish hopes to refactor all of his code and prepare the presentation|
 |**(Sentry) Sunny**|Completed most basic tests for each Sentry API including header responses. Refactored code to future proof his solution. This allowed Sunny to meet requirements set by stakeholders such as separating each type of API into separate projects|Commit more often in order to have more points of recovery within the source control|To test and refactor code further in order to optimise the solutions created. For example only accepting specific inputs within methods to make code more robust|
 
+###### 🌠Sprint 3:<br/>
+
+|Name|What Went Well?|Improvements|Action Plan|
+|-|-|-|-|
+|**(CAD) Tom**|        ||
+|**(Fireball) Kieran**|||
+|**(Scout) Thamish**|  ||
+|**(Sentry) Sunny**|   ||
+
+
 ☄️ **Project Retrospective**
 
+|Name|What Went Well?|Improvements|Action Plan|
+|-|-|-|-|
+|**(CAD) Tom**|        ||
+|**(Fireball) Kieran**|||
+|**(Scout) Thamish**|  ||
+|**(Sentry) Sunny**|   ||
 
 ## Code
 
