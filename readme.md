@@ -2,6 +2,8 @@
 
 ### A framework for testing [JPL’s SSD (Solar System Dynamics) and CNEOS (Center for Near-Earth Object Studies) API](https://ssd-api.jpl.nasa.gov/)
 
+#### Please note: Though the main submission exists in the "master" branch, please find the combined project within branch "split_up_projects"
+
 ## The Project
 
 ~ ***[Please refer to the Github Project board here](https://github.com/tomporter1/ApiGroupTesting/projects/1)*** ~
@@ -160,8 +162,11 @@ _Product owner said/requested_:
 
 |Card|Moved into column...|
 |-|-|
-||[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
-||[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3 Definition of Done ☄️✨](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41843668)|[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
+|[Sprint 3 Goal: Refine, Refactor, Unify ☄️✨](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41843123)|[Notes 🟨](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991896)|
+|[Sprint 3 Merge ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-42044361)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3 - Need to update documentation to reflect SBDB assignments by Tom and Thamish ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41973731)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
+|[Sprint 3: Inherit from base classes in prep. for migrating to per-project Service Object Models ☄️](https://github.com/tomporter1/ApiGroupTesting/projects/1#card-41978637)|[Done 🟩](https://github.com/tomporter1/ApiGroupTesting/projects/1#column-9991894)|
 
 _What happened to any cards left incomplete?_
 
@@ -196,20 +201,20 @@ _What happened to any cards left incomplete?_
 
 |Name|What Went Well?|Improvements|Action Plan|
 |-|-|-|-|
-|**(CAD) Tom**|        ||
-|**(Fireball) Kieran**|||
-|**(Scout) Thamish**|  ||
-|**(Sentry) Sunny**|   ||
+|**(CAD) Tom**|Pull requests and mergers from the dev branch have gone a lot smoother as we have become more familiar with GIT and GitHub. Also splitting up the projects into their own separate projects went surprisingly well as we put considerable effort into minimising conflicts and dependencies at the start of the project|For the different frameworks to use generalised code to simplify them and have them being less hard coded to specific use cases|If this project were to continue past the prototype stage, then it would be good to include more APIs and to generalise the framework more|
+|**(Fireball) Kieran**|Great documentation: explains the project well.|Wish he had focussed more on the code in this sprint|If the project were to be worked on past the prototype week, Kieran would refine his codebase more and test his own functions more.|
+|**(Scout) Thamish**|Worked well as a team<br/>Achieved sprint goal<br/>Refactored code<br/>Achieved stakeholder requirements|Minimise conflicts<br/>Framework needs to use more shared code modules|Test more APIs|
+|**(Sentry) Sunny**|Was able to test the error responses given for each API when invalid data was given to methods. Implemented tests for specific argument exceptions when sending invalid data given to sentry service methods|Make services more robust when accepting input data, by defining specific exceptions|To refactor the sentry config so that it inherits from a shared parent class between all APIs|
 
 
 ☄️ **Project Retrospective**
 
-|Name|What Went Well?|Improvements|Action Plan|
+|Name||What have you learned?| What would you do differently next time?| What would you do next?|
 |-|-|-|-|
-|**(CAD) Tom**|        ||
-|**(Fireball) Kieran**|||
+|**(CAD) Tom**|||
+|**(Fireball) Kieran**|Extensive documentation<br/>Quickly was able to write Fireball codebase<br/>Learnt a lot about source control<br/>|Could have tested my own code more<br/>Could have tested for exceptions<br/>Could have focussed more on expanding my codebase|If the project were to continue past the prototype stage, Kieran would test more APIs and write tests for more edge cases (negative numbers, overflow etc.)|
 |**(Scout) Thamish**|  ||
-|**(Sentry) Sunny**|   ||
+|**(Sentry) Sunny**|   ||       
 
 ## Code
 
