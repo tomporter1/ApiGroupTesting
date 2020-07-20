@@ -92,7 +92,7 @@ Other developers at my company can use the API
 |------|-----------------------------|---|--|--|
 |1|***Mon:Jul-13-20, 1:30PM*** - <br/> ***Tue:Jul-14-20, 1:30PM***|✅|[<img src="SprintScreenshots/Sprint1_Board_Start.png" alt="Sprint 1 Start" width="250"/>](SprintScreenshots/Sprint1_Board_Start.png)|[<img src="SprintScreenshots/Sprint1_Board_End.png" alt="Sprint 1 End" width="250"/>](SprintScreenshots/Sprint1_Board_End.png)|
 |2|***Tue:Jul-14-20, 1:30PM*** - <br/> ***Thu:Jul-16-20, 9:30AM***|✅|[<img src="SprintScreenshots/Sprint2_Board_Start.png" alt="Sprint 2 Start" width="250"/>](SprintScreenshots/Sprint2_Board_Start.png)|[<img src="SprintScreenshots/Sprint2_Board_End.png" alt="Sprint 2 End" width="250"/>](SprintScreenshots/Sprint2_Board_End.png)|
-|3|***Thu:Jul-16-20, 9:30AM*** - <br/> ***Fri:Jul-17-20, 11AM***|⬜️|[<img src="SprintScreenshots/Sprint3_Board_Start.png" alt="Sprint 3 Start" width="250"/>](SprintScreenshots/Sprint3_Board_Start.png)|[<img src="SprintScreenshots/Sprint3_Board_End.png" alt="Sprint 3 End" width="250"/>](SprintScreenshots/Sprint3_Board_End.png)|
+|3|***Thu:Jul-16-20, 9:30AM*** - <br/> ***Fri:Jul-17-20, 11AM***|✅|[<img src="SprintScreenshots/Sprint3_Board_Start.png" alt="Sprint 3 Start" width="250"/>](SprintScreenshots/Sprint3_Board_Start.png)|[<img src="SprintScreenshots/Sprint3_Board_End.png" alt="Sprint 3 End" width="250"/>](SprintScreenshots/Sprint3_Board_End.png)|
 
 ☄️ **Sprint Reviews**
 <br/>
