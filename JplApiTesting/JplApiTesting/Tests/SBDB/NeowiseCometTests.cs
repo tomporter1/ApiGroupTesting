@@ -45,13 +45,6 @@ namespace JplApiTesting.Tests.SBDB
 
         [Test]
         [Author("T Perera")]
-        public void CallingTheAPI_ReturnsCorrectOrbitProducer()
-        {
-            Assert.That(_sbdbService.DTO.SbdbInfo.orbit.producer, Is.EqualTo("Otto Matic"));
-        }
-
-        [Test]
-        [Author("T Perera")]
         public void CallingTheAPI_ReturnsCorrectSPKID()
         {
             Assert.That(_sbdbService.DTO.SbdbInfo._object.spkid, Is.EqualTo("1003667"));

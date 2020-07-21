@@ -11,7 +11,7 @@ namespace JplApiTesting.Tests.Scout
     public class ScoutDataApiTestsGivenNameAndDate
     {
 
-        private static string _name = "A10nMaI";
+        private static string _name = "C2Y22C2";
         // select a date that's either one month in the future or in the past of the current day
         private static string _date = "2020-07-22"; // Format = "YYYY-MM-DD"
         private ScoutEphemerisDataService _scoutService =

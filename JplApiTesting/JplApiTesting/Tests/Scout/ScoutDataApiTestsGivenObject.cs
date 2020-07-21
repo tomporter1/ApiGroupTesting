@@ -7,7 +7,7 @@ namespace JplApiTesting.Tests.Scout
     //Test object data given object name
     public class ScoutDataApiTestsGivenObject
     {
-        private static string _objectName = "A10nMaI";
+        private static string _objectName = "C2Y22C2";
         private ScoutNameQueryDataService _scoutService = new ScoutNameQueryDataService(_objectName);
 
         [Test]
@@ -43,9 +43,9 @@ namespace JplApiTesting.Tests.Scout
         }
 
         [TestCase("A10o9AK")]
-        [TestCase("A10o9AM")]
+        [TestCase("A10omkV")]
         [TestCase("P112eHp")]
-        [TestCase("N00gs7n")]
+        [TestCase("A10omkO")]
         [TestCase("P112eHp")]
         [Author("T Perera")]
         public void CheckIfGivenNameIsValid(string ObjectName)
